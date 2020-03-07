@@ -1,0 +1,1047 @@
+Project Information                       d:\max\lab20\fifolifokesh\mux8x8.rpt
+
+MAX+plus II Compiler Report File
+Version 10.2 07/10/2002
+Compiled: 02/20/2019 11:07:44
+
+Copyright (C) 1988-2002 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input Output Bidir  Memory  Memory  			 LCs
+POF       Device          Pins  Pins   Pins   Bits % Utilized  LCs  % Utilized
+
+mux8x8    EPF10K10TC144-3  67     8      0    0         0  %    61       10 %
+
+User Pins:                 67     8      0  
+
+
+
+Project Information                       d:\max\lab20\fifolifokesh\mux8x8.rpt
+
+** FILE HIERARCHY **
+
+
+
+|aa5tri8:5|
+|aa5tri8:6|
+|aa5tri8:7|
+|aa5tri8:8|
+|aa5tri8:4|
+|aa5tri8:3|
+|aa5tri8:2|
+|aa5tri8:1|
+|deshifr8:35|
+
+
+Device-Specific Information:              d:\max\lab20\fifolifokesh\mux8x8.rpt
+mux8x8
+
+***** Logic for device 'mux8x8' compiled without errors.
+
+
+
+
+Device: EPF10K10TC144-3
+
+FLEX 10K Configuration Scheme: Passive Serial
+
+Device Options:
+    User-Supplied Start-Up Clock               = OFF
+    Auto-Restart Configuration on Frame Error  = OFF
+    Release Clears Before Tri-States           = OFF
+    Enable Chip_Wide Reset                     = OFF
+    Enable Chip-Wide Output Enable             = OFF
+    Enable INIT_DONE Output                    = OFF
+    JTAG User Code                             = 7f
+    MultiVolt I/O                              = OFF
+
+                                                                                         
+                                                                                         
+                R R R R R   R R R R   R R R R   R                                        
+                E E E E E   E E E E   E E E E   E       A                                
+                S S S S S   S S S S   S S S S   S G D D D V D   D D D D D   D D D D D D  
+                E E E E E G E E E E V E E E E G E N A A R C A Q A A A A A V A A A A A A  
+                R R R R R N R R R R C R R R R N R D T T E C T O T T T T T C T T T T T T  
+                V V V V V D V V V V C V V V V D V I A A S I A U A A A A A C A A A A A A  
+                E E E E E I E E E E I E E E E I E N 7 5 S N 7 T 2 3 2 6 1 I 4 2 2 3 6 4  
+                D D D D D O D D D D O D D D D O D T 0 0 0 T 2 1 5 5 1 6 5 O 6 6 3 0 4 5  
+              --------------------------------------------------------------------------_ 
+             / 144 142 140 138 136 134 132 130 128 126 124 122 120 118 116 114 112 110   |_ 
+            /    143 141 139 137 135 133 131 129 127 125 123 121 119 117 115 113 111 109    | 
+      #TCK |  1                                                                         108 | ^DATA0 
+^CONF_DONE |  2                                                                         107 | ^DCLK 
+     ^nCEO |  3                                                                         106 | ^nCE 
+      #TDO |  4                                                                         105 | #TDI 
+     VCCIO |  5                                                                         104 | GNDIO 
+    VCCINT |  6                                                                         103 | GNDINT 
+    DATA05 |  7                                                                         102 | DATA41 
+    DATA55 |  8                                                                         101 | DATA06 
+    DATA11 |  9                                                                         100 | DATA54 
+    DATA16 | 10                                                                          99 | DATA71 
+    DATA65 | 11                                                                          98 | DATA75 
+    DATA14 | 12                                                                          97 | QOUT5 
+    DATA24 | 13                                                                          96 | DATA31 
+    DATA74 | 14                                                                          95 | QOUT4 
+     GNDIO | 15                                                                          94 | VCCIO 
+    GNDINT | 16                                                                          93 | VCCINT 
+    DATA12 | 17                                                                          92 | QOUT0 
+    DATA42 | 18                                                                          91 | DATA52 
+    DATA20 | 19                             EPF10K10TC144-3                              90 | DATA00 
+    DATA10 | 20                                                                          89 | DATA76 
+    DATA36 | 21                                                                          88 | DATA32 
+    DATA22 | 22                                                                          87 | QOUT2 
+    DATA56 | 23                                                                          86 | QOUT6 
+     VCCIO | 24                                                                          85 | GNDIO 
+    VCCINT | 25                                                                          84 | GNDINT 
+    DATA03 | 26                                                                          83 | QOUT3 
+    DATA73 | 27                                                                          82 | DATA67 
+    DATA07 | 28                                                                          81 | DATA47 
+    DATA37 | 29                                                                          80 | DATA57 
+    DATA17 | 30                                                                          79 | DATA77 
+    DATA27 | 31                                                                          78 | QOUT7 
+    DATA53 | 32                                                                          77 | ^MSEL0 
+    DATA13 | 33                                                                          76 | ^MSEL1 
+      #TMS | 34                                                                          75 | VCCINT 
+  ^nSTATUS | 35                                                                          74 | ^nCONFIG 
+  RESERVED | 36                                                                          73 | DATA04 
+           |      38  40  42  44  46  48  50  52  54  56  58  60  62  64  66  68  70  72  _| 
+            \   37  39  41  43  45  47  49  51  53  55  57  59  61  63  65  67  69  71   | 
+             \--------------------------------------------------------------------------- 
+                R R R G R R R R V R R R R G R V V A D A G G D D V D D D D G D D D D V D  
+                E E E N E E E E C E E E E N E C C D A D N N A A C A A A A N A A A A C A  
+                S S S D S S S S C S S S S D S C C R T R D D T T C T T T T D T T T T C T  
+                E E E I E E E E I E E E E I E I I E A E I I A A I A A A A I A A A A I A  
+                R R R O R R R R O R R R R O R N N S 6 S N N 3 4 O 6 5 3 0 O 6 4 4 0 O 6  
+                V V V   V V V V   V V V V   V T T S 0 S T T 4 3   3 1 3 1   2 0 4 2   1  
+                E E E   E E E E   E E E E   E     2   1                                  
+                D D D   D D D D   D D D D   D                                            
+                                                                                         
+                                                                                         
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+GNDINT = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+GNDIO = Dedicated ground pin, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+^ = Dedicated configuration pin.
++ = Reserved configuration pin, which is tri-stated during user mode.
+* = Reserved configuration pin, which drives out in user mode.
+PDn = Power Down pin. 
+@ = Special-purpose pin. 
+# = JTAG Boundary-Scan Testing/In-System Programming or Configuration Pin. The JTAG inputs TMS and TDI should be tied to VCC and TCK should be tied to GND when not in use.
+& = JTAG pin used for I/O. When used as user I/O, JTAG pins must be kept stable before and during configuration.  JTAG pin stability prevents accidental loading of JTAG instructions.
+
+
+Device-Specific Information:              d:\max\lab20\fifolifokesh\mux8x8.rpt
+mux8x8
+
+** RESOURCE USAGE **
+
+Logic                Column       Row                                   
+Array                Interconnect Interconnect         Clears/     External  
+Block   Logic Cells  Driven       Driven       Clocks  Presets   Interconnect
+A2       8/ 8(100%)   1/ 8( 12%)   2/ 8( 25%)    0/2    0/2      15/22( 68%)   
+A8       8/ 8(100%)   1/ 8( 12%)   1/ 8( 12%)    0/2    0/2      18/22( 81%)   
+A10      8/ 8(100%)   2/ 8( 25%)   1/ 8( 12%)    0/2    0/2      15/22( 68%)   
+B4       5/ 8( 62%)   1/ 8( 12%)   5/ 8( 62%)    0/2    0/2       7/22( 31%)   
+B6       8/ 8(100%)   0/ 8(  0%)   2/ 8( 25%)    0/2    0/2      20/22( 90%)   
+B8       8/ 8(100%)   0/ 8(  0%)   2/ 8( 25%)    0/2    0/2      18/22( 81%)   
+C5       8/ 8(100%)   1/ 8( 12%)   2/ 8( 25%)    0/2    0/2      15/22( 68%)   
+C8       8/ 8(100%)   1/ 8( 12%)   2/ 8( 25%)    0/2    0/2      15/22( 68%)   
+
+
+Embedded             Column       Row                                   
+Array     Embedded   Interconnect Interconnect         Read/      External  
+Block     Cells      Driven       Driven       Clocks  Write    Interconnect
+
+
+Total dedicated input pins used:                 6/6      (100%)
+Total I/O pins used:                            69/96     ( 71%)
+Total logic cells used:                         61/576    ( 10%)
+Total embedded cells used:                       0/24     (  0%)
+Total EABs used:                                 0/3      (  0%)
+Average fan-in:                                 3.91/4    ( 97%)
+Total fan-in:                                 239/2304    ( 10%)
+
+Total input pins required:                      67
+Total input I/O cell registers required:         0
+Total output pins required:                      8
+Total output I/O cell registers required:        0
+Total buried I/O cell registers required:        0
+Total bidirectional pins required:               0
+Total reserved pins required                     0
+Total logic cells required:                     61
+Total flipflops required:                        0
+Total packed registers required:                 0
+Total logic cells in carry chains:               0
+Total number of carry chains:                    0
+Total logic cells in cascade chains:             0
+Total number of cascade chains:                  0
+Total single-pin Clock Enables required:         0
+Total single-pin Output Enables required:        0
+
+Synthesized logic cells:                        24/ 576   (  4%)
+
+Logic Cell and Embedded Cell Counts
+
+Column:  01  02  03  04  05  06  07  08  09  10  11  12  EA  13  14  15  16  17  18  19  20  21  22  23  24  Total(LC/EC)
+ A:      0   8   0   0   0   0   0   8   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0     24/0  
+ B:      0   0   0   5   0   8   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0     21/0  
+ C:      0   0   0   0   8   0   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0     16/0  
+
+Total:   0   8   0   5   8   8   0  24   0   8   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0     61/0  
+
+
+
+Device-Specific Information:              d:\max\lab20\fifolifokesh\mux8x8.rpt
+mux8x8
+
+** INPUTS **
+
+                                                    Fan-In    Fan-Out
+ Pin     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+ 124      -     -    -    --      INPUT                0    0    0   29  ADRESS0
+  56      -     -    -    --      INPUT                0    0    0   29  ADRESS1
+  54      -     -    -    --      INPUT                0    0    0   29  ADRESS2
+  90      -     -    B    --      INPUT                0    0    0    1  DATA00
+  65      -     -    -    09      INPUT                0    0    0    1  DATA01
+  70      -     -    -    05      INPUT                0    0    0    1  DATA02
+  26      -     -    C    --      INPUT                0    0    0    1  DATA03
+  73      -     -    -    02      INPUT                0    0    0    1  DATA04
+   7      -     -    A    --      INPUT                0    0    0    1  DATA05
+ 101      -     -    A    --      INPUT                0    0    0    1  DATA06
+  28      -     -    C    --      INPUT                0    0    0    1  DATA07
+  20      -     -    B    --      INPUT                0    0    0    1  DATA10
+   9      -     -    A    --      INPUT                0    0    0    1  DATA11
+  17      -     -    B    --      INPUT                0    0    0    1  DATA12
+  33      -     -    C    --      INPUT                0    0    0    1  DATA13
+  12      -     -    A    --      INPUT                0    0    0    1  DATA14
+ 116      -     -    -    05      INPUT                0    0    0    1  DATA15
+  10      -     -    A    --      INPUT                0    0    0    1  DATA16
+  30      -     -    C    --      INPUT                0    0    0    1  DATA17
+  19      -     -    B    --      INPUT                0    0    0    1  DATA20
+ 118      -     -    -    07      INPUT                0    0    0    1  DATA21
+  22      -     -    B    --      INPUT                0    0    0    1  DATA22
+ 112      -     -    -    03      INPUT                0    0    0    1  DATA23
+  13      -     -    A    --      INPUT                0    0    0    1  DATA24
+ 120      -     -    -    09      INPUT                0    0    0    1  DATA25
+ 113      -     -    -    03      INPUT                0    0    0    1  DATA26
+  31      -     -    C    --      INPUT                0    0    0    1  DATA27
+ 111      -     -    -    02      INPUT                0    0    0    1  DATA30
+  96      -     -    A    --      INPUT                0    0    0    1  DATA31
+  88      -     -    B    --      INPUT                0    0    0    1  DATA32
+  64      -     -    -    10      INPUT                0    0    0    1  DATA33
+  59      -     -    -    12      INPUT                0    0    0    1  DATA34
+ 119      -     -    -    08      INPUT                0    0    0    1  DATA35
+  21      -     -    B    --      INPUT                0    0    0    1  DATA36
+  29      -     -    C    --      INPUT                0    0    0    1  DATA37
+  68      -     -    -    07      INPUT                0    0    0    1  DATA40
+ 102      -     -    A    --      INPUT                0    0    0    1  DATA41
+  18      -     -    B    --      INPUT                0    0    0    1  DATA42
+  60      -     -    -    12      INPUT                0    0    0    1  DATA43
+  69      -     -    -    06      INPUT                0    0    0    1  DATA44
+ 109      -     -    -    01      INPUT                0    0    0    1  DATA45
+ 114      -     -    -    04      INPUT                0    0    0    1  DATA46
+  81      -     -    C    --      INPUT                0    0    0    1  DATA47
+ 125      -     -    -    --      INPUT                0    0    0    1  DATA50
+  63      -     -    -    11      INPUT                0    0    0    1  DATA51
+  91      -     -    B    --      INPUT                0    0    0    1  DATA52
+  32      -     -    C    --      INPUT                0    0    0    1  DATA53
+ 100      -     -    A    --      INPUT                0    0    0    1  DATA54
+   8      -     -    A    --      INPUT                0    0    0    1  DATA55
+  23      -     -    B    --      INPUT                0    0    0    1  DATA56
+  80      -     -    C    --      INPUT                0    0    0    1  DATA57
+  55      -     -    -    --      INPUT                0    0    0    1  DATA60
+  72      -     -    -    04      INPUT                0    0    0    1  DATA61
+  67      -     -    -    08      INPUT                0    0    0    1  DATA62
+  62      -     -    -    11      INPUT                0    0    0    1  DATA63
+ 110      -     -    -    01      INPUT                0    0    0    1  DATA64
+  11      -     -    A    --      INPUT                0    0    0    1  DATA65
+ 117      -     -    -    06      INPUT                0    0    0    1  DATA66
+  82      -     -    C    --      INPUT                0    0    0    1  DATA67
+ 126      -     -    -    --      INPUT                0    0    0    1  DATA70
+  99      -     -    A    --      INPUT                0    0    0    1  DATA71
+ 122      -     -    -    12      INPUT                0    0    0    1  DATA72
+  27      -     -    C    --      INPUT                0    0    0    1  DATA73
+  14      -     -    A    --      INPUT                0    0    0    1  DATA74
+  98      -     -    A    --      INPUT                0    0    0    1  DATA75
+  89      -     -    B    --      INPUT                0    0    0    1  DATA76
+  79      -     -    C    --      INPUT                0    0    0    1  DATA77
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+@ = Uses single-pin Clock Enable
+& = Uses single-pin Output Enable
+
+
+Device-Specific Information:              d:\max\lab20\fifolifokesh\mux8x8.rpt
+mux8x8
+
+** OUTPUTS **
+
+       Fed By Fed By                                Fan-In    Fan-Out
+ Pin     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+  92      -     -    B    --     OUTPUT                0    1    0    0  QOUT0
+ 121      -     -    -    10     OUTPUT                0    1    0    0  QOUT1
+  87      -     -    B    --     OUTPUT                0    1    0    0  QOUT2
+  83      -     -    C    --     OUTPUT                0    1    0    0  QOUT3
+  95      -     -    A    --     OUTPUT                0    1    0    0  QOUT4
+  97      -     -    A    --     OUTPUT                0    1    0    0  QOUT5
+  86      -     -    B    --     OUTPUT                0    1    0    0  QOUT6
+  78      -     -    C    --     OUTPUT                0    1    0    0  QOUT7
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+@ = Uses single-pin Clock Enable
+& = Uses single-pin Output Enable
+
+
+Device-Specific Information:              d:\max\lab20\fifolifokesh\mux8x8.rpt
+mux8x8
+
+** BURIED LOGIC **
+
+                                                    Fan-In    Fan-Out
+ IOC     LC     EC   Row  Col  Primitive    Code      INP  FBK  OUT  FBK  Name
+   -      4     -    B    04       AND2                4    0    0    1  |aa5tri8:3|Q0 (|aa5tri8:3|:5)
+   -      6     -    A    10       AND2                4    0    0    1  |aa5tri8:3|Q1 (|aa5tri8:3|:6)
+   -      3     -    B    04       AND2                4    0    0    1  |aa5tri8:3|Q2 (|aa5tri8:3|:7)
+   -      6     -    C    08       AND2                4    0    0    1  |aa5tri8:3|Q3 (|aa5tri8:3|:8)
+   -      5     -    C    05       AND2                4    0    0    1  |aa5tri8:3|Q7 (|aa5tri8:3|:9)
+   -      2     -    B    04       AND2                4    0    0    1  |aa5tri8:3|Q6 (|aa5tri8:3|:10)
+   -      5     -    A    08       AND2                4    0    0    1  |aa5tri8:3|Q5 (|aa5tri8:3|:11)
+   -      5     -    A    02       AND2                4    0    0    1  |aa5tri8:3|Q4 (|aa5tri8:3|:12)
+   -      2     -    B    08       AND2                4    0    0    1  |aa5tri8:7|Q0 (|aa5tri8:7|:5)
+   -      3     -    A    10       AND2                4    0    0    1  |aa5tri8:7|Q1 (|aa5tri8:7|:6)
+   -      3     -    B    06       AND2                4    0    0    1  |aa5tri8:7|Q2 (|aa5tri8:7|:7)
+   -      3     -    C    08       AND2                4    0    0    1  |aa5tri8:7|Q3 (|aa5tri8:7|:8)
+   -      2     -    C    05       AND2                4    0    0    1  |aa5tri8:7|Q7 (|aa5tri8:7|:9)
+   -      5     -    B    08       AND2                4    0    0    1  |aa5tri8:7|Q6 (|aa5tri8:7|:10)
+   -      2     -    A    08       AND2                4    0    0    1  |aa5tri8:7|Q5 (|aa5tri8:7|:11)
+   -      2     -    A    02       AND2                4    0    0    1  |aa5tri8:7|Q4 (|aa5tri8:7|:12)
+   -      3     -    B    08       AND2                4    0    0    1  |aa5tri8:8|Q0 (|aa5tri8:8|:5)
+   -      4     -    A    10       AND2                4    0    0    1  |aa5tri8:8|Q1 (|aa5tri8:8|:6)
+   -      4     -    B    06       AND2                4    0    0    1  |aa5tri8:8|Q2 (|aa5tri8:8|:7)
+   -      4     -    C    08       AND2                4    0    0    1  |aa5tri8:8|Q3 (|aa5tri8:8|:8)
+   -      3     -    C    05       AND2                4    0    0    1  |aa5tri8:8|Q7 (|aa5tri8:8|:9)
+   -      1     -    B    04       AND2                4    0    0    1  |aa5tri8:8|Q6 (|aa5tri8:8|:10)
+   -      3     -    A    08       AND2                4    0    0    1  |aa5tri8:8|Q5 (|aa5tri8:8|:11)
+   -      3     -    A    02       AND2                4    0    0    1  |aa5tri8:8|Q4 (|aa5tri8:8|:12)
+   -      1     -    A    02       AND2                3    0    0    8  |deshifr8:35|F0 (|deshifr8:35|:25)
+   -      6     -    B    04       AND2                3    0    0    8  |deshifr8:35|F1 (|deshifr8:35|:26)
+   -      1     -    C    05       AND2                3    0    0    8  |deshifr8:35|F3 (|deshifr8:35|:28)
+   -      2     -    C    08       AND2                3    0    0    8  |deshifr8:35|F6 (|deshifr8:35|:31)
+   -      1     -    A    10       AND2                3    0    0    8  |deshifr8:35|F7 (|deshifr8:35|:32)
+   -      5     -    A    10        OR2    s           1    3    0    1  ~22~1
+   -      7     -    A    10        OR2    s           2    2    0    1  ~22~2
+   -      8     -    A    10        OR2    s           1    3    0    1  ~22~3
+   -      2     -    A    10        OR2                1    3    1    0  :22
+   -      4     -    B    08        OR2    s           1    3    0    1  ~23~1
+   -      1     -    B    06        OR2    s           2    2    0    1  ~23~2
+   -      2     -    B    06        OR2    s           1    3    0    1  ~23~3
+   -      1     -    B    08        OR2                1    3    1    0  :23
+   -      5     -    C    08        OR2    s           1    3    0    1  ~24~1
+   -      7     -    C    08        OR2    s           2    2    0    1  ~24~2
+   -      8     -    C    08        OR2    s           1    3    0    1  ~24~3
+   -      1     -    C    08        OR2                1    3    1    0  :24
+   -      5     -    B    06        OR2    s           1    3    0    1  ~25~1
+   -      6     -    B    06        OR2    s           2    2    0    1  ~25~2
+   -      8     -    B    06        OR2    s           1    3    0    1  ~25~3
+   -      7     -    B    06        OR2                1    3    1    0  :25
+   -      4     -    C    05        OR2    s           1    3    0    1  ~26~1
+   -      6     -    C    05        OR2    s           2    2    0    1  ~26~2
+   -      8     -    C    05        OR2    s           1    3    0    1  ~26~3
+   -      7     -    C    05        OR2                1    3    1    0  :26
+   -      6     -    B    08        OR2    s           1    3    0    1  ~27~1
+   -      1     -    A    08        OR2    s           2    2    0    1  ~27~2
+   -      7     -    B    08        OR2    s           1    3    0    1  ~27~3
+   -      8     -    B    08        OR2                1    3    1    0  :27
+   -      4     -    A    08        OR2    s           1    3    0    1  ~28~1
+   -      7     -    A    08        OR2    s           2    2    0    1  ~28~2
+   -      8     -    A    08        OR2    s           1    3    0    1  ~28~3
+   -      6     -    A    08        OR2                1    3    1    0  :28
+   -      4     -    A    02        OR2    s           1    3    0    1  ~29~1
+   -      6     -    A    02        OR2    s           2    2    0    1  ~29~2
+   -      8     -    A    02        OR2    s           1    3    0    1  ~29~3
+   -      7     -    A    02        OR2                1    3    1    0  :29
+
+
+Code:
+
+s = Synthesized pin or logic cell
++ = Synchronous flipflop
+/ = Slow slew-rate output
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+p = Packed register
+
+
+Device-Specific Information:              d:\max\lab20\fifolifokesh\mux8x8.rpt
+mux8x8
+
+** FASTTRACK INTERCONNECT UTILIZATION **
+
+Row FastTrack Interconnect:
+
+          Global         Left Half-      Right Half-
+         FastTrack       FastTrack       FastTrack 
+Row     Interconnect    Interconnect    Interconnect    Input Pins     Output Pins     Bidir Pins
+A:      17/ 96( 17%)    16/ 48( 33%)     0/ 48(  0%)   14/16( 87%)      2/16( 12%)     0/16(  0%)
+B:      16/ 96( 16%)    17/ 48( 35%)     0/ 48(  0%)   11/16( 68%)      3/16( 18%)     0/16(  0%)
+C:      12/ 96( 12%)    11/ 48( 22%)     0/ 48(  0%)   12/16( 75%)      2/16( 12%)     0/16(  0%)
+
+
+Column FastTrack Interconnect:
+
+         FastTrack                                 
+Column  Interconnect    Input Pins     Output Pins     Bidir Pins
+01:      3/24( 12%)     2/4( 50%)      0/4(  0%)       0/4(  0%)
+02:      2/24(  8%)     2/4( 50%)      0/4(  0%)       0/4(  0%)
+03:      3/24( 12%)     2/4( 50%)      0/4(  0%)       0/4(  0%)
+04:      2/24(  8%)     2/4( 50%)      0/4(  0%)       0/4(  0%)
+05:      3/24( 12%)     2/4( 50%)      0/4(  0%)       0/4(  0%)
+06:      2/24(  8%)     2/4( 50%)      0/4(  0%)       0/4(  0%)
+07:      3/24( 12%)     2/4( 50%)      0/4(  0%)       0/4(  0%)
+08:      3/24( 12%)     2/4( 50%)      0/4(  0%)       0/4(  0%)
+09:      2/24(  8%)     2/4( 50%)      0/4(  0%)       0/4(  0%)
+10:      3/24( 12%)     1/4( 25%)      1/4( 25%)       0/4(  0%)
+11:      2/24(  8%)     2/4( 50%)      0/4(  0%)       0/4(  0%)
+12:      3/24( 12%)     3/4( 75%)      0/4(  0%)       0/4(  0%)
+13:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+14:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+15:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+16:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+17:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+18:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+19:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+20:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+21:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+22:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+23:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+24:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+EA:      0/24(  0%)     0/4(  0%)      0/4(  0%)       0/4(  0%)
+
+
+Device-Specific Information:              d:\max\lab20\fifolifokesh\mux8x8.rpt
+mux8x8
+
+** EQUATIONS **
+
+ADRESS0  : INPUT;
+ADRESS1  : INPUT;
+ADRESS2  : INPUT;
+DATA00   : INPUT;
+DATA01   : INPUT;
+DATA02   : INPUT;
+DATA03   : INPUT;
+DATA04   : INPUT;
+DATA05   : INPUT;
+DATA06   : INPUT;
+DATA07   : INPUT;
+DATA10   : INPUT;
+DATA11   : INPUT;
+DATA12   : INPUT;
+DATA13   : INPUT;
+DATA14   : INPUT;
+DATA15   : INPUT;
+DATA16   : INPUT;
+DATA17   : INPUT;
+DATA20   : INPUT;
+DATA21   : INPUT;
+DATA22   : INPUT;
+DATA23   : INPUT;
+DATA24   : INPUT;
+DATA25   : INPUT;
+DATA26   : INPUT;
+DATA27   : INPUT;
+DATA30   : INPUT;
+DATA31   : INPUT;
+DATA32   : INPUT;
+DATA33   : INPUT;
+DATA34   : INPUT;
+DATA35   : INPUT;
+DATA36   : INPUT;
+DATA37   : INPUT;
+DATA40   : INPUT;
+DATA41   : INPUT;
+DATA42   : INPUT;
+DATA43   : INPUT;
+DATA44   : INPUT;
+DATA45   : INPUT;
+DATA46   : INPUT;
+DATA47   : INPUT;
+DATA50   : INPUT;
+DATA51   : INPUT;
+DATA52   : INPUT;
+DATA53   : INPUT;
+DATA54   : INPUT;
+DATA55   : INPUT;
+DATA56   : INPUT;
+DATA57   : INPUT;
+DATA60   : INPUT;
+DATA61   : INPUT;
+DATA62   : INPUT;
+DATA63   : INPUT;
+DATA64   : INPUT;
+DATA65   : INPUT;
+DATA66   : INPUT;
+DATA67   : INPUT;
+DATA70   : INPUT;
+DATA71   : INPUT;
+DATA72   : INPUT;
+DATA73   : INPUT;
+DATA74   : INPUT;
+DATA75   : INPUT;
+DATA76   : INPUT;
+DATA77   : INPUT;
+
+-- Node name is 'QOUT0' 
+-- Equation name is 'QOUT0', type is output 
+QOUT0    =  _LC1_B8;
+
+-- Node name is 'QOUT1' 
+-- Equation name is 'QOUT1', type is output 
+QOUT1    =  _LC2_A10;
+
+-- Node name is 'QOUT2' 
+-- Equation name is 'QOUT2', type is output 
+QOUT2    =  _LC7_B6;
+
+-- Node name is 'QOUT3' 
+-- Equation name is 'QOUT3', type is output 
+QOUT3    =  _LC1_C8;
+
+-- Node name is 'QOUT4' 
+-- Equation name is 'QOUT4', type is output 
+QOUT4    =  _LC7_A2;
+
+-- Node name is 'QOUT5' 
+-- Equation name is 'QOUT5', type is output 
+QOUT5    =  _LC6_A8;
+
+-- Node name is 'QOUT6' 
+-- Equation name is 'QOUT6', type is output 
+QOUT6    =  _LC8_B8;
+
+-- Node name is 'QOUT7' 
+-- Equation name is 'QOUT7', type is output 
+QOUT7    =  _LC7_C5;
+
+-- Node name is '|aa5tri8:3|:5' = '|aa5tri8:3|Q0' 
+-- Equation name is '_LC4_B4', type is buried 
+_LC4_B4  = LCELL( _EQ001);
+  _EQ001 = !ADRESS0 &  ADRESS1 & !ADRESS2 &  DATA20;
+
+-- Node name is '|aa5tri8:3|:6' = '|aa5tri8:3|Q1' 
+-- Equation name is '_LC6_A10', type is buried 
+_LC6_A10 = LCELL( _EQ002);
+  _EQ002 = !ADRESS0 &  ADRESS1 & !ADRESS2 &  DATA21;
+
+-- Node name is '|aa5tri8:3|:7' = '|aa5tri8:3|Q2' 
+-- Equation name is '_LC3_B4', type is buried 
+_LC3_B4  = LCELL( _EQ003);
+  _EQ003 = !ADRESS0 &  ADRESS1 & !ADRESS2 &  DATA22;
+
+-- Node name is '|aa5tri8:3|:8' = '|aa5tri8:3|Q3' 
+-- Equation name is '_LC6_C8', type is buried 
+_LC6_C8  = LCELL( _EQ004);
+  _EQ004 = !ADRESS0 &  ADRESS1 & !ADRESS2 &  DATA23;
+
+-- Node name is '|aa5tri8:3|:12' = '|aa5tri8:3|Q4' 
+-- Equation name is '_LC5_A2', type is buried 
+_LC5_A2  = LCELL( _EQ005);
+  _EQ005 = !ADRESS0 &  ADRESS1 & !ADRESS2 &  DATA24;
+
+-- Node name is '|aa5tri8:3|:11' = '|aa5tri8:3|Q5' 
+-- Equation name is '_LC5_A8', type is buried 
+_LC5_A8  = LCELL( _EQ006);
+  _EQ006 = !ADRESS0 &  ADRESS1 & !ADRESS2 &  DATA25;
+
+-- Node name is '|aa5tri8:3|:10' = '|aa5tri8:3|Q6' 
+-- Equation name is '_LC2_B4', type is buried 
+_LC2_B4  = LCELL( _EQ007);
+  _EQ007 = !ADRESS0 &  ADRESS1 & !ADRESS2 &  DATA26;
+
+-- Node name is '|aa5tri8:3|:9' = '|aa5tri8:3|Q7' 
+-- Equation name is '_LC5_C5', type is buried 
+_LC5_C5  = LCELL( _EQ008);
+  _EQ008 = !ADRESS0 &  ADRESS1 & !ADRESS2 &  DATA27;
+
+-- Node name is '|aa5tri8:7|:5' = '|aa5tri8:7|Q0' 
+-- Equation name is '_LC2_B8', type is buried 
+_LC2_B8  = LCELL( _EQ009);
+  _EQ009 =  ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA50;
+
+-- Node name is '|aa5tri8:7|:6' = '|aa5tri8:7|Q1' 
+-- Equation name is '_LC3_A10', type is buried 
+_LC3_A10 = LCELL( _EQ010);
+  _EQ010 =  ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA51;
+
+-- Node name is '|aa5tri8:7|:7' = '|aa5tri8:7|Q2' 
+-- Equation name is '_LC3_B6', type is buried 
+_LC3_B6  = LCELL( _EQ011);
+  _EQ011 =  ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA52;
+
+-- Node name is '|aa5tri8:7|:8' = '|aa5tri8:7|Q3' 
+-- Equation name is '_LC3_C8', type is buried 
+_LC3_C8  = LCELL( _EQ012);
+  _EQ012 =  ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA53;
+
+-- Node name is '|aa5tri8:7|:12' = '|aa5tri8:7|Q4' 
+-- Equation name is '_LC2_A2', type is buried 
+_LC2_A2  = LCELL( _EQ013);
+  _EQ013 =  ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA54;
+
+-- Node name is '|aa5tri8:7|:11' = '|aa5tri8:7|Q5' 
+-- Equation name is '_LC2_A8', type is buried 
+_LC2_A8  = LCELL( _EQ014);
+  _EQ014 =  ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA55;
+
+-- Node name is '|aa5tri8:7|:10' = '|aa5tri8:7|Q6' 
+-- Equation name is '_LC5_B8', type is buried 
+_LC5_B8  = LCELL( _EQ015);
+  _EQ015 =  ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA56;
+
+-- Node name is '|aa5tri8:7|:9' = '|aa5tri8:7|Q7' 
+-- Equation name is '_LC2_C5', type is buried 
+_LC2_C5  = LCELL( _EQ016);
+  _EQ016 =  ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA57;
+
+-- Node name is '|aa5tri8:8|:5' = '|aa5tri8:8|Q0' 
+-- Equation name is '_LC3_B8', type is buried 
+_LC3_B8  = LCELL( _EQ017);
+  _EQ017 = !ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA40;
+
+-- Node name is '|aa5tri8:8|:6' = '|aa5tri8:8|Q1' 
+-- Equation name is '_LC4_A10', type is buried 
+_LC4_A10 = LCELL( _EQ018);
+  _EQ018 = !ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA41;
+
+-- Node name is '|aa5tri8:8|:7' = '|aa5tri8:8|Q2' 
+-- Equation name is '_LC4_B6', type is buried 
+_LC4_B6  = LCELL( _EQ019);
+  _EQ019 = !ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA42;
+
+-- Node name is '|aa5tri8:8|:8' = '|aa5tri8:8|Q3' 
+-- Equation name is '_LC4_C8', type is buried 
+_LC4_C8  = LCELL( _EQ020);
+  _EQ020 = !ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA43;
+
+-- Node name is '|aa5tri8:8|:12' = '|aa5tri8:8|Q4' 
+-- Equation name is '_LC3_A2', type is buried 
+_LC3_A2  = LCELL( _EQ021);
+  _EQ021 = !ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA44;
+
+-- Node name is '|aa5tri8:8|:11' = '|aa5tri8:8|Q5' 
+-- Equation name is '_LC3_A8', type is buried 
+_LC3_A8  = LCELL( _EQ022);
+  _EQ022 = !ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA45;
+
+-- Node name is '|aa5tri8:8|:10' = '|aa5tri8:8|Q6' 
+-- Equation name is '_LC1_B4', type is buried 
+_LC1_B4  = LCELL( _EQ023);
+  _EQ023 = !ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA46;
+
+-- Node name is '|aa5tri8:8|:9' = '|aa5tri8:8|Q7' 
+-- Equation name is '_LC3_C5', type is buried 
+_LC3_C5  = LCELL( _EQ024);
+  _EQ024 = !ADRESS0 & !ADRESS1 &  ADRESS2 &  DATA47;
+
+-- Node name is '|deshifr8:35|:25' = '|deshifr8:35|F0' 
+-- Equation name is '_LC1_A2', type is buried 
+_LC1_A2  = LCELL( _EQ025);
+  _EQ025 = !ADRESS0 & !ADRESS1 & !ADRESS2;
+
+-- Node name is '|deshifr8:35|:26' = '|deshifr8:35|F1' 
+-- Equation name is '_LC6_B4', type is buried 
+_LC6_B4  = LCELL( _EQ026);
+  _EQ026 =  ADRESS0 & !ADRESS1 & !ADRESS2;
+
+-- Node name is '|deshifr8:35|:28' = '|deshifr8:35|F3' 
+-- Equation name is '_LC1_C5', type is buried 
+_LC1_C5  = LCELL( _EQ027);
+  _EQ027 =  ADRESS0 &  ADRESS1 & !ADRESS2;
+
+-- Node name is '|deshifr8:35|:31' = '|deshifr8:35|F6' 
+-- Equation name is '_LC2_C8', type is buried 
+_LC2_C8  = LCELL( _EQ028);
+  _EQ028 = !ADRESS0 &  ADRESS1 &  ADRESS2;
+
+-- Node name is '|deshifr8:35|:32' = '|deshifr8:35|F7' 
+-- Equation name is '_LC1_A10', type is buried 
+_LC1_A10 = LCELL( _EQ029);
+  _EQ029 =  ADRESS0 &  ADRESS1 &  ADRESS2;
+
+-- Node name is '~22~1' 
+-- Equation name is '~22~1', location is LC5_A10, type is buried.
+-- synthesized logic cell 
+_LC5_A10 = LCELL( _EQ030);
+  _EQ030 =  DATA61 &  _LC2_C8
+         #  _LC3_A10
+         #  _LC4_A10;
+
+-- Node name is '~22~2' 
+-- Equation name is '~22~2', location is LC7_A10, type is buried.
+-- synthesized logic cell 
+_LC7_A10 = LCELL( _EQ031);
+  _EQ031 =  DATA11 &  _LC6_B4
+         #  DATA01 &  _LC1_A2;
+
+-- Node name is '~22~3' 
+-- Equation name is '~22~3', location is LC8_A10, type is buried.
+-- synthesized logic cell 
+_LC8_A10 = LCELL( _EQ032);
+  _EQ032 =  DATA31 &  _LC1_C5
+         #  _LC6_A10
+         #  _LC7_A10;
+
+-- Node name is ':22' 
+-- Equation name is '_LC2_A10', type is buried 
+_LC2_A10 = LCELL( _EQ033);
+  _EQ033 =  DATA71 &  _LC1_A10
+         #  _LC5_A10
+         #  _LC8_A10;
+
+-- Node name is '~23~1' 
+-- Equation name is '~23~1', location is LC4_B8, type is buried.
+-- synthesized logic cell 
+_LC4_B8  = LCELL( _EQ034);
+  _EQ034 =  DATA60 &  _LC2_C8
+         #  _LC2_B8
+         #  _LC3_B8;
+
+-- Node name is '~23~2' 
+-- Equation name is '~23~2', location is LC1_B6, type is buried.
+-- synthesized logic cell 
+_LC1_B6  = LCELL( _EQ035);
+  _EQ035 =  DATA10 &  _LC6_B4
+         #  DATA00 &  _LC1_A2;
+
+-- Node name is '~23~3' 
+-- Equation name is '~23~3', location is LC2_B6, type is buried.
+-- synthesized logic cell 
+_LC2_B6  = LCELL( _EQ036);
+  _EQ036 =  DATA30 &  _LC1_C5
+         #  _LC4_B4
+         #  _LC1_B6;
+
+-- Node name is ':23' 
+-- Equation name is '_LC1_B8', type is buried 
+_LC1_B8  = LCELL( _EQ037);
+  _EQ037 =  DATA70 &  _LC1_A10
+         #  _LC4_B8
+         #  _LC2_B6;
+
+-- Node name is '~24~1' 
+-- Equation name is '~24~1', location is LC5_C8, type is buried.
+-- synthesized logic cell 
+_LC5_C8  = LCELL( _EQ038);
+  _EQ038 =  DATA63 &  _LC2_C8
+         #  _LC3_C8
+         #  _LC4_C8;
+
+-- Node name is '~24~2' 
+-- Equation name is '~24~2', location is LC7_C8, type is buried.
+-- synthesized logic cell 
+_LC7_C8  = LCELL( _EQ039);
+  _EQ039 =  DATA13 &  _LC6_B4
+         #  DATA03 &  _LC1_A2;
+
+-- Node name is '~24~3' 
+-- Equation name is '~24~3', location is LC8_C8, type is buried.
+-- synthesized logic cell 
+_LC8_C8  = LCELL( _EQ040);
+  _EQ040 =  DATA33 &  _LC1_C5
+         #  _LC6_C8
+         #  _LC7_C8;
+
+-- Node name is ':24' 
+-- Equation name is '_LC1_C8', type is buried 
+_LC1_C8  = LCELL( _EQ041);
+  _EQ041 =  DATA73 &  _LC1_A10
+         #  _LC5_C8
+         #  _LC8_C8;
+
+-- Node name is '~25~1' 
+-- Equation name is '~25~1', location is LC5_B6, type is buried.
+-- synthesized logic cell 
+_LC5_B6  = LCELL( _EQ042);
+  _EQ042 =  DATA62 &  _LC2_C8
+         #  _LC3_B6
+         #  _LC4_B6;
+
+-- Node name is '~25~2' 
+-- Equation name is '~25~2', location is LC6_B6, type is buried.
+-- synthesized logic cell 
+_LC6_B6  = LCELL( _EQ043);
+  _EQ043 =  DATA12 &  _LC6_B4
+         #  DATA02 &  _LC1_A2;
+
+-- Node name is '~25~3' 
+-- Equation name is '~25~3', location is LC8_B6, type is buried.
+-- synthesized logic cell 
+_LC8_B6  = LCELL( _EQ044);
+  _EQ044 =  DATA32 &  _LC1_C5
+         #  _LC3_B4
+         #  _LC6_B6;
+
+-- Node name is ':25' 
+-- Equation name is '_LC7_B6', type is buried 
+_LC7_B6  = LCELL( _EQ045);
+  _EQ045 =  DATA72 &  _LC1_A10
+         #  _LC5_B6
+         #  _LC8_B6;
+
+-- Node name is '~26~1' 
+-- Equation name is '~26~1', location is LC4_C5, type is buried.
+-- synthesized logic cell 
+_LC4_C5  = LCELL( _EQ046);
+  _EQ046 =  DATA67 &  _LC2_C8
+         #  _LC2_C5
+         #  _LC3_C5;
+
+-- Node name is '~26~2' 
+-- Equation name is '~26~2', location is LC6_C5, type is buried.
+-- synthesized logic cell 
+_LC6_C5  = LCELL( _EQ047);
+  _EQ047 =  DATA17 &  _LC6_B4
+         #  DATA07 &  _LC1_A2;
+
+-- Node name is '~26~3' 
+-- Equation name is '~26~3', location is LC8_C5, type is buried.
+-- synthesized logic cell 
+_LC8_C5  = LCELL( _EQ048);
+  _EQ048 =  DATA37 &  _LC1_C5
+         #  _LC5_C5
+         #  _LC6_C5;
+
+-- Node name is ':26' 
+-- Equation name is '_LC7_C5', type is buried 
+_LC7_C5  = LCELL( _EQ049);
+  _EQ049 =  DATA77 &  _LC1_A10
+         #  _LC4_C5
+         #  _LC8_C5;
+
+-- Node name is '~27~1' 
+-- Equation name is '~27~1', location is LC6_B8, type is buried.
+-- synthesized logic cell 
+_LC6_B8  = LCELL( _EQ050);
+  _EQ050 =  DATA66 &  _LC2_C8
+         #  _LC5_B8
+         #  _LC1_B4;
+
+-- Node name is '~27~2' 
+-- Equation name is '~27~2', location is LC1_A8, type is buried.
+-- synthesized logic cell 
+_LC1_A8  = LCELL( _EQ051);
+  _EQ051 =  DATA16 &  _LC6_B4
+         #  DATA06 &  _LC1_A2;
+
+-- Node name is '~27~3' 
+-- Equation name is '~27~3', location is LC7_B8, type is buried.
+-- synthesized logic cell 
+_LC7_B8  = LCELL( _EQ052);
+  _EQ052 =  DATA36 &  _LC1_C5
+         #  _LC2_B4
+         #  _LC1_A8;
+
+-- Node name is ':27' 
+-- Equation name is '_LC8_B8', type is buried 
+_LC8_B8  = LCELL( _EQ053);
+  _EQ053 =  DATA76 &  _LC1_A10
+         #  _LC6_B8
+         #  _LC7_B8;
+
+-- Node name is '~28~1' 
+-- Equation name is '~28~1', location is LC4_A8, type is buried.
+-- synthesized logic cell 
+_LC4_A8  = LCELL( _EQ054);
+  _EQ054 =  DATA65 &  _LC2_C8
+         #  _LC2_A8
+         #  _LC3_A8;
+
+-- Node name is '~28~2' 
+-- Equation name is '~28~2', location is LC7_A8, type is buried.
+-- synthesized logic cell 
+_LC7_A8  = LCELL( _EQ055);
+  _EQ055 =  DATA15 &  _LC6_B4
+         #  DATA05 &  _LC1_A2;
+
+-- Node name is '~28~3' 
+-- Equation name is '~28~3', location is LC8_A8, type is buried.
+-- synthesized logic cell 
+_LC8_A8  = LCELL( _EQ056);
+  _EQ056 =  DATA35 &  _LC1_C5
+         #  _LC5_A8
+         #  _LC7_A8;
+
+-- Node name is ':28' 
+-- Equation name is '_LC6_A8', type is buried 
+_LC6_A8  = LCELL( _EQ057);
+  _EQ057 =  DATA75 &  _LC1_A10
+         #  _LC4_A8
+         #  _LC8_A8;
+
+-- Node name is '~29~1' 
+-- Equation name is '~29~1', location is LC4_A2, type is buried.
+-- synthesized logic cell 
+_LC4_A2  = LCELL( _EQ058);
+  _EQ058 =  DATA64 &  _LC2_C8
+         #  _LC2_A2
+         #  _LC3_A2;
+
+-- Node name is '~29~2' 
+-- Equation name is '~29~2', location is LC6_A2, type is buried.
+-- synthesized logic cell 
+_LC6_A2  = LCELL( _EQ059);
+  _EQ059 =  DATA14 &  _LC6_B4
+         #  DATA04 &  _LC1_A2;
+
+-- Node name is '~29~3' 
+-- Equation name is '~29~3', location is LC8_A2, type is buried.
+-- synthesized logic cell 
+_LC8_A2  = LCELL( _EQ060);
+  _EQ060 =  DATA34 &  _LC1_C5
+         #  _LC5_A2
+         #  _LC6_A2;
+
+-- Node name is ':29' 
+-- Equation name is '_LC7_A2', type is buried 
+_LC7_A2  = LCELL( _EQ061);
+  _EQ061 =  DATA74 &  _LC1_A10
+         #  _LC4_A2
+         #  _LC8_A2;
+
+
+
+Project Information                       d:\max\lab20\fifolifokesh\mux8x8.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Multi-Level
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'FLEX10K' family
+
+      CARRY_CHAIN                         = ignore
+      CARRY_CHAIN_LENGTH                  = 32
+      CASCADE_CHAIN                       = ignore
+      CASCADE_CHAIN_LENGTH                = 2
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SUBFACTOR_EXTRACTION                = on
+      IGNORE_SOFT_BUFFERS                 = on
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = off
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Use Quartus Fitter                        = on
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:01
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:01
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 13,413K

@@ -1,0 +1,176 @@
+-- Copyright (C) 1988-2002 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+GNDINT = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+GNDIO = Dedicated ground pin, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+----------------------------------------------------------------------------
+
+CHIP "mux8x8" ASSIGNED TO AN EPF10K10TC144-3
+TCK                              : 1
+CONF_DONE                        : 2
+nCEO                             : 3
+TDO                              : 4
+VCCIO                            : 5
+VCCINT                           : 6
+DATA05                           : 7
+DATA55                           : 8
+DATA11                           : 9
+DATA16                           : 10
+DATA65                           : 11
+DATA14                           : 12
+DATA24                           : 13
+DATA74                           : 14
+GNDIO                            : 15
+GNDINT                           : 16
+DATA12                           : 17
+DATA42                           : 18
+DATA20                           : 19
+DATA10                           : 20
+DATA36                           : 21
+DATA22                           : 22
+DATA56                           : 23
+VCCIO                            : 24
+VCCINT                           : 25
+DATA03                           : 26
+DATA73                           : 27
+DATA07                           : 28
+DATA37                           : 29
+DATA17                           : 30
+DATA27                           : 31
+DATA53                           : 32
+DATA13                           : 33
+TMS                              : 34
+nSTATUS                          : 35
+RESERVED                         : 36
+RESERVED                         : 37
+RESERVED                         : 38
+RESERVED                         : 39
+GNDIO                            : 40
+RESERVED                         : 41
+RESERVED                         : 42
+RESERVED                         : 43
+RESERVED                         : 44
+VCCIO                            : 45
+RESERVED                         : 46
+RESERVED                         : 47
+RESERVED                         : 48
+RESERVED                         : 49
+GNDIO                            : 50
+RESERVED                         : 51
+VCCINT                           : 52
+VCCINT                           : 53
+ADRESS2                          : 54
+DATA60                           : 55
+ADRESS1                          : 56
+GNDINT                           : 57
+GNDINT                           : 58
+DATA34                           : 59
+DATA43                           : 60
+VCCIO                            : 61
+DATA63                           : 62
+DATA51                           : 63
+DATA33                           : 64
+DATA01                           : 65
+GNDIO                            : 66
+DATA62                           : 67
+DATA40                           : 68
+DATA44                           : 69
+DATA02                           : 70
+VCCIO                            : 71
+DATA61                           : 72
+DATA04                           : 73
+nCONFIG                          : 74
+VCCINT                           : 75
+MSEL1                            : 76
+MSEL0                            : 77
+QOUT7                            : 78
+DATA77                           : 79
+DATA57                           : 80
+DATA47                           : 81
+DATA67                           : 82
+QOUT3                            : 83
+GNDINT                           : 84
+GNDIO                            : 85
+QOUT6                            : 86
+QOUT2                            : 87
+DATA32                           : 88
+DATA76                           : 89
+DATA00                           : 90
+DATA52                           : 91
+QOUT0                            : 92
+VCCINT                           : 93
+VCCIO                            : 94
+QOUT4                            : 95
+DATA31                           : 96
+QOUT5                            : 97
+DATA75                           : 98
+DATA71                           : 99
+DATA54                           : 100
+DATA06                           : 101
+DATA41                           : 102
+GNDINT                           : 103
+GNDIO                            : 104
+TDI                              : 105
+nCE                              : 106
+DCLK                             : 107
+DATA0                            : 108
+DATA45                           : 109
+DATA64                           : 110
+DATA30                           : 111
+DATA23                           : 112
+DATA26                           : 113
+DATA46                           : 114
+VCCIO                            : 115
+DATA15                           : 116
+DATA66                           : 117
+DATA21                           : 118
+DATA35                           : 119
+DATA25                           : 120
+QOUT1                            : 121
+DATA72                           : 122
+VCCINT                           : 123
+ADRESS0                          : 124
+DATA50                           : 125
+DATA70                           : 126
+GNDINT                           : 127
+RESERVED                         : 128
+GNDIO                            : 129
+RESERVED                         : 130
+RESERVED                         : 131
+RESERVED                         : 132
+RESERVED                         : 133
+VCCIO                            : 134
+RESERVED                         : 135
+RESERVED                         : 136
+RESERVED                         : 137
+RESERVED                         : 138
+GNDIO                            : 139
+RESERVED                         : 140
+RESERVED                         : 141
+RESERVED                         : 142
+RESERVED                         : 143
+RESERVED                         : 144
