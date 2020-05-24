@@ -1,0 +1,2 @@
+C:\Users\mi\Desktop\test\t2\x64\Debug\t2.exe
+C:\Users\mi\Desktop\test\t2\x64\Debug\t2.pdb

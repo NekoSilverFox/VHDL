@@ -1,0 +1,6100 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--sumary[0] is sumary[0]
+--operation mode is arithmetic
+
+sumary[0]_lut_out = A1L1 $ C6_product[0];
+sumary[0] = DFFEAS(sumary[0]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L124 is sumary[0]~141
+--operation mode is arithmetic
+
+A1L124 = CARRY(A1L1 # !C6_product[0]);
+
+
+--sumary[1] is sumary[1]
+--operation mode is arithmetic
+
+sumary[1]_carry_eqn = A1L124;
+sumary[1]_lut_out = A1L3 $ C6_product[1] $ !sumary[1]_carry_eqn;
+sumary[1] = DFFEAS(sumary[1]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L324 is sumary[1]~145
+--operation mode is arithmetic
+
+A1L324 = CARRY(A1L3 & C6_product[1] & !A1L124 # !A1L3 & (C6_product[1] # !A1L124));
+
+
+--sumary[2] is sumary[2]
+--operation mode is arithmetic
+
+sumary[2]_carry_eqn = A1L324;
+sumary[2]_lut_out = A1L5 $ C6_product[2] $ sumary[2]_carry_eqn;
+sumary[2] = DFFEAS(sumary[2]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L524 is sumary[2]~149
+--operation mode is arithmetic
+
+A1L524 = CARRY(A1L5 & (!A1L324 # !C6_product[2]) # !A1L5 & !C6_product[2] & !A1L324);
+
+
+--sumary[3] is sumary[3]
+--operation mode is arithmetic
+
+sumary[3]_carry_eqn = A1L524;
+sumary[3]_lut_out = A1L7 $ C6_product[3] $ !sumary[3]_carry_eqn;
+sumary[3] = DFFEAS(sumary[3]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L724 is sumary[3]~153
+--operation mode is arithmetic
+
+A1L724 = CARRY(A1L7 & C6_product[3] & !A1L524 # !A1L7 & (C6_product[3] # !A1L524));
+
+
+--sumary[4] is sumary[4]
+--operation mode is arithmetic
+
+sumary[4]_carry_eqn = A1L724;
+sumary[4]_lut_out = A1L9 $ C6_product[4] $ sumary[4]_carry_eqn;
+sumary[4] = DFFEAS(sumary[4]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L924 is sumary[4]~157
+--operation mode is arithmetic
+
+A1L924 = CARRY(A1L9 & (!A1L724 # !C6_product[4]) # !A1L9 & !C6_product[4] & !A1L724);
+
+
+--sumary[5] is sumary[5]
+--operation mode is arithmetic
+
+sumary[5]_carry_eqn = A1L924;
+sumary[5]_lut_out = A1L11 $ C6_product[5] $ !sumary[5]_carry_eqn;
+sumary[5] = DFFEAS(sumary[5]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L134 is sumary[5]~161
+--operation mode is arithmetic
+
+A1L134 = CARRY(A1L11 & C6_product[5] & !A1L924 # !A1L11 & (C6_product[5] # !A1L924));
+
+
+--sumary[6] is sumary[6]
+--operation mode is arithmetic
+
+sumary[6]_carry_eqn = A1L134;
+sumary[6]_lut_out = A1L31 $ C6_product[6] $ sumary[6]_carry_eqn;
+sumary[6] = DFFEAS(sumary[6]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L334 is sumary[6]~165
+--operation mode is arithmetic
+
+A1L334 = CARRY(A1L31 & (!A1L134 # !C6_product[6]) # !A1L31 & !C6_product[6] & !A1L134);
+
+
+--sumary[7] is sumary[7]
+--operation mode is arithmetic
+
+sumary[7]_carry_eqn = A1L334;
+sumary[7]_lut_out = A1L51 $ C6_product[7] $ !sumary[7]_carry_eqn;
+sumary[7] = DFFEAS(sumary[7]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L534 is sumary[7]~169
+--operation mode is arithmetic
+
+A1L534 = CARRY(A1L51 & C6_product[7] & !A1L334 # !A1L51 & (C6_product[7] # !A1L334));
+
+
+--sumary[8] is sumary[8]
+--operation mode is arithmetic
+
+sumary[8]_carry_eqn = A1L534;
+sumary[8]_lut_out = A1L71 $ C6_product[8] $ sumary[8]_carry_eqn;
+sumary[8] = DFFEAS(sumary[8]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L734 is sumary[8]~173
+--operation mode is arithmetic
+
+A1L734 = CARRY(A1L71 & (!A1L534 # !C6_product[8]) # !A1L71 & !C6_product[8] & !A1L534);
+
+
+--sumary[9] is sumary[9]
+--operation mode is arithmetic
+
+sumary[9]_carry_eqn = A1L734;
+sumary[9]_lut_out = A1L91 $ C6_product[9] $ !sumary[9]_carry_eqn;
+sumary[9] = DFFEAS(sumary[9]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L934 is sumary[9]~177
+--operation mode is arithmetic
+
+A1L934 = CARRY(A1L91 & C6_product[9] & !A1L734 # !A1L91 & (C6_product[9] # !A1L734));
+
+
+--sumary[10] is sumary[10]
+--operation mode is arithmetic
+
+sumary[10]_carry_eqn = A1L934;
+sumary[10]_lut_out = A1L12 $ C6_product[10] $ sumary[10]_carry_eqn;
+sumary[10] = DFFEAS(sumary[10]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L144 is sumary[10]~181
+--operation mode is arithmetic
+
+A1L144 = CARRY(A1L12 & (!A1L934 # !C6_product[10]) # !A1L12 & !C6_product[10] & !A1L934);
+
+
+--sumary[11] is sumary[11]
+--operation mode is arithmetic
+
+sumary[11]_carry_eqn = A1L144;
+sumary[11]_lut_out = A1L32 $ C6_product[11] $ !sumary[11]_carry_eqn;
+sumary[11] = DFFEAS(sumary[11]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L344 is sumary[11]~185
+--operation mode is arithmetic
+
+A1L344 = CARRY(A1L32 & C6_product[11] & !A1L144 # !A1L32 & (C6_product[11] # !A1L144));
+
+
+--sumary[12] is sumary[12]
+--operation mode is arithmetic
+
+sumary[12]_carry_eqn = A1L344;
+sumary[12]_lut_out = A1L52 $ C6_product[12] $ sumary[12]_carry_eqn;
+sumary[12] = DFFEAS(sumary[12]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L544 is sumary[12]~189
+--operation mode is arithmetic
+
+A1L544 = CARRY(A1L52 & (!A1L344 # !C6_product[12]) # !A1L52 & !C6_product[12] & !A1L344);
+
+
+--sumary[13] is sumary[13]
+--operation mode is arithmetic
+
+sumary[13]_carry_eqn = A1L544;
+sumary[13]_lut_out = A1L72 $ C6_product[13] $ !sumary[13]_carry_eqn;
+sumary[13] = DFFEAS(sumary[13]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L744 is sumary[13]~193
+--operation mode is arithmetic
+
+A1L744 = CARRY(A1L72 & C6_product[13] & !A1L544 # !A1L72 & (C6_product[13] # !A1L544));
+
+
+--sumary[14] is sumary[14]
+--operation mode is arithmetic
+
+sumary[14]_carry_eqn = A1L744;
+sumary[14]_lut_out = A1L92 $ C6_product[14] $ sumary[14]_carry_eqn;
+sumary[14] = DFFEAS(sumary[14]_lut_out, clock, VCC, , ewr, , , , );
+
+--A1L944 is sumary[14]~197
+--operation mode is arithmetic
+
+A1L944 = CARRY(A1L92 & (!A1L744 # !C6_product[14]) # !A1L92 & !C6_product[14] & !A1L744);
+
+
+--sumary[15] is sumary[15]
+--operation mode is normal
+
+sumary[15]_carry_eqn = A1L944;
+sumary[15]_lut_out = A1L13 $ C6_product[15] $ !sumary[15]_carry_eqn;
+sumary[15] = DFFEAS(sumary[15]_lut_out, clock, VCC, , ewr, , , , );
+
+
+--C1_product[0] is plus_mult:comb_4|product[0]
+--operation mode is normal
+
+C1_product[0]_lut_out = F2_result[0];
+C1_product[0] = DFFEAS(C1_product[0]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[1] is plus_mult:comb_4|product[1]
+--operation mode is normal
+
+C1_product[1]_lut_out = F2_result[1];
+C1_product[1] = DFFEAS(C1_product[1]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[2] is plus_mult:comb_4|product[2]
+--operation mode is normal
+
+C1_product[2]_lut_out = F2_result[2];
+C1_product[2] = DFFEAS(C1_product[2]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[3] is plus_mult:comb_4|product[3]
+--operation mode is normal
+
+C1_product[3]_lut_out = F2_result[3];
+C1_product[3] = DFFEAS(C1_product[3]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[4] is plus_mult:comb_4|product[4]
+--operation mode is normal
+
+C1_product[4]_lut_out = F2_result[4];
+C1_product[4] = DFFEAS(C1_product[4]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[5] is plus_mult:comb_4|product[5]
+--operation mode is normal
+
+C1_product[5]_lut_out = F2_result[5];
+C1_product[5] = DFFEAS(C1_product[5]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[6] is plus_mult:comb_4|product[6]
+--operation mode is normal
+
+C1_product[6]_lut_out = F2_result[6];
+C1_product[6] = DFFEAS(C1_product[6]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[7] is plus_mult:comb_4|product[7]
+--operation mode is normal
+
+C1_product[7]_lut_out = F2_result[7];
+C1_product[7] = DFFEAS(C1_product[7]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[8] is plus_mult:comb_4|product[8]
+--operation mode is normal
+
+C1_product[8]_lut_out = F2_result[8];
+C1_product[8] = DFFEAS(C1_product[8]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[9] is plus_mult:comb_4|product[9]
+--operation mode is normal
+
+C1_product[9]_lut_out = F2_result[9];
+C1_product[9] = DFFEAS(C1_product[9]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[10] is plus_mult:comb_4|product[10]
+--operation mode is normal
+
+C1_product[10]_lut_out = F2_result[10];
+C1_product[10] = DFFEAS(C1_product[10]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[11] is plus_mult:comb_4|product[11]
+--operation mode is normal
+
+C1_product[11]_lut_out = F2_result[11];
+C1_product[11] = DFFEAS(C1_product[11]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[12] is plus_mult:comb_4|product[12]
+--operation mode is normal
+
+C1_product[12]_lut_out = F2_result[12];
+C1_product[12] = DFFEAS(C1_product[12]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[13] is plus_mult:comb_4|product[13]
+--operation mode is normal
+
+C1_product[13]_lut_out = F2_result[13];
+C1_product[13] = DFFEAS(C1_product[13]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[14] is plus_mult:comb_4|product[14]
+--operation mode is normal
+
+C1_product[14]_lut_out = F2_result[14];
+C1_product[14] = DFFEAS(C1_product[14]_lut_out, clock, VCC, , , , , , );
+
+
+--C1_product[15] is plus_mult:comb_4|product[15]
+--operation mode is normal
+
+C1_product[15]_lut_out = F2_result[15];
+C1_product[15] = DFFEAS(C1_product[15]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[0] is plus_mult:comb_5|product[0]
+--operation mode is normal
+
+C2_product[0]_lut_out = F4_result[0];
+C2_product[0] = DFFEAS(C2_product[0]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[1] is plus_mult:comb_5|product[1]
+--operation mode is normal
+
+C2_product[1]_lut_out = F4_result[1];
+C2_product[1] = DFFEAS(C2_product[1]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[2] is plus_mult:comb_5|product[2]
+--operation mode is normal
+
+C2_product[2]_lut_out = F4_result[2];
+C2_product[2] = DFFEAS(C2_product[2]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[3] is plus_mult:comb_5|product[3]
+--operation mode is normal
+
+C2_product[3]_lut_out = F4_result[3];
+C2_product[3] = DFFEAS(C2_product[3]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[4] is plus_mult:comb_5|product[4]
+--operation mode is normal
+
+C2_product[4]_lut_out = F4_result[4];
+C2_product[4] = DFFEAS(C2_product[4]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[5] is plus_mult:comb_5|product[5]
+--operation mode is normal
+
+C2_product[5]_lut_out = F4_result[5];
+C2_product[5] = DFFEAS(C2_product[5]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[6] is plus_mult:comb_5|product[6]
+--operation mode is normal
+
+C2_product[6]_lut_out = F4_result[6];
+C2_product[6] = DFFEAS(C2_product[6]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[7] is plus_mult:comb_5|product[7]
+--operation mode is normal
+
+C2_product[7]_lut_out = F4_result[7];
+C2_product[7] = DFFEAS(C2_product[7]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[8] is plus_mult:comb_5|product[8]
+--operation mode is normal
+
+C2_product[8]_lut_out = F4_result[8];
+C2_product[8] = DFFEAS(C2_product[8]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[9] is plus_mult:comb_5|product[9]
+--operation mode is normal
+
+C2_product[9]_lut_out = F4_result[9];
+C2_product[9] = DFFEAS(C2_product[9]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[10] is plus_mult:comb_5|product[10]
+--operation mode is normal
+
+C2_product[10]_lut_out = F4_result[10];
+C2_product[10] = DFFEAS(C2_product[10]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[11] is plus_mult:comb_5|product[11]
+--operation mode is normal
+
+C2_product[11]_lut_out = F4_result[11];
+C2_product[11] = DFFEAS(C2_product[11]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[12] is plus_mult:comb_5|product[12]
+--operation mode is normal
+
+C2_product[12]_lut_out = F4_result[12];
+C2_product[12] = DFFEAS(C2_product[12]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[13] is plus_mult:comb_5|product[13]
+--operation mode is normal
+
+C2_product[13]_lut_out = F4_result[13];
+C2_product[13] = DFFEAS(C2_product[13]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[14] is plus_mult:comb_5|product[14]
+--operation mode is normal
+
+C2_product[14]_lut_out = F4_result[14];
+C2_product[14] = DFFEAS(C2_product[14]_lut_out, clock, VCC, , , , , , );
+
+
+--C2_product[15] is plus_mult:comb_5|product[15]
+--operation mode is normal
+
+C2_product[15]_lut_out = F4_result[15];
+C2_product[15] = DFFEAS(C2_product[15]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[0] is plus_mult:comb_6|product[0]
+--operation mode is normal
+
+C3_product[0]_lut_out = F6_result[0];
+C3_product[0] = DFFEAS(C3_product[0]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[1] is plus_mult:comb_6|product[1]
+--operation mode is normal
+
+C3_product[1]_lut_out = F6_result[1];
+C3_product[1] = DFFEAS(C3_product[1]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[2] is plus_mult:comb_6|product[2]
+--operation mode is normal
+
+C3_product[2]_lut_out = F6_result[2];
+C3_product[2] = DFFEAS(C3_product[2]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[3] is plus_mult:comb_6|product[3]
+--operation mode is normal
+
+C3_product[3]_lut_out = F6_result[3];
+C3_product[3] = DFFEAS(C3_product[3]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[4] is plus_mult:comb_6|product[4]
+--operation mode is normal
+
+C3_product[4]_lut_out = F6_result[4];
+C3_product[4] = DFFEAS(C3_product[4]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[5] is plus_mult:comb_6|product[5]
+--operation mode is normal
+
+C3_product[5]_lut_out = F6_result[5];
+C3_product[5] = DFFEAS(C3_product[5]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[6] is plus_mult:comb_6|product[6]
+--operation mode is normal
+
+C3_product[6]_lut_out = F6_result[6];
+C3_product[6] = DFFEAS(C3_product[6]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[7] is plus_mult:comb_6|product[7]
+--operation mode is normal
+
+C3_product[7]_lut_out = F6_result[7];
+C3_product[7] = DFFEAS(C3_product[7]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[8] is plus_mult:comb_6|product[8]
+--operation mode is normal
+
+C3_product[8]_lut_out = F6_result[8];
+C3_product[8] = DFFEAS(C3_product[8]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[9] is plus_mult:comb_6|product[9]
+--operation mode is normal
+
+C3_product[9]_lut_out = F6_result[9];
+C3_product[9] = DFFEAS(C3_product[9]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[10] is plus_mult:comb_6|product[10]
+--operation mode is normal
+
+C3_product[10]_lut_out = F6_result[10];
+C3_product[10] = DFFEAS(C3_product[10]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[11] is plus_mult:comb_6|product[11]
+--operation mode is normal
+
+C3_product[11]_lut_out = F6_result[11];
+C3_product[11] = DFFEAS(C3_product[11]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[12] is plus_mult:comb_6|product[12]
+--operation mode is normal
+
+C3_product[12]_lut_out = F6_result[12];
+C3_product[12] = DFFEAS(C3_product[12]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[13] is plus_mult:comb_6|product[13]
+--operation mode is normal
+
+C3_product[13]_lut_out = F6_result[13];
+C3_product[13] = DFFEAS(C3_product[13]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[14] is plus_mult:comb_6|product[14]
+--operation mode is normal
+
+C3_product[14]_lut_out = F6_result[14];
+C3_product[14] = DFFEAS(C3_product[14]_lut_out, clock, VCC, , , , , , );
+
+
+--C3_product[15] is plus_mult:comb_6|product[15]
+--operation mode is normal
+
+C3_product[15]_lut_out = F6_result[15];
+C3_product[15] = DFFEAS(C3_product[15]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[0] is plus_mult:comb_7|product[0]
+--operation mode is normal
+
+C4_product[0]_lut_out = F8_result[0];
+C4_product[0] = DFFEAS(C4_product[0]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[1] is plus_mult:comb_7|product[1]
+--operation mode is normal
+
+C4_product[1]_lut_out = F8_result[1];
+C4_product[1] = DFFEAS(C4_product[1]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[2] is plus_mult:comb_7|product[2]
+--operation mode is normal
+
+C4_product[2]_lut_out = F8_result[2];
+C4_product[2] = DFFEAS(C4_product[2]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[3] is plus_mult:comb_7|product[3]
+--operation mode is normal
+
+C4_product[3]_lut_out = F8_result[3];
+C4_product[3] = DFFEAS(C4_product[3]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[4] is plus_mult:comb_7|product[4]
+--operation mode is normal
+
+C4_product[4]_lut_out = F8_result[4];
+C4_product[4] = DFFEAS(C4_product[4]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[5] is plus_mult:comb_7|product[5]
+--operation mode is normal
+
+C4_product[5]_lut_out = F8_result[5];
+C4_product[5] = DFFEAS(C4_product[5]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[6] is plus_mult:comb_7|product[6]
+--operation mode is normal
+
+C4_product[6]_lut_out = F8_result[6];
+C4_product[6] = DFFEAS(C4_product[6]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[7] is plus_mult:comb_7|product[7]
+--operation mode is normal
+
+C4_product[7]_lut_out = F8_result[7];
+C4_product[7] = DFFEAS(C4_product[7]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[8] is plus_mult:comb_7|product[8]
+--operation mode is normal
+
+C4_product[8]_lut_out = F8_result[8];
+C4_product[8] = DFFEAS(C4_product[8]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[9] is plus_mult:comb_7|product[9]
+--operation mode is normal
+
+C4_product[9]_lut_out = F8_result[9];
+C4_product[9] = DFFEAS(C4_product[9]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[10] is plus_mult:comb_7|product[10]
+--operation mode is normal
+
+C4_product[10]_lut_out = F8_result[10];
+C4_product[10] = DFFEAS(C4_product[10]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[11] is plus_mult:comb_7|product[11]
+--operation mode is normal
+
+C4_product[11]_lut_out = F8_result[11];
+C4_product[11] = DFFEAS(C4_product[11]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[12] is plus_mult:comb_7|product[12]
+--operation mode is normal
+
+C4_product[12]_lut_out = F8_result[12];
+C4_product[12] = DFFEAS(C4_product[12]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[13] is plus_mult:comb_7|product[13]
+--operation mode is normal
+
+C4_product[13]_lut_out = F8_result[13];
+C4_product[13] = DFFEAS(C4_product[13]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[14] is plus_mult:comb_7|product[14]
+--operation mode is normal
+
+C4_product[14]_lut_out = F8_result[14];
+C4_product[14] = DFFEAS(C4_product[14]_lut_out, clock, VCC, , , , , , );
+
+
+--C4_product[15] is plus_mult:comb_7|product[15]
+--operation mode is normal
+
+C4_product[15]_lut_out = F8_result[15];
+C4_product[15] = DFFEAS(C4_product[15]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[0] is plus_mult:comb_8|product[0]
+--operation mode is normal
+
+C5_product[0]_lut_out = F01_result[0];
+C5_product[0] = DFFEAS(C5_product[0]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[1] is plus_mult:comb_8|product[1]
+--operation mode is normal
+
+C5_product[1]_lut_out = F01_result[1];
+C5_product[1] = DFFEAS(C5_product[1]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[2] is plus_mult:comb_8|product[2]
+--operation mode is normal
+
+C5_product[2]_lut_out = F01_result[2];
+C5_product[2] = DFFEAS(C5_product[2]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[3] is plus_mult:comb_8|product[3]
+--operation mode is normal
+
+C5_product[3]_lut_out = F01_result[3];
+C5_product[3] = DFFEAS(C5_product[3]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[4] is plus_mult:comb_8|product[4]
+--operation mode is normal
+
+C5_product[4]_lut_out = F01_result[4];
+C5_product[4] = DFFEAS(C5_product[4]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[5] is plus_mult:comb_8|product[5]
+--operation mode is normal
+
+C5_product[5]_lut_out = F01_result[5];
+C5_product[5] = DFFEAS(C5_product[5]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[6] is plus_mult:comb_8|product[6]
+--operation mode is normal
+
+C5_product[6]_lut_out = F01_result[6];
+C5_product[6] = DFFEAS(C5_product[6]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[7] is plus_mult:comb_8|product[7]
+--operation mode is normal
+
+C5_product[7]_lut_out = F01_result[7];
+C5_product[7] = DFFEAS(C5_product[7]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[8] is plus_mult:comb_8|product[8]
+--operation mode is normal
+
+C5_product[8]_lut_out = F01_result[8];
+C5_product[8] = DFFEAS(C5_product[8]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[9] is plus_mult:comb_8|product[9]
+--operation mode is normal
+
+C5_product[9]_lut_out = F01_result[9];
+C5_product[9] = DFFEAS(C5_product[9]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[10] is plus_mult:comb_8|product[10]
+--operation mode is normal
+
+C5_product[10]_lut_out = F01_result[10];
+C5_product[10] = DFFEAS(C5_product[10]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[11] is plus_mult:comb_8|product[11]
+--operation mode is normal
+
+C5_product[11]_lut_out = F01_result[11];
+C5_product[11] = DFFEAS(C5_product[11]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[12] is plus_mult:comb_8|product[12]
+--operation mode is normal
+
+C5_product[12]_lut_out = F01_result[12];
+C5_product[12] = DFFEAS(C5_product[12]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[13] is plus_mult:comb_8|product[13]
+--operation mode is normal
+
+C5_product[13]_lut_out = F01_result[13];
+C5_product[13] = DFFEAS(C5_product[13]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[14] is plus_mult:comb_8|product[14]
+--operation mode is normal
+
+C5_product[14]_lut_out = F01_result[14];
+C5_product[14] = DFFEAS(C5_product[14]_lut_out, clock, VCC, , , , , , );
+
+
+--C5_product[15] is plus_mult:comb_8|product[15]
+--operation mode is normal
+
+C5_product[15]_lut_out = F01_result[15];
+C5_product[15] = DFFEAS(C5_product[15]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[0] is plus_mult:comb_9|product[0]
+--operation mode is normal
+
+C6_product[0]_lut_out = F21_result[0];
+C6_product[0] = DFFEAS(C6_product[0]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[1] is plus_mult:comb_9|product[1]
+--operation mode is normal
+
+C6_product[1]_lut_out = F21_result[1];
+C6_product[1] = DFFEAS(C6_product[1]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[2] is plus_mult:comb_9|product[2]
+--operation mode is normal
+
+C6_product[2]_lut_out = F21_result[2];
+C6_product[2] = DFFEAS(C6_product[2]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[3] is plus_mult:comb_9|product[3]
+--operation mode is normal
+
+C6_product[3]_lut_out = F21_result[3];
+C6_product[3] = DFFEAS(C6_product[3]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[4] is plus_mult:comb_9|product[4]
+--operation mode is normal
+
+C6_product[4]_lut_out = F21_result[4];
+C6_product[4] = DFFEAS(C6_product[4]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[5] is plus_mult:comb_9|product[5]
+--operation mode is normal
+
+C6_product[5]_lut_out = F21_result[5];
+C6_product[5] = DFFEAS(C6_product[5]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[6] is plus_mult:comb_9|product[6]
+--operation mode is normal
+
+C6_product[6]_lut_out = F21_result[6];
+C6_product[6] = DFFEAS(C6_product[6]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[7] is plus_mult:comb_9|product[7]
+--operation mode is normal
+
+C6_product[7]_lut_out = F21_result[7];
+C6_product[7] = DFFEAS(C6_product[7]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[8] is plus_mult:comb_9|product[8]
+--operation mode is normal
+
+C6_product[8]_lut_out = F21_result[8];
+C6_product[8] = DFFEAS(C6_product[8]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[9] is plus_mult:comb_9|product[9]
+--operation mode is normal
+
+C6_product[9]_lut_out = F21_result[9];
+C6_product[9] = DFFEAS(C6_product[9]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[10] is plus_mult:comb_9|product[10]
+--operation mode is normal
+
+C6_product[10]_lut_out = F21_result[10];
+C6_product[10] = DFFEAS(C6_product[10]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[11] is plus_mult:comb_9|product[11]
+--operation mode is normal
+
+C6_product[11]_lut_out = F21_result[11];
+C6_product[11] = DFFEAS(C6_product[11]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[12] is plus_mult:comb_9|product[12]
+--operation mode is normal
+
+C6_product[12]_lut_out = F21_result[12];
+C6_product[12] = DFFEAS(C6_product[12]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[13] is plus_mult:comb_9|product[13]
+--operation mode is normal
+
+C6_product[13]_lut_out = F21_result[13];
+C6_product[13] = DFFEAS(C6_product[13]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[14] is plus_mult:comb_9|product[14]
+--operation mode is normal
+
+C6_product[14]_lut_out = F21_result[14];
+C6_product[14] = DFFEAS(C6_product[14]_lut_out, clock, VCC, , , , , , );
+
+
+--C6_product[15] is plus_mult:comb_9|product[15]
+--operation mode is normal
+
+C6_product[15]_lut_out = F21_result[15];
+C6_product[15] = DFFEAS(C6_product[15]_lut_out, clock, VCC, , , , , , );
+
+
+--A1L1 is add~1106
+--operation mode is arithmetic
+
+A1L1 = C5_product[0] $ A1L23;
+
+--A1L2 is add~1108
+--operation mode is arithmetic
+
+A1L2 = CARRY(A1L23 # !C5_product[0]);
+
+
+--A1L3 is add~1111
+--operation mode is arithmetic
+
+A1L3_carry_eqn = A1L2;
+A1L3 = C5_product[1] $ A1L43 $ !A1L3_carry_eqn;
+
+--A1L4 is add~1113
+--operation mode is arithmetic
+
+A1L4 = CARRY(C5_product[1] & (!A1L2 # !A1L43) # !C5_product[1] & !A1L43 & !A1L2);
+
+
+--A1L5 is add~1116
+--operation mode is arithmetic
+
+A1L5_carry_eqn = A1L4;
+A1L5 = C5_product[2] $ A1L63 $ A1L5_carry_eqn;
+
+--A1L6 is add~1118
+--operation mode is arithmetic
+
+A1L6 = CARRY(C5_product[2] & A1L63 & !A1L4 # !C5_product[2] & (A1L63 # !A1L4));
+
+
+--A1L7 is add~1121
+--operation mode is arithmetic
+
+A1L7_carry_eqn = A1L6;
+A1L7 = C5_product[3] $ A1L83 $ !A1L7_carry_eqn;
+
+--A1L8 is add~1123
+--operation mode is arithmetic
+
+A1L8 = CARRY(C5_product[3] & (!A1L6 # !A1L83) # !C5_product[3] & !A1L83 & !A1L6);
+
+
+--A1L9 is add~1126
+--operation mode is arithmetic
+
+A1L9_carry_eqn = A1L8;
+A1L9 = C5_product[4] $ A1L04 $ A1L9_carry_eqn;
+
+--A1L01 is add~1128
+--operation mode is arithmetic
+
+A1L01 = CARRY(C5_product[4] & A1L04 & !A1L8 # !C5_product[4] & (A1L04 # !A1L8));
+
+
+--A1L11 is add~1131
+--operation mode is arithmetic
+
+A1L11_carry_eqn = A1L01;
+A1L11 = C5_product[5] $ A1L24 $ !A1L11_carry_eqn;
+
+--A1L21 is add~1133
+--operation mode is arithmetic
+
+A1L21 = CARRY(C5_product[5] & (!A1L01 # !A1L24) # !C5_product[5] & !A1L24 & !A1L01);
+
+
+--A1L31 is add~1136
+--operation mode is arithmetic
+
+A1L31_carry_eqn = A1L21;
+A1L31 = C5_product[6] $ A1L44 $ A1L31_carry_eqn;
+
+--A1L41 is add~1138
+--operation mode is arithmetic
+
+A1L41 = CARRY(C5_product[6] & A1L44 & !A1L21 # !C5_product[6] & (A1L44 # !A1L21));
+
+
+--A1L51 is add~1141
+--operation mode is arithmetic
+
+A1L51_carry_eqn = A1L41;
+A1L51 = C5_product[7] $ A1L64 $ !A1L51_carry_eqn;
+
+--A1L61 is add~1143
+--operation mode is arithmetic
+
+A1L61 = CARRY(C5_product[7] & (!A1L41 # !A1L64) # !C5_product[7] & !A1L64 & !A1L41);
+
+
+--A1L71 is add~1146
+--operation mode is arithmetic
+
+A1L71_carry_eqn = A1L61;
+A1L71 = C5_product[8] $ A1L84 $ A1L71_carry_eqn;
+
+--A1L81 is add~1148
+--operation mode is arithmetic
+
+A1L81 = CARRY(C5_product[8] & A1L84 & !A1L61 # !C5_product[8] & (A1L84 # !A1L61));
+
+
+--A1L91 is add~1151
+--operation mode is arithmetic
+
+A1L91_carry_eqn = A1L81;
+A1L91 = C5_product[9] $ A1L05 $ !A1L91_carry_eqn;
+
+--A1L02 is add~1153
+--operation mode is arithmetic
+
+A1L02 = CARRY(C5_product[9] & (!A1L81 # !A1L05) # !C5_product[9] & !A1L05 & !A1L81);
+
+
+--A1L12 is add~1156
+--operation mode is arithmetic
+
+A1L12_carry_eqn = A1L02;
+A1L12 = C5_product[10] $ A1L25 $ A1L12_carry_eqn;
+
+--A1L22 is add~1158
+--operation mode is arithmetic
+
+A1L22 = CARRY(C5_product[10] & A1L25 & !A1L02 # !C5_product[10] & (A1L25 # !A1L02));
+
+
+--A1L32 is add~1161
+--operation mode is arithmetic
+
+A1L32_carry_eqn = A1L22;
+A1L32 = C5_product[11] $ A1L45 $ !A1L32_carry_eqn;
+
+--A1L42 is add~1163
+--operation mode is arithmetic
+
+A1L42 = CARRY(C5_product[11] & (!A1L22 # !A1L45) # !C5_product[11] & !A1L45 & !A1L22);
+
+
+--A1L52 is add~1166
+--operation mode is arithmetic
+
+A1L52_carry_eqn = A1L42;
+A1L52 = C5_product[12] $ A1L65 $ A1L52_carry_eqn;
+
+--A1L62 is add~1168
+--operation mode is arithmetic
+
+A1L62 = CARRY(C5_product[12] & A1L65 & !A1L42 # !C5_product[12] & (A1L65 # !A1L42));
+
+
+--A1L72 is add~1171
+--operation mode is arithmetic
+
+A1L72_carry_eqn = A1L62;
+A1L72 = C5_product[13] $ A1L85 $ !A1L72_carry_eqn;
+
+--A1L82 is add~1173
+--operation mode is arithmetic
+
+A1L82 = CARRY(C5_product[13] & (!A1L62 # !A1L85) # !C5_product[13] & !A1L85 & !A1L62);
+
+
+--A1L92 is add~1176
+--operation mode is arithmetic
+
+A1L92_carry_eqn = A1L82;
+A1L92 = C5_product[14] $ A1L06 $ A1L92_carry_eqn;
+
+--A1L03 is add~1178
+--operation mode is arithmetic
+
+A1L03 = CARRY(C5_product[14] & A1L06 & !A1L82 # !C5_product[14] & (A1L06 # !A1L82));
+
+
+--A1L13 is add~1181
+--operation mode is normal
+
+A1L13_carry_eqn = A1L03;
+A1L13 = C5_product[15] $ A1L26 $ !A1L13_carry_eqn;
+
+
+--F2_result[0] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F2_result[0] = F2_mac_mult2;
+
+--F2_result[1] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[1]
+F2_result[1] = F2L2;
+
+--F2_result[2] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[2]
+F2_result[2] = F2L3;
+
+--F2_result[3] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[3]
+F2_result[3] = F2L4;
+
+--F2_result[4] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[4]
+F2_result[4] = F2L5;
+
+--F2_result[5] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[5]
+F2_result[5] = F2L6;
+
+--F2_result[6] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[6]
+F2_result[6] = F2L7;
+
+--F2_result[7] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[7]
+F2_result[7] = F2L8;
+
+--F2_result[8] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[8]
+F2_result[8] = F2L9;
+
+--F2_result[9] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[9]
+F2_result[9] = F2L01;
+
+--F2_result[10] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[10]
+F2_result[10] = F2L11;
+
+--F2_result[11] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[11]
+F2_result[11] = F2L21;
+
+--F2_result[12] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[12]
+F2_result[12] = F2L31;
+
+--F2_result[13] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[13]
+F2_result[13] = F2L41;
+
+--F2_result[14] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[14]
+F2_result[14] = F2L51;
+
+--F2_result[15] is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|result[15]
+F2_result[15] = F2L61;
+
+
+--F4_result[0] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F4_result[0] = F4_mac_mult2;
+
+--F4_result[1] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[1]
+F4_result[1] = F4L2;
+
+--F4_result[2] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[2]
+F4_result[2] = F4L3;
+
+--F4_result[3] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[3]
+F4_result[3] = F4L4;
+
+--F4_result[4] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[4]
+F4_result[4] = F4L5;
+
+--F4_result[5] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[5]
+F4_result[5] = F4L6;
+
+--F4_result[6] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[6]
+F4_result[6] = F4L7;
+
+--F4_result[7] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[7]
+F4_result[7] = F4L8;
+
+--F4_result[8] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[8]
+F4_result[8] = F4L9;
+
+--F4_result[9] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[9]
+F4_result[9] = F4L01;
+
+--F4_result[10] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[10]
+F4_result[10] = F4L11;
+
+--F4_result[11] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[11]
+F4_result[11] = F4L21;
+
+--F4_result[12] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[12]
+F4_result[12] = F4L31;
+
+--F4_result[13] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[13]
+F4_result[13] = F4L41;
+
+--F4_result[14] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[14]
+F4_result[14] = F4L51;
+
+--F4_result[15] is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|result[15]
+F4_result[15] = F4L61;
+
+
+--F6_result[0] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F6_result[0] = F6_mac_mult2;
+
+--F6_result[1] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[1]
+F6_result[1] = F6L2;
+
+--F6_result[2] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[2]
+F6_result[2] = F6L3;
+
+--F6_result[3] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[3]
+F6_result[3] = F6L4;
+
+--F6_result[4] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[4]
+F6_result[4] = F6L5;
+
+--F6_result[5] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[5]
+F6_result[5] = F6L6;
+
+--F6_result[6] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[6]
+F6_result[6] = F6L7;
+
+--F6_result[7] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[7]
+F6_result[7] = F6L8;
+
+--F6_result[8] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[8]
+F6_result[8] = F6L9;
+
+--F6_result[9] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[9]
+F6_result[9] = F6L01;
+
+--F6_result[10] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[10]
+F6_result[10] = F6L11;
+
+--F6_result[11] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[11]
+F6_result[11] = F6L21;
+
+--F6_result[12] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[12]
+F6_result[12] = F6L31;
+
+--F6_result[13] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[13]
+F6_result[13] = F6L41;
+
+--F6_result[14] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[14]
+F6_result[14] = F6L51;
+
+--F6_result[15] is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|result[15]
+F6_result[15] = F6L61;
+
+
+--F8_result[0] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F8_result[0] = F8_mac_mult2;
+
+--F8_result[1] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[1]
+F8_result[1] = F8L2;
+
+--F8_result[2] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[2]
+F8_result[2] = F8L3;
+
+--F8_result[3] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[3]
+F8_result[3] = F8L4;
+
+--F8_result[4] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[4]
+F8_result[4] = F8L5;
+
+--F8_result[5] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[5]
+F8_result[5] = F8L6;
+
+--F8_result[6] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[6]
+F8_result[6] = F8L7;
+
+--F8_result[7] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[7]
+F8_result[7] = F8L8;
+
+--F8_result[8] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[8]
+F8_result[8] = F8L9;
+
+--F8_result[9] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[9]
+F8_result[9] = F8L01;
+
+--F8_result[10] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[10]
+F8_result[10] = F8L11;
+
+--F8_result[11] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[11]
+F8_result[11] = F8L21;
+
+--F8_result[12] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[12]
+F8_result[12] = F8L31;
+
+--F8_result[13] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[13]
+F8_result[13] = F8L41;
+
+--F8_result[14] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[14]
+F8_result[14] = F8L51;
+
+--F8_result[15] is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|result[15]
+F8_result[15] = F8L61;
+
+
+--F01_result[0] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F01_result[0] = F01_mac_mult2;
+
+--F01_result[1] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[1]
+F01_result[1] = F01L2;
+
+--F01_result[2] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[2]
+F01_result[2] = F01L3;
+
+--F01_result[3] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[3]
+F01_result[3] = F01L4;
+
+--F01_result[4] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[4]
+F01_result[4] = F01L5;
+
+--F01_result[5] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[5]
+F01_result[5] = F01L6;
+
+--F01_result[6] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[6]
+F01_result[6] = F01L7;
+
+--F01_result[7] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[7]
+F01_result[7] = F01L8;
+
+--F01_result[8] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[8]
+F01_result[8] = F01L9;
+
+--F01_result[9] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[9]
+F01_result[9] = F01L01;
+
+--F01_result[10] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[10]
+F01_result[10] = F01L11;
+
+--F01_result[11] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[11]
+F01_result[11] = F01L21;
+
+--F01_result[12] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[12]
+F01_result[12] = F01L31;
+
+--F01_result[13] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[13]
+F01_result[13] = F01L41;
+
+--F01_result[14] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[14]
+F01_result[14] = F01L51;
+
+--F01_result[15] is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|result[15]
+F01_result[15] = F01L61;
+
+
+--F21_result[0] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F21_result[0] = F21_mac_mult2;
+
+--F21_result[1] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[1]
+F21_result[1] = F21L2;
+
+--F21_result[2] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[2]
+F21_result[2] = F21L3;
+
+--F21_result[3] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[3]
+F21_result[3] = F21L4;
+
+--F21_result[4] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[4]
+F21_result[4] = F21L5;
+
+--F21_result[5] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[5]
+F21_result[5] = F21L6;
+
+--F21_result[6] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[6]
+F21_result[6] = F21L7;
+
+--F21_result[7] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[7]
+F21_result[7] = F21L8;
+
+--F21_result[8] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[8]
+F21_result[8] = F21L9;
+
+--F21_result[9] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[9]
+F21_result[9] = F21L01;
+
+--F21_result[10] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[10]
+F21_result[10] = F21L11;
+
+--F21_result[11] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[11]
+F21_result[11] = F21L21;
+
+--F21_result[12] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[12]
+F21_result[12] = F21L31;
+
+--F21_result[13] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[13]
+F21_result[13] = F21L41;
+
+--F21_result[14] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[14]
+F21_result[14] = F21L51;
+
+--F21_result[15] is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|result[15]
+F21_result[15] = F21L61;
+
+
+--A1L23 is add~1186
+--operation mode is arithmetic
+
+A1L23 = A1L36 $ C4_product[0];
+
+--A1L33 is add~1188
+--operation mode is arithmetic
+
+A1L33 = CARRY(A1L36 # !C4_product[0]);
+
+
+--A1L43 is add~1191
+--operation mode is arithmetic
+
+A1L43_carry_eqn = A1L33;
+A1L43 = A1L56 $ C4_product[1] $ !A1L43_carry_eqn;
+
+--A1L53 is add~1193
+--operation mode is arithmetic
+
+A1L53 = CARRY(A1L56 & C4_product[1] & !A1L33 # !A1L56 & (C4_product[1] # !A1L33));
+
+
+--A1L63 is add~1196
+--operation mode is arithmetic
+
+A1L63_carry_eqn = A1L53;
+A1L63 = A1L76 $ C4_product[2] $ A1L63_carry_eqn;
+
+--A1L73 is add~1198
+--operation mode is arithmetic
+
+A1L73 = CARRY(A1L76 & (!A1L53 # !C4_product[2]) # !A1L76 & !C4_product[2] & !A1L53);
+
+
+--A1L83 is add~1201
+--operation mode is arithmetic
+
+A1L83_carry_eqn = A1L73;
+A1L83 = A1L96 $ C4_product[3] $ !A1L83_carry_eqn;
+
+--A1L93 is add~1203
+--operation mode is arithmetic
+
+A1L93 = CARRY(A1L96 & C4_product[3] & !A1L73 # !A1L96 & (C4_product[3] # !A1L73));
+
+
+--A1L04 is add~1206
+--operation mode is arithmetic
+
+A1L04_carry_eqn = A1L93;
+A1L04 = A1L17 $ C4_product[4] $ A1L04_carry_eqn;
+
+--A1L14 is add~1208
+--operation mode is arithmetic
+
+A1L14 = CARRY(A1L17 & (!A1L93 # !C4_product[4]) # !A1L17 & !C4_product[4] & !A1L93);
+
+
+--A1L24 is add~1211
+--operation mode is arithmetic
+
+A1L24_carry_eqn = A1L14;
+A1L24 = A1L37 $ C4_product[5] $ !A1L24_carry_eqn;
+
+--A1L34 is add~1213
+--operation mode is arithmetic
+
+A1L34 = CARRY(A1L37 & C4_product[5] & !A1L14 # !A1L37 & (C4_product[5] # !A1L14));
+
+
+--A1L44 is add~1216
+--operation mode is arithmetic
+
+A1L44_carry_eqn = A1L34;
+A1L44 = A1L57 $ C4_product[6] $ A1L44_carry_eqn;
+
+--A1L54 is add~1218
+--operation mode is arithmetic
+
+A1L54 = CARRY(A1L57 & (!A1L34 # !C4_product[6]) # !A1L57 & !C4_product[6] & !A1L34);
+
+
+--A1L64 is add~1221
+--operation mode is arithmetic
+
+A1L64_carry_eqn = A1L54;
+A1L64 = A1L77 $ C4_product[7] $ !A1L64_carry_eqn;
+
+--A1L74 is add~1223
+--operation mode is arithmetic
+
+A1L74 = CARRY(A1L77 & C4_product[7] & !A1L54 # !A1L77 & (C4_product[7] # !A1L54));
+
+
+--A1L84 is add~1226
+--operation mode is arithmetic
+
+A1L84_carry_eqn = A1L74;
+A1L84 = A1L97 $ C4_product[8] $ A1L84_carry_eqn;
+
+--A1L94 is add~1228
+--operation mode is arithmetic
+
+A1L94 = CARRY(A1L97 & (!A1L74 # !C4_product[8]) # !A1L97 & !C4_product[8] & !A1L74);
+
+
+--A1L05 is add~1231
+--operation mode is arithmetic
+
+A1L05_carry_eqn = A1L94;
+A1L05 = A1L18 $ C4_product[9] $ !A1L05_carry_eqn;
+
+--A1L15 is add~1233
+--operation mode is arithmetic
+
+A1L15 = CARRY(A1L18 & C4_product[9] & !A1L94 # !A1L18 & (C4_product[9] # !A1L94));
+
+
+--A1L25 is add~1236
+--operation mode is arithmetic
+
+A1L25_carry_eqn = A1L15;
+A1L25 = A1L38 $ C4_product[10] $ A1L25_carry_eqn;
+
+--A1L35 is add~1238
+--operation mode is arithmetic
+
+A1L35 = CARRY(A1L38 & (!A1L15 # !C4_product[10]) # !A1L38 & !C4_product[10] & !A1L15);
+
+
+--A1L45 is add~1241
+--operation mode is arithmetic
+
+A1L45_carry_eqn = A1L35;
+A1L45 = A1L58 $ C4_product[11] $ !A1L45_carry_eqn;
+
+--A1L55 is add~1243
+--operation mode is arithmetic
+
+A1L55 = CARRY(A1L58 & C4_product[11] & !A1L35 # !A1L58 & (C4_product[11] # !A1L35));
+
+
+--A1L65 is add~1246
+--operation mode is arithmetic
+
+A1L65_carry_eqn = A1L55;
+A1L65 = A1L78 $ C4_product[12] $ A1L65_carry_eqn;
+
+--A1L75 is add~1248
+--operation mode is arithmetic
+
+A1L75 = CARRY(A1L78 & (!A1L55 # !C4_product[12]) # !A1L78 & !C4_product[12] & !A1L55);
+
+
+--A1L85 is add~1251
+--operation mode is arithmetic
+
+A1L85_carry_eqn = A1L75;
+A1L85 = A1L98 $ C4_product[13] $ !A1L85_carry_eqn;
+
+--A1L95 is add~1253
+--operation mode is arithmetic
+
+A1L95 = CARRY(A1L98 & C4_product[13] & !A1L75 # !A1L98 & (C4_product[13] # !A1L75));
+
+
+--A1L06 is add~1256
+--operation mode is arithmetic
+
+A1L06_carry_eqn = A1L95;
+A1L06 = A1L19 $ C4_product[14] $ A1L06_carry_eqn;
+
+--A1L16 is add~1258
+--operation mode is arithmetic
+
+A1L16 = CARRY(A1L19 & (!A1L95 # !C4_product[14]) # !A1L19 & !C4_product[14] & !A1L95);
+
+
+--A1L26 is add~1261
+--operation mode is normal
+
+A1L26_carry_eqn = A1L16;
+A1L26 = A1L39 $ C4_product[15] $ !A1L26_carry_eqn;
+
+
+--F2_mac_mult2 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F2_mac_mult2_a_data = DATA(F1_result[15], F1_result[14], F1_result[13], F1_result[12], F1_result[11], F1_result[10], F1_result[9], F1_result[8], F1_result[7], F1_result[6], F1_result[5], F1_result[4], F1_result[3], F1_result[2], F1_result[1], F1_result[0]);
+F2_mac_mult2_a_rep = UNSIGNED(F2_mac_mult2_a_data);
+F2_mac_mult2_b_data = DATA(arr[9][15], arr[9][14], arr[9][13], arr[9][12], arr[9][11], arr[9][10], arr[9][9], arr[9][8], arr[9][7], arr[9][6], arr[9][5], arr[9][4], arr[9][3], arr[9][2], arr[9][1], arr[9][0]);
+F2_mac_mult2_b_rep = UNSIGNED(F2_mac_mult2_b_data);
+F2_mac_mult2_result = F2_mac_mult2_a_rep * F2_mac_mult2_b_rep;
+F2_mac_mult2 = F2_mac_mult2_result[0];
+
+--F2L2 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F2L2 = F2_mac_mult2_result[1];
+
+--F2L3 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F2L3 = F2_mac_mult2_result[2];
+
+--F2L4 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F2L4 = F2_mac_mult2_result[3];
+
+--F2L5 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F2L5 = F2_mac_mult2_result[4];
+
+--F2L6 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F2L6 = F2_mac_mult2_result[5];
+
+--F2L7 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F2L7 = F2_mac_mult2_result[6];
+
+--F2L8 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F2L8 = F2_mac_mult2_result[7];
+
+--F2L9 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F2L9 = F2_mac_mult2_result[8];
+
+--F2L01 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F2L01 = F2_mac_mult2_result[9];
+
+--F2L11 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F2L11 = F2_mac_mult2_result[10];
+
+--F2L21 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F2L21 = F2_mac_mult2_result[11];
+
+--F2L31 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F2L31 = F2_mac_mult2_result[12];
+
+--F2L41 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F2L41 = F2_mac_mult2_result[13];
+
+--F2L51 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F2L51 = F2_mac_mult2_result[14];
+
+--F2L61 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F2L61 = F2_mac_mult2_result[15];
+
+--F2L71 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F2L71 = F2_mac_mult2_result[16];
+
+--F2L81 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F2L81 = F2_mac_mult2_result[17];
+
+--F2L91 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F2L91 = F2_mac_mult2_result[18];
+
+--F2L02 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F2L02 = F2_mac_mult2_result[19];
+
+--F2L12 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F2L12 = F2_mac_mult2_result[20];
+
+--F2L22 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F2L22 = F2_mac_mult2_result[21];
+
+--F2L32 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F2L32 = F2_mac_mult2_result[22];
+
+--F2L42 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F2L42 = F2_mac_mult2_result[23];
+
+--F2L52 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F2L52 = F2_mac_mult2_result[24];
+
+--F2L62 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F2L62 = F2_mac_mult2_result[25];
+
+--F2L72 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F2L72 = F2_mac_mult2_result[26];
+
+--F2L82 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F2L82 = F2_mac_mult2_result[27];
+
+--F2L92 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F2L92 = F2_mac_mult2_result[28];
+
+--F2L03 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F2L03 = F2_mac_mult2_result[29];
+
+--F2L13 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F2L13 = F2_mac_mult2_result[30];
+
+--F2L23 is plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F2L23 = F2_mac_mult2_result[31];
+
+
+--F4_mac_mult2 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F4_mac_mult2_a_data = DATA(F3_result[15], F3_result[14], F3_result[13], F3_result[12], F3_result[11], F3_result[10], F3_result[9], F3_result[8], F3_result[7], F3_result[6], F3_result[5], F3_result[4], F3_result[3], F3_result[2], F3_result[1], F3_result[0]);
+F4_mac_mult2_a_rep = UNSIGNED(F4_mac_mult2_a_data);
+F4_mac_mult2_b_data = DATA(arr[7][15], arr[7][14], arr[7][13], arr[7][12], arr[7][11], arr[7][10], arr[7][9], arr[7][8], arr[7][7], arr[7][6], arr[7][5], arr[7][4], arr[7][3], arr[7][2], arr[7][1], arr[7][0]);
+F4_mac_mult2_b_rep = UNSIGNED(F4_mac_mult2_b_data);
+F4_mac_mult2_result = F4_mac_mult2_a_rep * F4_mac_mult2_b_rep;
+F4_mac_mult2 = F4_mac_mult2_result[0];
+
+--F4L2 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F4L2 = F4_mac_mult2_result[1];
+
+--F4L3 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F4L3 = F4_mac_mult2_result[2];
+
+--F4L4 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F4L4 = F4_mac_mult2_result[3];
+
+--F4L5 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F4L5 = F4_mac_mult2_result[4];
+
+--F4L6 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F4L6 = F4_mac_mult2_result[5];
+
+--F4L7 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F4L7 = F4_mac_mult2_result[6];
+
+--F4L8 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F4L8 = F4_mac_mult2_result[7];
+
+--F4L9 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F4L9 = F4_mac_mult2_result[8];
+
+--F4L01 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F4L01 = F4_mac_mult2_result[9];
+
+--F4L11 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F4L11 = F4_mac_mult2_result[10];
+
+--F4L21 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F4L21 = F4_mac_mult2_result[11];
+
+--F4L31 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F4L31 = F4_mac_mult2_result[12];
+
+--F4L41 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F4L41 = F4_mac_mult2_result[13];
+
+--F4L51 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F4L51 = F4_mac_mult2_result[14];
+
+--F4L61 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F4L61 = F4_mac_mult2_result[15];
+
+--F4L71 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F4L71 = F4_mac_mult2_result[16];
+
+--F4L81 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F4L81 = F4_mac_mult2_result[17];
+
+--F4L91 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F4L91 = F4_mac_mult2_result[18];
+
+--F4L02 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F4L02 = F4_mac_mult2_result[19];
+
+--F4L12 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F4L12 = F4_mac_mult2_result[20];
+
+--F4L22 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F4L22 = F4_mac_mult2_result[21];
+
+--F4L32 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F4L32 = F4_mac_mult2_result[22];
+
+--F4L42 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F4L42 = F4_mac_mult2_result[23];
+
+--F4L52 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F4L52 = F4_mac_mult2_result[24];
+
+--F4L62 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F4L62 = F4_mac_mult2_result[25];
+
+--F4L72 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F4L72 = F4_mac_mult2_result[26];
+
+--F4L82 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F4L82 = F4_mac_mult2_result[27];
+
+--F4L92 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F4L92 = F4_mac_mult2_result[28];
+
+--F4L03 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F4L03 = F4_mac_mult2_result[29];
+
+--F4L13 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F4L13 = F4_mac_mult2_result[30];
+
+--F4L23 is plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F4L23 = F4_mac_mult2_result[31];
+
+
+--F6_mac_mult2 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F6_mac_mult2_a_data = DATA(F5_result[15], F5_result[14], F5_result[13], F5_result[12], F5_result[11], F5_result[10], F5_result[9], F5_result[8], F5_result[7], F5_result[6], F5_result[5], F5_result[4], F5_result[3], F5_result[2], F5_result[1], F5_result[0]);
+F6_mac_mult2_a_rep = UNSIGNED(F6_mac_mult2_a_data);
+F6_mac_mult2_b_data = DATA(arr[3][15], arr[3][14], arr[3][13], arr[3][12], arr[3][11], arr[3][10], arr[3][9], arr[3][8], arr[3][7], arr[3][6], arr[3][5], arr[3][4], arr[3][3], arr[3][2], arr[3][1], arr[3][0]);
+F6_mac_mult2_b_rep = UNSIGNED(F6_mac_mult2_b_data);
+F6_mac_mult2_result = F6_mac_mult2_a_rep * F6_mac_mult2_b_rep;
+F6_mac_mult2 = F6_mac_mult2_result[0];
+
+--F6L2 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F6L2 = F6_mac_mult2_result[1];
+
+--F6L3 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F6L3 = F6_mac_mult2_result[2];
+
+--F6L4 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F6L4 = F6_mac_mult2_result[3];
+
+--F6L5 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F6L5 = F6_mac_mult2_result[4];
+
+--F6L6 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F6L6 = F6_mac_mult2_result[5];
+
+--F6L7 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F6L7 = F6_mac_mult2_result[6];
+
+--F6L8 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F6L8 = F6_mac_mult2_result[7];
+
+--F6L9 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F6L9 = F6_mac_mult2_result[8];
+
+--F6L01 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F6L01 = F6_mac_mult2_result[9];
+
+--F6L11 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F6L11 = F6_mac_mult2_result[10];
+
+--F6L21 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F6L21 = F6_mac_mult2_result[11];
+
+--F6L31 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F6L31 = F6_mac_mult2_result[12];
+
+--F6L41 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F6L41 = F6_mac_mult2_result[13];
+
+--F6L51 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F6L51 = F6_mac_mult2_result[14];
+
+--F6L61 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F6L61 = F6_mac_mult2_result[15];
+
+--F6L71 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F6L71 = F6_mac_mult2_result[16];
+
+--F6L81 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F6L81 = F6_mac_mult2_result[17];
+
+--F6L91 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F6L91 = F6_mac_mult2_result[18];
+
+--F6L02 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F6L02 = F6_mac_mult2_result[19];
+
+--F6L12 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F6L12 = F6_mac_mult2_result[20];
+
+--F6L22 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F6L22 = F6_mac_mult2_result[21];
+
+--F6L32 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F6L32 = F6_mac_mult2_result[22];
+
+--F6L42 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F6L42 = F6_mac_mult2_result[23];
+
+--F6L52 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F6L52 = F6_mac_mult2_result[24];
+
+--F6L62 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F6L62 = F6_mac_mult2_result[25];
+
+--F6L72 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F6L72 = F6_mac_mult2_result[26];
+
+--F6L82 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F6L82 = F6_mac_mult2_result[27];
+
+--F6L92 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F6L92 = F6_mac_mult2_result[28];
+
+--F6L03 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F6L03 = F6_mac_mult2_result[29];
+
+--F6L13 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F6L13 = F6_mac_mult2_result[30];
+
+--F6L23 is plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F6L23 = F6_mac_mult2_result[31];
+
+
+--F8_mac_mult2 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F8_mac_mult2_a_data = DATA(F7_result[15], F7_result[14], F7_result[13], F7_result[12], F7_result[11], F7_result[10], F7_result[9], F7_result[8], F7_result[7], F7_result[6], F7_result[5], F7_result[4], F7_result[3], F7_result[2], F7_result[1], F7_result[0]);
+F8_mac_mult2_a_rep = UNSIGNED(F8_mac_mult2_a_data);
+F8_mac_mult2_b_data = DATA(arr[7][15], arr[7][14], arr[7][13], arr[7][12], arr[7][11], arr[7][10], arr[7][9], arr[7][8], arr[7][7], arr[7][6], arr[7][5], arr[7][4], arr[7][3], arr[7][2], arr[7][1], arr[7][0]);
+F8_mac_mult2_b_rep = UNSIGNED(F8_mac_mult2_b_data);
+F8_mac_mult2_result = F8_mac_mult2_a_rep * F8_mac_mult2_b_rep;
+F8_mac_mult2 = F8_mac_mult2_result[0];
+
+--F8L2 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F8L2 = F8_mac_mult2_result[1];
+
+--F8L3 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F8L3 = F8_mac_mult2_result[2];
+
+--F8L4 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F8L4 = F8_mac_mult2_result[3];
+
+--F8L5 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F8L5 = F8_mac_mult2_result[4];
+
+--F8L6 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F8L6 = F8_mac_mult2_result[5];
+
+--F8L7 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F8L7 = F8_mac_mult2_result[6];
+
+--F8L8 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F8L8 = F8_mac_mult2_result[7];
+
+--F8L9 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F8L9 = F8_mac_mult2_result[8];
+
+--F8L01 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F8L01 = F8_mac_mult2_result[9];
+
+--F8L11 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F8L11 = F8_mac_mult2_result[10];
+
+--F8L21 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F8L21 = F8_mac_mult2_result[11];
+
+--F8L31 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F8L31 = F8_mac_mult2_result[12];
+
+--F8L41 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F8L41 = F8_mac_mult2_result[13];
+
+--F8L51 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F8L51 = F8_mac_mult2_result[14];
+
+--F8L61 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F8L61 = F8_mac_mult2_result[15];
+
+--F8L71 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F8L71 = F8_mac_mult2_result[16];
+
+--F8L81 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F8L81 = F8_mac_mult2_result[17];
+
+--F8L91 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F8L91 = F8_mac_mult2_result[18];
+
+--F8L02 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F8L02 = F8_mac_mult2_result[19];
+
+--F8L12 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F8L12 = F8_mac_mult2_result[20];
+
+--F8L22 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F8L22 = F8_mac_mult2_result[21];
+
+--F8L32 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F8L32 = F8_mac_mult2_result[22];
+
+--F8L42 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F8L42 = F8_mac_mult2_result[23];
+
+--F8L52 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F8L52 = F8_mac_mult2_result[24];
+
+--F8L62 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F8L62 = F8_mac_mult2_result[25];
+
+--F8L72 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F8L72 = F8_mac_mult2_result[26];
+
+--F8L82 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F8L82 = F8_mac_mult2_result[27];
+
+--F8L92 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F8L92 = F8_mac_mult2_result[28];
+
+--F8L03 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F8L03 = F8_mac_mult2_result[29];
+
+--F8L13 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F8L13 = F8_mac_mult2_result[30];
+
+--F8L23 is plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F8L23 = F8_mac_mult2_result[31];
+
+
+--F01_mac_mult2 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F01_mac_mult2_a_data = DATA(F9_result[15], F9_result[14], F9_result[13], F9_result[12], F9_result[11], F9_result[10], F9_result[9], F9_result[8], F9_result[7], F9_result[6], F9_result[5], F9_result[4], F9_result[3], F9_result[2], F9_result[1], F9_result[0]);
+F01_mac_mult2_a_rep = UNSIGNED(F01_mac_mult2_a_data);
+F01_mac_mult2_b_data = DATA(arr[9][15], arr[9][14], arr[9][13], arr[9][12], arr[9][11], arr[9][10], arr[9][9], arr[9][8], arr[9][7], arr[9][6], arr[9][5], arr[9][4], arr[9][3], arr[9][2], arr[9][1], arr[9][0]);
+F01_mac_mult2_b_rep = UNSIGNED(F01_mac_mult2_b_data);
+F01_mac_mult2_result = F01_mac_mult2_a_rep * F01_mac_mult2_b_rep;
+F01_mac_mult2 = F01_mac_mult2_result[0];
+
+--F01L2 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F01L2 = F01_mac_mult2_result[1];
+
+--F01L3 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F01L3 = F01_mac_mult2_result[2];
+
+--F01L4 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F01L4 = F01_mac_mult2_result[3];
+
+--F01L5 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F01L5 = F01_mac_mult2_result[4];
+
+--F01L6 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F01L6 = F01_mac_mult2_result[5];
+
+--F01L7 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F01L7 = F01_mac_mult2_result[6];
+
+--F01L8 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F01L8 = F01_mac_mult2_result[7];
+
+--F01L9 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F01L9 = F01_mac_mult2_result[8];
+
+--F01L01 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F01L01 = F01_mac_mult2_result[9];
+
+--F01L11 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F01L11 = F01_mac_mult2_result[10];
+
+--F01L21 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F01L21 = F01_mac_mult2_result[11];
+
+--F01L31 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F01L31 = F01_mac_mult2_result[12];
+
+--F01L41 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F01L41 = F01_mac_mult2_result[13];
+
+--F01L51 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F01L51 = F01_mac_mult2_result[14];
+
+--F01L61 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F01L61 = F01_mac_mult2_result[15];
+
+--F01L71 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F01L71 = F01_mac_mult2_result[16];
+
+--F01L81 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F01L81 = F01_mac_mult2_result[17];
+
+--F01L91 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F01L91 = F01_mac_mult2_result[18];
+
+--F01L02 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F01L02 = F01_mac_mult2_result[19];
+
+--F01L12 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F01L12 = F01_mac_mult2_result[20];
+
+--F01L22 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F01L22 = F01_mac_mult2_result[21];
+
+--F01L32 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F01L32 = F01_mac_mult2_result[22];
+
+--F01L42 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F01L42 = F01_mac_mult2_result[23];
+
+--F01L52 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F01L52 = F01_mac_mult2_result[24];
+
+--F01L62 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F01L62 = F01_mac_mult2_result[25];
+
+--F01L72 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F01L72 = F01_mac_mult2_result[26];
+
+--F01L82 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F01L82 = F01_mac_mult2_result[27];
+
+--F01L92 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F01L92 = F01_mac_mult2_result[28];
+
+--F01L03 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F01L03 = F01_mac_mult2_result[29];
+
+--F01L13 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F01L13 = F01_mac_mult2_result[30];
+
+--F01L23 is plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F01L23 = F01_mac_mult2_result[31];
+
+
+--F21_mac_mult2 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F21_mac_mult2_a_data = DATA(F11_result[15], F11_result[14], F11_result[13], F11_result[12], F11_result[11], F11_result[10], F11_result[9], F11_result[8], F11_result[7], F11_result[6], F11_result[5], F11_result[4], F11_result[3], F11_result[2], F11_result[1], F11_result[0]);
+F21_mac_mult2_a_rep = UNSIGNED(F21_mac_mult2_a_data);
+F21_mac_mult2_b_data = DATA(arr[1][15], arr[1][14], arr[1][13], arr[1][12], arr[1][11], arr[1][10], arr[1][9], arr[1][8], arr[1][7], arr[1][6], arr[1][5], arr[1][4], arr[1][3], arr[1][2], arr[1][1], arr[1][0]);
+F21_mac_mult2_b_rep = UNSIGNED(F21_mac_mult2_b_data);
+F21_mac_mult2_result = F21_mac_mult2_a_rep * F21_mac_mult2_b_rep;
+F21_mac_mult2 = F21_mac_mult2_result[0];
+
+--F21L2 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F21L2 = F21_mac_mult2_result[1];
+
+--F21L3 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F21L3 = F21_mac_mult2_result[2];
+
+--F21L4 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F21L4 = F21_mac_mult2_result[3];
+
+--F21L5 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F21L5 = F21_mac_mult2_result[4];
+
+--F21L6 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F21L6 = F21_mac_mult2_result[5];
+
+--F21L7 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F21L7 = F21_mac_mult2_result[6];
+
+--F21L8 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F21L8 = F21_mac_mult2_result[7];
+
+--F21L9 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F21L9 = F21_mac_mult2_result[8];
+
+--F21L01 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F21L01 = F21_mac_mult2_result[9];
+
+--F21L11 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F21L11 = F21_mac_mult2_result[10];
+
+--F21L21 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F21L21 = F21_mac_mult2_result[11];
+
+--F21L31 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F21L31 = F21_mac_mult2_result[12];
+
+--F21L41 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F21L41 = F21_mac_mult2_result[13];
+
+--F21L51 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F21L51 = F21_mac_mult2_result[14];
+
+--F21L61 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F21L61 = F21_mac_mult2_result[15];
+
+--F21L71 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F21L71 = F21_mac_mult2_result[16];
+
+--F21L81 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F21L81 = F21_mac_mult2_result[17];
+
+--F21L91 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F21L91 = F21_mac_mult2_result[18];
+
+--F21L02 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F21L02 = F21_mac_mult2_result[19];
+
+--F21L12 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F21L12 = F21_mac_mult2_result[20];
+
+--F21L22 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F21L22 = F21_mac_mult2_result[21];
+
+--F21L32 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F21L32 = F21_mac_mult2_result[22];
+
+--F21L42 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F21L42 = F21_mac_mult2_result[23];
+
+--F21L52 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F21L52 = F21_mac_mult2_result[24];
+
+--F21L62 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F21L62 = F21_mac_mult2_result[25];
+
+--F21L72 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F21L72 = F21_mac_mult2_result[26];
+
+--F21L82 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F21L82 = F21_mac_mult2_result[27];
+
+--F21L92 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F21L92 = F21_mac_mult2_result[28];
+
+--F21L03 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F21L03 = F21_mac_mult2_result[29];
+
+--F21L13 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F21L13 = F21_mac_mult2_result[30];
+
+--F21L23 is plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F21L23 = F21_mac_mult2_result[31];
+
+
+--A1L36 is add~1266
+--operation mode is arithmetic
+
+A1L36 = D1_result[0] $ C3_product[0];
+
+--A1L46 is add~1268
+--operation mode is arithmetic
+
+A1L46 = CARRY(D1_result[0] & C3_product[0]);
+
+
+--A1L56 is add~1271
+--operation mode is arithmetic
+
+A1L56_carry_eqn = A1L46;
+A1L56 = D1_result[1] $ C3_product[1] $ A1L56_carry_eqn;
+
+--A1L66 is add~1273
+--operation mode is arithmetic
+
+A1L66 = CARRY(D1_result[1] & !C3_product[1] & !A1L46 # !D1_result[1] & (!A1L46 # !C3_product[1]));
+
+
+--A1L76 is add~1276
+--operation mode is arithmetic
+
+A1L76_carry_eqn = A1L66;
+A1L76 = D1_result[2] $ C3_product[2] $ !A1L76_carry_eqn;
+
+--A1L86 is add~1278
+--operation mode is arithmetic
+
+A1L86 = CARRY(D1_result[2] & (C3_product[2] # !A1L66) # !D1_result[2] & C3_product[2] & !A1L66);
+
+
+--A1L96 is add~1281
+--operation mode is arithmetic
+
+A1L96_carry_eqn = A1L86;
+A1L96 = D1_result[3] $ C3_product[3] $ A1L96_carry_eqn;
+
+--A1L07 is add~1283
+--operation mode is arithmetic
+
+A1L07 = CARRY(D1_result[3] & !C3_product[3] & !A1L86 # !D1_result[3] & (!A1L86 # !C3_product[3]));
+
+
+--A1L17 is add~1286
+--operation mode is arithmetic
+
+A1L17_carry_eqn = A1L07;
+A1L17 = D1_result[4] $ C3_product[4] $ !A1L17_carry_eqn;
+
+--A1L27 is add~1288
+--operation mode is arithmetic
+
+A1L27 = CARRY(D1_result[4] & (C3_product[4] # !A1L07) # !D1_result[4] & C3_product[4] & !A1L07);
+
+
+--A1L37 is add~1291
+--operation mode is arithmetic
+
+A1L37_carry_eqn = A1L27;
+A1L37 = D1_result[5] $ C3_product[5] $ A1L37_carry_eqn;
+
+--A1L47 is add~1293
+--operation mode is arithmetic
+
+A1L47 = CARRY(D1_result[5] & !C3_product[5] & !A1L27 # !D1_result[5] & (!A1L27 # !C3_product[5]));
+
+
+--A1L57 is add~1296
+--operation mode is arithmetic
+
+A1L57_carry_eqn = A1L47;
+A1L57 = D1_result[6] $ C3_product[6] $ !A1L57_carry_eqn;
+
+--A1L67 is add~1298
+--operation mode is arithmetic
+
+A1L67 = CARRY(D1_result[6] & (C3_product[6] # !A1L47) # !D1_result[6] & C3_product[6] & !A1L47);
+
+
+--A1L77 is add~1301
+--operation mode is arithmetic
+
+A1L77_carry_eqn = A1L67;
+A1L77 = D1_result[7] $ C3_product[7] $ A1L77_carry_eqn;
+
+--A1L87 is add~1303
+--operation mode is arithmetic
+
+A1L87 = CARRY(D1_result[7] & !C3_product[7] & !A1L67 # !D1_result[7] & (!A1L67 # !C3_product[7]));
+
+
+--A1L97 is add~1306
+--operation mode is arithmetic
+
+A1L97_carry_eqn = A1L87;
+A1L97 = D1_result[8] $ C3_product[8] $ !A1L97_carry_eqn;
+
+--A1L08 is add~1308
+--operation mode is arithmetic
+
+A1L08 = CARRY(D1_result[8] & (C3_product[8] # !A1L87) # !D1_result[8] & C3_product[8] & !A1L87);
+
+
+--A1L18 is add~1311
+--operation mode is arithmetic
+
+A1L18_carry_eqn = A1L08;
+A1L18 = D1_result[9] $ C3_product[9] $ A1L18_carry_eqn;
+
+--A1L28 is add~1313
+--operation mode is arithmetic
+
+A1L28 = CARRY(D1_result[9] & !C3_product[9] & !A1L08 # !D1_result[9] & (!A1L08 # !C3_product[9]));
+
+
+--A1L38 is add~1316
+--operation mode is arithmetic
+
+A1L38_carry_eqn = A1L28;
+A1L38 = D1_result[10] $ C3_product[10] $ !A1L38_carry_eqn;
+
+--A1L48 is add~1318
+--operation mode is arithmetic
+
+A1L48 = CARRY(D1_result[10] & (C3_product[10] # !A1L28) # !D1_result[10] & C3_product[10] & !A1L28);
+
+
+--A1L58 is add~1321
+--operation mode is arithmetic
+
+A1L58_carry_eqn = A1L48;
+A1L58 = D1_result[11] $ C3_product[11] $ A1L58_carry_eqn;
+
+--A1L68 is add~1323
+--operation mode is arithmetic
+
+A1L68 = CARRY(D1_result[11] & !C3_product[11] & !A1L48 # !D1_result[11] & (!A1L48 # !C3_product[11]));
+
+
+--A1L78 is add~1326
+--operation mode is arithmetic
+
+A1L78_carry_eqn = A1L68;
+A1L78 = D1_result[12] $ C3_product[12] $ !A1L78_carry_eqn;
+
+--A1L88 is add~1328
+--operation mode is arithmetic
+
+A1L88 = CARRY(D1_result[12] & (C3_product[12] # !A1L68) # !D1_result[12] & C3_product[12] & !A1L68);
+
+
+--A1L98 is add~1331
+--operation mode is arithmetic
+
+A1L98_carry_eqn = A1L88;
+A1L98 = D1_result[13] $ C3_product[13] $ A1L98_carry_eqn;
+
+--A1L09 is add~1333
+--operation mode is arithmetic
+
+A1L09 = CARRY(D1_result[13] & !C3_product[13] & !A1L88 # !D1_result[13] & (!A1L88 # !C3_product[13]));
+
+
+--A1L19 is add~1336
+--operation mode is arithmetic
+
+A1L19_carry_eqn = A1L09;
+A1L19 = D1_result[14] $ C3_product[14] $ !A1L19_carry_eqn;
+
+--A1L29 is add~1338
+--operation mode is arithmetic
+
+A1L29 = CARRY(D1_result[14] & (C3_product[14] # !A1L09) # !D1_result[14] & C3_product[14] & !A1L09);
+
+
+--A1L39 is add~1341
+--operation mode is normal
+
+A1L39_carry_eqn = A1L29;
+A1L39 = D1_result[15] $ C3_product[15] $ A1L39_carry_eqn;
+
+
+--F1_result[0] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F1_result[0] = F1_mac_mult2;
+
+--F1_result[1] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[1]
+F1_result[1] = F1L2;
+
+--F1_result[2] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[2]
+F1_result[2] = F1L3;
+
+--F1_result[3] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[3]
+F1_result[3] = F1L4;
+
+--F1_result[4] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[4]
+F1_result[4] = F1L5;
+
+--F1_result[5] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[5]
+F1_result[5] = F1L6;
+
+--F1_result[6] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[6]
+F1_result[6] = F1L7;
+
+--F1_result[7] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[7]
+F1_result[7] = F1L8;
+
+--F1_result[8] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[8]
+F1_result[8] = F1L9;
+
+--F1_result[9] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[9]
+F1_result[9] = F1L01;
+
+--F1_result[10] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[10]
+F1_result[10] = F1L11;
+
+--F1_result[11] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[11]
+F1_result[11] = F1L21;
+
+--F1_result[12] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[12]
+F1_result[12] = F1L31;
+
+--F1_result[13] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[13]
+F1_result[13] = F1L41;
+
+--F1_result[14] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[14]
+F1_result[14] = F1L51;
+
+--F1_result[15] is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|result[15]
+F1_result[15] = F1L61;
+
+
+--arr[9][0] is arr[9][0]
+--operation mode is normal
+
+arr[9][0]_lut_out = ewr & in9[0];
+arr[9][0] = DFFEAS(arr[9][0]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][1] is arr[9][1]
+--operation mode is normal
+
+arr[9][1]_lut_out = ewr & in9[1];
+arr[9][1] = DFFEAS(arr[9][1]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][2] is arr[9][2]
+--operation mode is normal
+
+arr[9][2]_lut_out = ewr & in9[2];
+arr[9][2] = DFFEAS(arr[9][2]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][3] is arr[9][3]
+--operation mode is normal
+
+arr[9][3]_lut_out = ewr & in9[3];
+arr[9][3] = DFFEAS(arr[9][3]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][4] is arr[9][4]
+--operation mode is normal
+
+arr[9][4]_lut_out = ewr & in9[4];
+arr[9][4] = DFFEAS(arr[9][4]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][5] is arr[9][5]
+--operation mode is normal
+
+arr[9][5]_lut_out = ewr & in9[5];
+arr[9][5] = DFFEAS(arr[9][5]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][6] is arr[9][6]
+--operation mode is normal
+
+arr[9][6]_lut_out = ewr & in9[6];
+arr[9][6] = DFFEAS(arr[9][6]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][7] is arr[9][7]
+--operation mode is normal
+
+arr[9][7]_lut_out = ewr & in9[7];
+arr[9][7] = DFFEAS(arr[9][7]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][8] is arr[9][8]
+--operation mode is normal
+
+arr[9][8]_lut_out = ewr & in9[8];
+arr[9][8] = DFFEAS(arr[9][8]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][9] is arr[9][9]
+--operation mode is normal
+
+arr[9][9]_lut_out = ewr & in9[9];
+arr[9][9] = DFFEAS(arr[9][9]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][10] is arr[9][10]
+--operation mode is normal
+
+arr[9][10]_lut_out = ewr & in9[10];
+arr[9][10] = DFFEAS(arr[9][10]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][11] is arr[9][11]
+--operation mode is normal
+
+arr[9][11]_lut_out = ewr & in9[11];
+arr[9][11] = DFFEAS(arr[9][11]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][12] is arr[9][12]
+--operation mode is normal
+
+arr[9][12]_lut_out = ewr & in9[12];
+arr[9][12] = DFFEAS(arr[9][12]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][13] is arr[9][13]
+--operation mode is normal
+
+arr[9][13]_lut_out = ewr & in9[13];
+arr[9][13] = DFFEAS(arr[9][13]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][14] is arr[9][14]
+--operation mode is normal
+
+arr[9][14]_lut_out = ewr & in9[14];
+arr[9][14] = DFFEAS(arr[9][14]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[9][15] is arr[9][15]
+--operation mode is normal
+
+arr[9][15]_lut_out = ewr & in9[15];
+arr[9][15] = DFFEAS(arr[9][15]_lut_out, clock, VCC, , , , , , );
+
+
+--F3_result[0] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F3_result[0] = F3_mac_mult2;
+
+--F3_result[1] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[1]
+F3_result[1] = F3L2;
+
+--F3_result[2] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[2]
+F3_result[2] = F3L3;
+
+--F3_result[3] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[3]
+F3_result[3] = F3L4;
+
+--F3_result[4] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[4]
+F3_result[4] = F3L5;
+
+--F3_result[5] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[5]
+F3_result[5] = F3L6;
+
+--F3_result[6] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[6]
+F3_result[6] = F3L7;
+
+--F3_result[7] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[7]
+F3_result[7] = F3L8;
+
+--F3_result[8] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[8]
+F3_result[8] = F3L9;
+
+--F3_result[9] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[9]
+F3_result[9] = F3L01;
+
+--F3_result[10] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[10]
+F3_result[10] = F3L11;
+
+--F3_result[11] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[11]
+F3_result[11] = F3L21;
+
+--F3_result[12] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[12]
+F3_result[12] = F3L31;
+
+--F3_result[13] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[13]
+F3_result[13] = F3L41;
+
+--F3_result[14] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[14]
+F3_result[14] = F3L51;
+
+--F3_result[15] is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|result[15]
+F3_result[15] = F3L61;
+
+
+--arr[7][0] is arr[7][0]
+--operation mode is normal
+
+arr[7][0]_lut_out = ewr & in7[0];
+arr[7][0] = DFFEAS(arr[7][0]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][1] is arr[7][1]
+--operation mode is normal
+
+arr[7][1]_lut_out = ewr & in7[1];
+arr[7][1] = DFFEAS(arr[7][1]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][2] is arr[7][2]
+--operation mode is normal
+
+arr[7][2]_lut_out = ewr & in7[2];
+arr[7][2] = DFFEAS(arr[7][2]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][3] is arr[7][3]
+--operation mode is normal
+
+arr[7][3]_lut_out = ewr & in7[3];
+arr[7][3] = DFFEAS(arr[7][3]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][4] is arr[7][4]
+--operation mode is normal
+
+arr[7][4]_lut_out = ewr & in7[4];
+arr[7][4] = DFFEAS(arr[7][4]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][5] is arr[7][5]
+--operation mode is normal
+
+arr[7][5]_lut_out = ewr & in7[5];
+arr[7][5] = DFFEAS(arr[7][5]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][6] is arr[7][6]
+--operation mode is normal
+
+arr[7][6]_lut_out = ewr & in7[6];
+arr[7][6] = DFFEAS(arr[7][6]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][7] is arr[7][7]
+--operation mode is normal
+
+arr[7][7]_lut_out = ewr & in7[7];
+arr[7][7] = DFFEAS(arr[7][7]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][8] is arr[7][8]
+--operation mode is normal
+
+arr[7][8]_lut_out = ewr & in7[8];
+arr[7][8] = DFFEAS(arr[7][8]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][9] is arr[7][9]
+--operation mode is normal
+
+arr[7][9]_lut_out = ewr & in7[9];
+arr[7][9] = DFFEAS(arr[7][9]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][10] is arr[7][10]
+--operation mode is normal
+
+arr[7][10]_lut_out = ewr & in7[10];
+arr[7][10] = DFFEAS(arr[7][10]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][11] is arr[7][11]
+--operation mode is normal
+
+arr[7][11]_lut_out = ewr & in7[11];
+arr[7][11] = DFFEAS(arr[7][11]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][12] is arr[7][12]
+--operation mode is normal
+
+arr[7][12]_lut_out = ewr & in7[12];
+arr[7][12] = DFFEAS(arr[7][12]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][13] is arr[7][13]
+--operation mode is normal
+
+arr[7][13]_lut_out = ewr & in7[13];
+arr[7][13] = DFFEAS(arr[7][13]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][14] is arr[7][14]
+--operation mode is normal
+
+arr[7][14]_lut_out = ewr & in7[14];
+arr[7][14] = DFFEAS(arr[7][14]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[7][15] is arr[7][15]
+--operation mode is normal
+
+arr[7][15]_lut_out = ewr & in7[15];
+arr[7][15] = DFFEAS(arr[7][15]_lut_out, clock, VCC, , , , , , );
+
+
+--F5_result[0] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F5_result[0] = F5_mac_mult2;
+
+--F5_result[1] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[1]
+F5_result[1] = F5L2;
+
+--F5_result[2] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[2]
+F5_result[2] = F5L3;
+
+--F5_result[3] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[3]
+F5_result[3] = F5L4;
+
+--F5_result[4] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[4]
+F5_result[4] = F5L5;
+
+--F5_result[5] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[5]
+F5_result[5] = F5L6;
+
+--F5_result[6] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[6]
+F5_result[6] = F5L7;
+
+--F5_result[7] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[7]
+F5_result[7] = F5L8;
+
+--F5_result[8] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[8]
+F5_result[8] = F5L9;
+
+--F5_result[9] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[9]
+F5_result[9] = F5L01;
+
+--F5_result[10] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[10]
+F5_result[10] = F5L11;
+
+--F5_result[11] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[11]
+F5_result[11] = F5L21;
+
+--F5_result[12] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[12]
+F5_result[12] = F5L31;
+
+--F5_result[13] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[13]
+F5_result[13] = F5L41;
+
+--F5_result[14] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[14]
+F5_result[14] = F5L51;
+
+--F5_result[15] is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|result[15]
+F5_result[15] = F5L61;
+
+
+--arr[3][0] is arr[3][0]
+--operation mode is normal
+
+arr[3][0]_lut_out = ewr & in3[0];
+arr[3][0] = DFFEAS(arr[3][0]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][1] is arr[3][1]
+--operation mode is normal
+
+arr[3][1]_lut_out = ewr & in3[1];
+arr[3][1] = DFFEAS(arr[3][1]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][2] is arr[3][2]
+--operation mode is normal
+
+arr[3][2]_lut_out = ewr & in3[2];
+arr[3][2] = DFFEAS(arr[3][2]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][3] is arr[3][3]
+--operation mode is normal
+
+arr[3][3]_lut_out = ewr & in3[3];
+arr[3][3] = DFFEAS(arr[3][3]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][4] is arr[3][4]
+--operation mode is normal
+
+arr[3][4]_lut_out = ewr & in3[4];
+arr[3][4] = DFFEAS(arr[3][4]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][5] is arr[3][5]
+--operation mode is normal
+
+arr[3][5]_lut_out = ewr & in3[5];
+arr[3][5] = DFFEAS(arr[3][5]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][6] is arr[3][6]
+--operation mode is normal
+
+arr[3][6]_lut_out = ewr & in3[6];
+arr[3][6] = DFFEAS(arr[3][6]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][7] is arr[3][7]
+--operation mode is normal
+
+arr[3][7]_lut_out = ewr & in3[7];
+arr[3][7] = DFFEAS(arr[3][7]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][8] is arr[3][8]
+--operation mode is normal
+
+arr[3][8]_lut_out = ewr & in3[8];
+arr[3][8] = DFFEAS(arr[3][8]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][9] is arr[3][9]
+--operation mode is normal
+
+arr[3][9]_lut_out = ewr & in3[9];
+arr[3][9] = DFFEAS(arr[3][9]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][10] is arr[3][10]
+--operation mode is normal
+
+arr[3][10]_lut_out = ewr & in3[10];
+arr[3][10] = DFFEAS(arr[3][10]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][11] is arr[3][11]
+--operation mode is normal
+
+arr[3][11]_lut_out = ewr & in3[11];
+arr[3][11] = DFFEAS(arr[3][11]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][12] is arr[3][12]
+--operation mode is normal
+
+arr[3][12]_lut_out = ewr & in3[12];
+arr[3][12] = DFFEAS(arr[3][12]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][13] is arr[3][13]
+--operation mode is normal
+
+arr[3][13]_lut_out = ewr & in3[13];
+arr[3][13] = DFFEAS(arr[3][13]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][14] is arr[3][14]
+--operation mode is normal
+
+arr[3][14]_lut_out = ewr & in3[14];
+arr[3][14] = DFFEAS(arr[3][14]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[3][15] is arr[3][15]
+--operation mode is normal
+
+arr[3][15]_lut_out = ewr & in3[15];
+arr[3][15] = DFFEAS(arr[3][15]_lut_out, clock, VCC, , , , , , );
+
+
+--F7_result[0] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F7_result[0] = F7_mac_mult2;
+
+--F7_result[1] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[1]
+F7_result[1] = F7L2;
+
+--F7_result[2] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[2]
+F7_result[2] = F7L3;
+
+--F7_result[3] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[3]
+F7_result[3] = F7L4;
+
+--F7_result[4] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[4]
+F7_result[4] = F7L5;
+
+--F7_result[5] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[5]
+F7_result[5] = F7L6;
+
+--F7_result[6] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[6]
+F7_result[6] = F7L7;
+
+--F7_result[7] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[7]
+F7_result[7] = F7L8;
+
+--F7_result[8] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[8]
+F7_result[8] = F7L9;
+
+--F7_result[9] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[9]
+F7_result[9] = F7L01;
+
+--F7_result[10] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[10]
+F7_result[10] = F7L11;
+
+--F7_result[11] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[11]
+F7_result[11] = F7L21;
+
+--F7_result[12] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[12]
+F7_result[12] = F7L31;
+
+--F7_result[13] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[13]
+F7_result[13] = F7L41;
+
+--F7_result[14] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[14]
+F7_result[14] = F7L51;
+
+--F7_result[15] is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|result[15]
+F7_result[15] = F7L61;
+
+
+--F9_result[0] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F9_result[0] = F9_mac_mult2;
+
+--F9_result[1] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[1]
+F9_result[1] = F9L2;
+
+--F9_result[2] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[2]
+F9_result[2] = F9L3;
+
+--F9_result[3] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[3]
+F9_result[3] = F9L4;
+
+--F9_result[4] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[4]
+F9_result[4] = F9L5;
+
+--F9_result[5] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[5]
+F9_result[5] = F9L6;
+
+--F9_result[6] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[6]
+F9_result[6] = F9L7;
+
+--F9_result[7] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[7]
+F9_result[7] = F9L8;
+
+--F9_result[8] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[8]
+F9_result[8] = F9L9;
+
+--F9_result[9] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[9]
+F9_result[9] = F9L01;
+
+--F9_result[10] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[10]
+F9_result[10] = F9L11;
+
+--F9_result[11] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[11]
+F9_result[11] = F9L21;
+
+--F9_result[12] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[12]
+F9_result[12] = F9L31;
+
+--F9_result[13] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[13]
+F9_result[13] = F9L41;
+
+--F9_result[14] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[14]
+F9_result[14] = F9L51;
+
+--F9_result[15] is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|result[15]
+F9_result[15] = F9L61;
+
+
+--F11_result[0] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (18-bit)
+F11_result[0] = F11_mac_mult2;
+
+--F11_result[1] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[1]
+F11_result[1] = F11L2;
+
+--F11_result[2] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[2]
+F11_result[2] = F11L3;
+
+--F11_result[3] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[3]
+F11_result[3] = F11L4;
+
+--F11_result[4] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[4]
+F11_result[4] = F11L5;
+
+--F11_result[5] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[5]
+F11_result[5] = F11L6;
+
+--F11_result[6] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[6]
+F11_result[6] = F11L7;
+
+--F11_result[7] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[7]
+F11_result[7] = F11L8;
+
+--F11_result[8] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[8]
+F11_result[8] = F11L9;
+
+--F11_result[9] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[9]
+F11_result[9] = F11L01;
+
+--F11_result[10] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[10]
+F11_result[10] = F11L11;
+
+--F11_result[11] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[11]
+F11_result[11] = F11L21;
+
+--F11_result[12] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[12]
+F11_result[12] = F11L31;
+
+--F11_result[13] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[13]
+F11_result[13] = F11L41;
+
+--F11_result[14] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[14]
+F11_result[14] = F11L51;
+
+--F11_result[15] is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|result[15]
+F11_result[15] = F11L61;
+
+
+--arr[1][0] is arr[1][0]
+--operation mode is normal
+
+arr[1][0]_lut_out = ewr & in1[0];
+arr[1][0] = DFFEAS(arr[1][0]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][1] is arr[1][1]
+--operation mode is normal
+
+arr[1][1]_lut_out = ewr & in1[1];
+arr[1][1] = DFFEAS(arr[1][1]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][2] is arr[1][2]
+--operation mode is normal
+
+arr[1][2]_lut_out = ewr & in1[2];
+arr[1][2] = DFFEAS(arr[1][2]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][3] is arr[1][3]
+--operation mode is normal
+
+arr[1][3]_lut_out = ewr & in1[3];
+arr[1][3] = DFFEAS(arr[1][3]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][4] is arr[1][4]
+--operation mode is normal
+
+arr[1][4]_lut_out = ewr & in1[4];
+arr[1][4] = DFFEAS(arr[1][4]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][5] is arr[1][5]
+--operation mode is normal
+
+arr[1][5]_lut_out = ewr & in1[5];
+arr[1][5] = DFFEAS(arr[1][5]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][6] is arr[1][6]
+--operation mode is normal
+
+arr[1][6]_lut_out = ewr & in1[6];
+arr[1][6] = DFFEAS(arr[1][6]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][7] is arr[1][7]
+--operation mode is normal
+
+arr[1][7]_lut_out = ewr & in1[7];
+arr[1][7] = DFFEAS(arr[1][7]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][8] is arr[1][8]
+--operation mode is normal
+
+arr[1][8]_lut_out = ewr & in1[8];
+arr[1][8] = DFFEAS(arr[1][8]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][9] is arr[1][9]
+--operation mode is normal
+
+arr[1][9]_lut_out = ewr & in1[9];
+arr[1][9] = DFFEAS(arr[1][9]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][10] is arr[1][10]
+--operation mode is normal
+
+arr[1][10]_lut_out = ewr & in1[10];
+arr[1][10] = DFFEAS(arr[1][10]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][11] is arr[1][11]
+--operation mode is normal
+
+arr[1][11]_lut_out = ewr & in1[11];
+arr[1][11] = DFFEAS(arr[1][11]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][12] is arr[1][12]
+--operation mode is normal
+
+arr[1][12]_lut_out = ewr & in1[12];
+arr[1][12] = DFFEAS(arr[1][12]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][13] is arr[1][13]
+--operation mode is normal
+
+arr[1][13]_lut_out = ewr & in1[13];
+arr[1][13] = DFFEAS(arr[1][13]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][14] is arr[1][14]
+--operation mode is normal
+
+arr[1][14]_lut_out = ewr & in1[14];
+arr[1][14] = DFFEAS(arr[1][14]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[1][15] is arr[1][15]
+--operation mode is normal
+
+arr[1][15]_lut_out = ewr & in1[15];
+arr[1][15] = DFFEAS(arr[1][15]_lut_out, clock, VCC, , , , , , );
+
+
+--D1_result[0] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[0]
+--DSP Block Operation Mode: Two-Multipliers Adder (18-bit)
+D1_result[0]_a_data = DATA(D1L23Q, D1L13Q, D1L03Q, D1L92Q, D1L82Q, D1L72Q, D1L62Q, D1L52Q, D1L42Q, D1L32Q, D1L22Q, D1L12Q, D1L02Q, D1L91Q, D1L81Q, D1L71Q, D1L61Q, D1L51Q, D1L41Q, D1L31Q, D1L21Q, D1L11Q, D1L01Q, D1L9Q, D1L8Q, D1L7Q, D1L6Q, D1L5Q, D1L4Q, D1L3Q, D1L2Q, D1_mac_mult1);
+D1_result[0]_a_rep = UNSIGNED(D1_result[0]_a_data);
+D1_result[0]_b_data = DATA(D1L69Q, D1L59Q, D1L49Q, D1L39Q, D1L29Q, D1L19Q, D1L09Q, D1L98Q, D1L88Q, D1L78Q, D1L68Q, D1L58Q, D1L48Q, D1L38Q, D1L28Q, D1L18Q, D1L08Q, D1L97Q, D1L87Q, D1L77Q, D1L67Q, D1L57Q, D1L47Q, D1L37Q, D1L27Q, D1L17Q, D1L07Q, D1L96Q, D1L86Q, D1L76Q, D1L66Q, D1_mac_mult2);
+D1_result[0]_b_rep = UNSIGNED(D1_result[0]_b_data);
+D1_result[0]_result = D1_result[0]_a_rep + D1_result[0]_b_rep;
+D1_result[0] = D1_result[0]_result[0];
+
+--D1_result[1] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[1]
+D1_result[1] = D1_result[0]_result[1];
+
+--D1_result[2] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[2]
+D1_result[2] = D1_result[0]_result[2];
+
+--D1_result[3] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[3]
+D1_result[3] = D1_result[0]_result[3];
+
+--D1_result[4] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[4]
+D1_result[4] = D1_result[0]_result[4];
+
+--D1_result[5] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[5]
+D1_result[5] = D1_result[0]_result[5];
+
+--D1_result[6] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[6]
+D1_result[6] = D1_result[0]_result[6];
+
+--D1_result[7] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[7]
+D1_result[7] = D1_result[0]_result[7];
+
+--D1_result[8] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[8]
+D1_result[8] = D1_result[0]_result[8];
+
+--D1_result[9] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[9]
+D1_result[9] = D1_result[0]_result[9];
+
+--D1_result[10] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[10]
+D1_result[10] = D1_result[0]_result[10];
+
+--D1_result[11] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[11]
+D1_result[11] = D1_result[0]_result[11];
+
+--D1_result[12] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[12]
+D1_result[12] = D1_result[0]_result[12];
+
+--D1_result[13] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[13]
+D1_result[13] = D1_result[0]_result[13];
+
+--D1_result[14] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[14]
+D1_result[14] = D1_result[0]_result[14];
+
+--D1_result[15] is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|result[15]
+D1_result[15] = D1_result[0]_result[15];
+
+
+--F1_mac_mult2 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F1_mac_mult2_a_data = DATA(arr[1][15], arr[1][14], arr[1][13], arr[1][12], arr[1][11], arr[1][10], arr[1][9], arr[1][8], arr[1][7], arr[1][6], arr[1][5], arr[1][4], arr[1][3], arr[1][2], arr[1][1], arr[1][0]);
+F1_mac_mult2_a_rep = UNSIGNED(F1_mac_mult2_a_data);
+F1_mac_mult2_b_data = DATA(arr[5][15], arr[5][14], arr[5][13], arr[5][12], arr[5][11], arr[5][10], arr[5][9], arr[5][8], arr[5][7], arr[5][6], arr[5][5], arr[5][4], arr[5][3], arr[5][2], arr[5][1], arr[5][0]);
+F1_mac_mult2_b_rep = UNSIGNED(F1_mac_mult2_b_data);
+F1_mac_mult2_result = F1_mac_mult2_a_rep * F1_mac_mult2_b_rep;
+F1_mac_mult2 = F1_mac_mult2_result[0];
+
+--F1L2 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F1L2 = F1_mac_mult2_result[1];
+
+--F1L3 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F1L3 = F1_mac_mult2_result[2];
+
+--F1L4 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F1L4 = F1_mac_mult2_result[3];
+
+--F1L5 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F1L5 = F1_mac_mult2_result[4];
+
+--F1L6 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F1L6 = F1_mac_mult2_result[5];
+
+--F1L7 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F1L7 = F1_mac_mult2_result[6];
+
+--F1L8 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F1L8 = F1_mac_mult2_result[7];
+
+--F1L9 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F1L9 = F1_mac_mult2_result[8];
+
+--F1L01 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F1L01 = F1_mac_mult2_result[9];
+
+--F1L11 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F1L11 = F1_mac_mult2_result[10];
+
+--F1L21 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F1L21 = F1_mac_mult2_result[11];
+
+--F1L31 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F1L31 = F1_mac_mult2_result[12];
+
+--F1L41 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F1L41 = F1_mac_mult2_result[13];
+
+--F1L51 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F1L51 = F1_mac_mult2_result[14];
+
+--F1L61 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F1L61 = F1_mac_mult2_result[15];
+
+--F1L71 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F1L71 = F1_mac_mult2_result[16];
+
+--F1L81 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F1L81 = F1_mac_mult2_result[17];
+
+--F1L91 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F1L91 = F1_mac_mult2_result[18];
+
+--F1L02 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F1L02 = F1_mac_mult2_result[19];
+
+--F1L12 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F1L12 = F1_mac_mult2_result[20];
+
+--F1L22 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F1L22 = F1_mac_mult2_result[21];
+
+--F1L32 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F1L32 = F1_mac_mult2_result[22];
+
+--F1L42 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F1L42 = F1_mac_mult2_result[23];
+
+--F1L52 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F1L52 = F1_mac_mult2_result[24];
+
+--F1L62 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F1L62 = F1_mac_mult2_result[25];
+
+--F1L72 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F1L72 = F1_mac_mult2_result[26];
+
+--F1L82 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F1L82 = F1_mac_mult2_result[27];
+
+--F1L92 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F1L92 = F1_mac_mult2_result[28];
+
+--F1L03 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F1L03 = F1_mac_mult2_result[29];
+
+--F1L13 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F1L13 = F1_mac_mult2_result[30];
+
+--F1L23 is plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F1L23 = F1_mac_mult2_result[31];
+
+
+--F3_mac_mult2 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F3_mac_mult2_a_data = DATA(arr[2][15], arr[2][14], arr[2][13], arr[2][12], arr[2][11], arr[2][10], arr[2][9], arr[2][8], arr[2][7], arr[2][6], arr[2][5], arr[2][4], arr[2][3], arr[2][2], arr[2][1], arr[2][0]);
+F3_mac_mult2_a_rep = UNSIGNED(F3_mac_mult2_a_data);
+F3_mac_mult2_b_data = DATA(arr[6][15], arr[6][14], arr[6][13], arr[6][12], arr[6][11], arr[6][10], arr[6][9], arr[6][8], arr[6][7], arr[6][6], arr[6][5], arr[6][4], arr[6][3], arr[6][2], arr[6][1], arr[6][0]);
+F3_mac_mult2_b_rep = UNSIGNED(F3_mac_mult2_b_data);
+F3_mac_mult2_result = F3_mac_mult2_a_rep * F3_mac_mult2_b_rep;
+F3_mac_mult2 = F3_mac_mult2_result[0];
+
+--F3L2 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F3L2 = F3_mac_mult2_result[1];
+
+--F3L3 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F3L3 = F3_mac_mult2_result[2];
+
+--F3L4 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F3L4 = F3_mac_mult2_result[3];
+
+--F3L5 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F3L5 = F3_mac_mult2_result[4];
+
+--F3L6 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F3L6 = F3_mac_mult2_result[5];
+
+--F3L7 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F3L7 = F3_mac_mult2_result[6];
+
+--F3L8 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F3L8 = F3_mac_mult2_result[7];
+
+--F3L9 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F3L9 = F3_mac_mult2_result[8];
+
+--F3L01 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F3L01 = F3_mac_mult2_result[9];
+
+--F3L11 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F3L11 = F3_mac_mult2_result[10];
+
+--F3L21 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F3L21 = F3_mac_mult2_result[11];
+
+--F3L31 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F3L31 = F3_mac_mult2_result[12];
+
+--F3L41 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F3L41 = F3_mac_mult2_result[13];
+
+--F3L51 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F3L51 = F3_mac_mult2_result[14];
+
+--F3L61 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F3L61 = F3_mac_mult2_result[15];
+
+--F3L71 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F3L71 = F3_mac_mult2_result[16];
+
+--F3L81 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F3L81 = F3_mac_mult2_result[17];
+
+--F3L91 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F3L91 = F3_mac_mult2_result[18];
+
+--F3L02 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F3L02 = F3_mac_mult2_result[19];
+
+--F3L12 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F3L12 = F3_mac_mult2_result[20];
+
+--F3L22 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F3L22 = F3_mac_mult2_result[21];
+
+--F3L32 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F3L32 = F3_mac_mult2_result[22];
+
+--F3L42 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F3L42 = F3_mac_mult2_result[23];
+
+--F3L52 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F3L52 = F3_mac_mult2_result[24];
+
+--F3L62 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F3L62 = F3_mac_mult2_result[25];
+
+--F3L72 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F3L72 = F3_mac_mult2_result[26];
+
+--F3L82 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F3L82 = F3_mac_mult2_result[27];
+
+--F3L92 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F3L92 = F3_mac_mult2_result[28];
+
+--F3L03 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F3L03 = F3_mac_mult2_result[29];
+
+--F3L13 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F3L13 = F3_mac_mult2_result[30];
+
+--F3L23 is plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F3L23 = F3_mac_mult2_result[31];
+
+
+--F5_mac_mult2 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F5_mac_mult2_a_data = DATA(arr[4][15], arr[4][14], arr[4][13], arr[4][12], arr[4][11], arr[4][10], arr[4][9], arr[4][8], arr[4][7], arr[4][6], arr[4][5], arr[4][4], arr[4][3], arr[4][2], arr[4][1], arr[4][0]);
+F5_mac_mult2_a_rep = UNSIGNED(F5_mac_mult2_a_data);
+F5_mac_mult2_b_data = DATA(arr[8][15], arr[8][14], arr[8][13], arr[8][12], arr[8][11], arr[8][10], arr[8][9], arr[8][8], arr[8][7], arr[8][6], arr[8][5], arr[8][4], arr[8][3], arr[8][2], arr[8][1], arr[8][0]);
+F5_mac_mult2_b_rep = UNSIGNED(F5_mac_mult2_b_data);
+F5_mac_mult2_result = F5_mac_mult2_a_rep * F5_mac_mult2_b_rep;
+F5_mac_mult2 = F5_mac_mult2_result[0];
+
+--F5L2 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F5L2 = F5_mac_mult2_result[1];
+
+--F5L3 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F5L3 = F5_mac_mult2_result[2];
+
+--F5L4 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F5L4 = F5_mac_mult2_result[3];
+
+--F5L5 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F5L5 = F5_mac_mult2_result[4];
+
+--F5L6 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F5L6 = F5_mac_mult2_result[5];
+
+--F5L7 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F5L7 = F5_mac_mult2_result[6];
+
+--F5L8 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F5L8 = F5_mac_mult2_result[7];
+
+--F5L9 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F5L9 = F5_mac_mult2_result[8];
+
+--F5L01 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F5L01 = F5_mac_mult2_result[9];
+
+--F5L11 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F5L11 = F5_mac_mult2_result[10];
+
+--F5L21 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F5L21 = F5_mac_mult2_result[11];
+
+--F5L31 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F5L31 = F5_mac_mult2_result[12];
+
+--F5L41 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F5L41 = F5_mac_mult2_result[13];
+
+--F5L51 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F5L51 = F5_mac_mult2_result[14];
+
+--F5L61 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F5L61 = F5_mac_mult2_result[15];
+
+--F5L71 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F5L71 = F5_mac_mult2_result[16];
+
+--F5L81 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F5L81 = F5_mac_mult2_result[17];
+
+--F5L91 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F5L91 = F5_mac_mult2_result[18];
+
+--F5L02 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F5L02 = F5_mac_mult2_result[19];
+
+--F5L12 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F5L12 = F5_mac_mult2_result[20];
+
+--F5L22 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F5L22 = F5_mac_mult2_result[21];
+
+--F5L32 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F5L32 = F5_mac_mult2_result[22];
+
+--F5L42 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F5L42 = F5_mac_mult2_result[23];
+
+--F5L52 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F5L52 = F5_mac_mult2_result[24];
+
+--F5L62 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F5L62 = F5_mac_mult2_result[25];
+
+--F5L72 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F5L72 = F5_mac_mult2_result[26];
+
+--F5L82 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F5L82 = F5_mac_mult2_result[27];
+
+--F5L92 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F5L92 = F5_mac_mult2_result[28];
+
+--F5L03 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F5L03 = F5_mac_mult2_result[29];
+
+--F5L13 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F5L13 = F5_mac_mult2_result[30];
+
+--F5L23 is plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F5L23 = F5_mac_mult2_result[31];
+
+
+--F7_mac_mult2 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F7_mac_mult2_a_data = DATA(arr[3][15], arr[3][14], arr[3][13], arr[3][12], arr[3][11], arr[3][10], arr[3][9], arr[3][8], arr[3][7], arr[3][6], arr[3][5], arr[3][4], arr[3][3], arr[3][2], arr[3][1], arr[3][0]);
+F7_mac_mult2_a_rep = UNSIGNED(F7_mac_mult2_a_data);
+F7_mac_mult2_b_data = DATA(arr[5][15], arr[5][14], arr[5][13], arr[5][12], arr[5][11], arr[5][10], arr[5][9], arr[5][8], arr[5][7], arr[5][6], arr[5][5], arr[5][4], arr[5][3], arr[5][2], arr[5][1], arr[5][0]);
+F7_mac_mult2_b_rep = UNSIGNED(F7_mac_mult2_b_data);
+F7_mac_mult2_result = F7_mac_mult2_a_rep * F7_mac_mult2_b_rep;
+F7_mac_mult2 = F7_mac_mult2_result[0];
+
+--F7L2 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F7L2 = F7_mac_mult2_result[1];
+
+--F7L3 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F7L3 = F7_mac_mult2_result[2];
+
+--F7L4 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F7L4 = F7_mac_mult2_result[3];
+
+--F7L5 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F7L5 = F7_mac_mult2_result[4];
+
+--F7L6 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F7L6 = F7_mac_mult2_result[5];
+
+--F7L7 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F7L7 = F7_mac_mult2_result[6];
+
+--F7L8 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F7L8 = F7_mac_mult2_result[7];
+
+--F7L9 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F7L9 = F7_mac_mult2_result[8];
+
+--F7L01 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F7L01 = F7_mac_mult2_result[9];
+
+--F7L11 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F7L11 = F7_mac_mult2_result[10];
+
+--F7L21 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F7L21 = F7_mac_mult2_result[11];
+
+--F7L31 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F7L31 = F7_mac_mult2_result[12];
+
+--F7L41 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F7L41 = F7_mac_mult2_result[13];
+
+--F7L51 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F7L51 = F7_mac_mult2_result[14];
+
+--F7L61 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F7L61 = F7_mac_mult2_result[15];
+
+--F7L71 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F7L71 = F7_mac_mult2_result[16];
+
+--F7L81 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F7L81 = F7_mac_mult2_result[17];
+
+--F7L91 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F7L91 = F7_mac_mult2_result[18];
+
+--F7L02 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F7L02 = F7_mac_mult2_result[19];
+
+--F7L12 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F7L12 = F7_mac_mult2_result[20];
+
+--F7L22 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F7L22 = F7_mac_mult2_result[21];
+
+--F7L32 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F7L32 = F7_mac_mult2_result[22];
+
+--F7L42 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F7L42 = F7_mac_mult2_result[23];
+
+--F7L52 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F7L52 = F7_mac_mult2_result[24];
+
+--F7L62 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F7L62 = F7_mac_mult2_result[25];
+
+--F7L72 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F7L72 = F7_mac_mult2_result[26];
+
+--F7L82 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F7L82 = F7_mac_mult2_result[27];
+
+--F7L92 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F7L92 = F7_mac_mult2_result[28];
+
+--F7L03 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F7L03 = F7_mac_mult2_result[29];
+
+--F7L13 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F7L13 = F7_mac_mult2_result[30];
+
+--F7L23 is plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F7L23 = F7_mac_mult2_result[31];
+
+
+--F9_mac_mult2 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F9_mac_mult2_a_data = DATA(arr[2][15], arr[2][14], arr[2][13], arr[2][12], arr[2][11], arr[2][10], arr[2][9], arr[2][8], arr[2][7], arr[2][6], arr[2][5], arr[2][4], arr[2][3], arr[2][2], arr[2][1], arr[2][0]);
+F9_mac_mult2_a_rep = UNSIGNED(F9_mac_mult2_a_data);
+F9_mac_mult2_b_data = DATA(arr[4][15], arr[4][14], arr[4][13], arr[4][12], arr[4][11], arr[4][10], arr[4][9], arr[4][8], arr[4][7], arr[4][6], arr[4][5], arr[4][4], arr[4][3], arr[4][2], arr[4][1], arr[4][0]);
+F9_mac_mult2_b_rep = UNSIGNED(F9_mac_mult2_b_data);
+F9_mac_mult2_result = F9_mac_mult2_a_rep * F9_mac_mult2_b_rep;
+F9_mac_mult2 = F9_mac_mult2_result[0];
+
+--F9L2 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F9L2 = F9_mac_mult2_result[1];
+
+--F9L3 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F9L3 = F9_mac_mult2_result[2];
+
+--F9L4 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F9L4 = F9_mac_mult2_result[3];
+
+--F9L5 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F9L5 = F9_mac_mult2_result[4];
+
+--F9L6 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F9L6 = F9_mac_mult2_result[5];
+
+--F9L7 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F9L7 = F9_mac_mult2_result[6];
+
+--F9L8 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F9L8 = F9_mac_mult2_result[7];
+
+--F9L9 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F9L9 = F9_mac_mult2_result[8];
+
+--F9L01 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F9L01 = F9_mac_mult2_result[9];
+
+--F9L11 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F9L11 = F9_mac_mult2_result[10];
+
+--F9L21 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F9L21 = F9_mac_mult2_result[11];
+
+--F9L31 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F9L31 = F9_mac_mult2_result[12];
+
+--F9L41 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F9L41 = F9_mac_mult2_result[13];
+
+--F9L51 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F9L51 = F9_mac_mult2_result[14];
+
+--F9L61 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F9L61 = F9_mac_mult2_result[15];
+
+--F9L71 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F9L71 = F9_mac_mult2_result[16];
+
+--F9L81 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F9L81 = F9_mac_mult2_result[17];
+
+--F9L91 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F9L91 = F9_mac_mult2_result[18];
+
+--F9L02 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F9L02 = F9_mac_mult2_result[19];
+
+--F9L12 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F9L12 = F9_mac_mult2_result[20];
+
+--F9L22 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F9L22 = F9_mac_mult2_result[21];
+
+--F9L32 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F9L32 = F9_mac_mult2_result[22];
+
+--F9L42 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F9L42 = F9_mac_mult2_result[23];
+
+--F9L52 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F9L52 = F9_mac_mult2_result[24];
+
+--F9L62 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F9L62 = F9_mac_mult2_result[25];
+
+--F9L72 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F9L72 = F9_mac_mult2_result[26];
+
+--F9L82 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F9L82 = F9_mac_mult2_result[27];
+
+--F9L92 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F9L92 = F9_mac_mult2_result[28];
+
+--F9L03 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F9L03 = F9_mac_mult2_result[29];
+
+--F9L13 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F9L13 = F9_mac_mult2_result[30];
+
+--F9L23 is plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F9L23 = F9_mac_mult2_result[31];
+
+
+--F11_mac_mult2 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+F11_mac_mult2_a_data = DATA(arr[6][15], arr[6][14], arr[6][13], arr[6][12], arr[6][11], arr[6][10], arr[6][9], arr[6][8], arr[6][7], arr[6][6], arr[6][5], arr[6][4], arr[6][3], arr[6][2], arr[6][1], arr[6][0]);
+F11_mac_mult2_a_rep = UNSIGNED(F11_mac_mult2_a_data);
+F11_mac_mult2_b_data = DATA(arr[8][15], arr[8][14], arr[8][13], arr[8][12], arr[8][11], arr[8][10], arr[8][9], arr[8][8], arr[8][7], arr[8][6], arr[8][5], arr[8][4], arr[8][3], arr[8][2], arr[8][1], arr[8][0]);
+F11_mac_mult2_b_rep = UNSIGNED(F11_mac_mult2_b_data);
+F11_mac_mult2_result = F11_mac_mult2_a_rep * F11_mac_mult2_b_rep;
+F11_mac_mult2 = F11_mac_mult2_result[0];
+
+--F11L2 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT1
+F11L2 = F11_mac_mult2_result[1];
+
+--F11L3 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT2
+F11L3 = F11_mac_mult2_result[2];
+
+--F11L4 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT3
+F11L4 = F11_mac_mult2_result[3];
+
+--F11L5 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT4
+F11L5 = F11_mac_mult2_result[4];
+
+--F11L6 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT5
+F11L6 = F11_mac_mult2_result[5];
+
+--F11L7 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT6
+F11L7 = F11_mac_mult2_result[6];
+
+--F11L8 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT7
+F11L8 = F11_mac_mult2_result[7];
+
+--F11L9 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT8
+F11L9 = F11_mac_mult2_result[8];
+
+--F11L01 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT9
+F11L01 = F11_mac_mult2_result[9];
+
+--F11L11 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT10
+F11L11 = F11_mac_mult2_result[10];
+
+--F11L21 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT11
+F11L21 = F11_mac_mult2_result[11];
+
+--F11L31 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT12
+F11L31 = F11_mac_mult2_result[12];
+
+--F11L41 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT13
+F11L41 = F11_mac_mult2_result[13];
+
+--F11L51 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT14
+F11L51 = F11_mac_mult2_result[14];
+
+--F11L61 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT15
+F11L61 = F11_mac_mult2_result[15];
+
+--F11L71 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT16
+F11L71 = F11_mac_mult2_result[16];
+
+--F11L81 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT17
+F11L81 = F11_mac_mult2_result[17];
+
+--F11L91 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT18
+F11L91 = F11_mac_mult2_result[18];
+
+--F11L02 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT19
+F11L02 = F11_mac_mult2_result[19];
+
+--F11L12 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT20
+F11L12 = F11_mac_mult2_result[20];
+
+--F11L22 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT21
+F11L22 = F11_mac_mult2_result[21];
+
+--F11L32 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT22
+F11L32 = F11_mac_mult2_result[22];
+
+--F11L42 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT23
+F11L42 = F11_mac_mult2_result[23];
+
+--F11L52 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT24
+F11L52 = F11_mac_mult2_result[24];
+
+--F11L62 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT25
+F11L62 = F11_mac_mult2_result[25];
+
+--F11L72 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT26
+F11L72 = F11_mac_mult2_result[26];
+
+--F11L82 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT27
+F11L82 = F11_mac_mult2_result[27];
+
+--F11L92 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT28
+F11L92 = F11_mac_mult2_result[28];
+
+--F11L03 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT29
+F11L03 = F11_mac_mult2_result[29];
+
+--F11L13 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT30
+F11L13 = F11_mac_mult2_result[30];
+
+--F11L23 is plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated|mac_mult2~DATAOUT31
+F11L23 = F11_mac_mult2_result[31];
+
+
+--D1_mac_mult1 is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1
+--DSP Block Multiplier Base Width: 18-bits
+D1_mac_mult1_a_data = DATA(F3_result[15], F3_result[14], F3_result[13], F3_result[12], F3_result[11], F3_result[10], F3_result[9], F3_result[8], F3_result[7], F3_result[6], F3_result[5], F3_result[4], F3_result[3], F3_result[2], F3_result[1], F3_result[0]);
+D1_mac_mult1_a_rep = UNSIGNED(D1_mac_mult1_a_data);
+D1_mac_mult1_b_data = DATA(arr[7][15], arr[7][14], arr[7][13], arr[7][12], arr[7][11], arr[7][10], arr[7][9], arr[7][8], arr[7][7], arr[7][6], arr[7][5], arr[7][4], arr[7][3], arr[7][2], arr[7][1], arr[7][0]);
+D1_mac_mult1_b_rep = UNSIGNED(D1_mac_mult1_b_data);
+D1_mac_mult1_result = D1_mac_mult1_a_rep * D1_mac_mult1_b_rep;
+D1_mac_mult1_result_reg = DFFE(D1_mac_mult1_result, clock, , , );
+D1_mac_mult1 = D1_mac_mult1_result_reg[0];
+
+--D1L2Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT1
+D1L2Q = D1_mac_mult1_result_reg[1];
+
+--D1L3Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT2
+D1L3Q = D1_mac_mult1_result_reg[2];
+
+--D1L4Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT3
+D1L4Q = D1_mac_mult1_result_reg[3];
+
+--D1L5Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT4
+D1L5Q = D1_mac_mult1_result_reg[4];
+
+--D1L6Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT5
+D1L6Q = D1_mac_mult1_result_reg[5];
+
+--D1L7Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT6
+D1L7Q = D1_mac_mult1_result_reg[6];
+
+--D1L8Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT7
+D1L8Q = D1_mac_mult1_result_reg[7];
+
+--D1L9Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT8
+D1L9Q = D1_mac_mult1_result_reg[8];
+
+--D1L01Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT9
+D1L01Q = D1_mac_mult1_result_reg[9];
+
+--D1L11Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT10
+D1L11Q = D1_mac_mult1_result_reg[10];
+
+--D1L21Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT11
+D1L21Q = D1_mac_mult1_result_reg[11];
+
+--D1L31Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT12
+D1L31Q = D1_mac_mult1_result_reg[12];
+
+--D1L41Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT13
+D1L41Q = D1_mac_mult1_result_reg[13];
+
+--D1L51Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT14
+D1L51Q = D1_mac_mult1_result_reg[14];
+
+--D1L61Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT15
+D1L61Q = D1_mac_mult1_result_reg[15];
+
+--D1L71Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT16
+D1L71Q = D1_mac_mult1_result_reg[16];
+
+--D1L81Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT17
+D1L81Q = D1_mac_mult1_result_reg[17];
+
+--D1L91Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT18
+D1L91Q = D1_mac_mult1_result_reg[18];
+
+--D1L02Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT19
+D1L02Q = D1_mac_mult1_result_reg[19];
+
+--D1L12Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT20
+D1L12Q = D1_mac_mult1_result_reg[20];
+
+--D1L22Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT21
+D1L22Q = D1_mac_mult1_result_reg[21];
+
+--D1L32Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT22
+D1L32Q = D1_mac_mult1_result_reg[22];
+
+--D1L42Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT23
+D1L42Q = D1_mac_mult1_result_reg[23];
+
+--D1L52Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT24
+D1L52Q = D1_mac_mult1_result_reg[24];
+
+--D1L62Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT25
+D1L62Q = D1_mac_mult1_result_reg[25];
+
+--D1L72Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT26
+D1L72Q = D1_mac_mult1_result_reg[26];
+
+--D1L82Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT27
+D1L82Q = D1_mac_mult1_result_reg[27];
+
+--D1L92Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT28
+D1L92Q = D1_mac_mult1_result_reg[28];
+
+--D1L03Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT29
+D1L03Q = D1_mac_mult1_result_reg[29];
+
+--D1L13Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT30
+D1L13Q = D1_mac_mult1_result_reg[30];
+
+--D1L23Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult1~DATAOUT31
+D1L23Q = D1_mac_mult1_result_reg[31];
+
+
+--D1_mac_mult2 is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2
+--DSP Block Multiplier Base Width: 18-bits
+D1_mac_mult2_a_data = DATA(F1_result[15], F1_result[14], F1_result[13], F1_result[12], F1_result[11], F1_result[10], F1_result[9], F1_result[8], F1_result[7], F1_result[6], F1_result[5], F1_result[4], F1_result[3], F1_result[2], F1_result[1], F1_result[0]);
+D1_mac_mult2_a_rep = UNSIGNED(D1_mac_mult2_a_data);
+D1_mac_mult2_b_data = DATA(arr[9][15], arr[9][14], arr[9][13], arr[9][12], arr[9][11], arr[9][10], arr[9][9], arr[9][8], arr[9][7], arr[9][6], arr[9][5], arr[9][4], arr[9][3], arr[9][2], arr[9][1], arr[9][0]);
+D1_mac_mult2_b_rep = UNSIGNED(D1_mac_mult2_b_data);
+D1_mac_mult2_result = D1_mac_mult2_a_rep * D1_mac_mult2_b_rep;
+D1_mac_mult2_result_reg = DFFE(D1_mac_mult2_result, clock, , , );
+D1_mac_mult2 = D1_mac_mult2_result_reg[0];
+
+--D1L66Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT1
+D1L66Q = D1_mac_mult2_result_reg[1];
+
+--D1L76Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT2
+D1L76Q = D1_mac_mult2_result_reg[2];
+
+--D1L86Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT3
+D1L86Q = D1_mac_mult2_result_reg[3];
+
+--D1L96Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT4
+D1L96Q = D1_mac_mult2_result_reg[4];
+
+--D1L07Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT5
+D1L07Q = D1_mac_mult2_result_reg[5];
+
+--D1L17Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT6
+D1L17Q = D1_mac_mult2_result_reg[6];
+
+--D1L27Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT7
+D1L27Q = D1_mac_mult2_result_reg[7];
+
+--D1L37Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT8
+D1L37Q = D1_mac_mult2_result_reg[8];
+
+--D1L47Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT9
+D1L47Q = D1_mac_mult2_result_reg[9];
+
+--D1L57Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT10
+D1L57Q = D1_mac_mult2_result_reg[10];
+
+--D1L67Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT11
+D1L67Q = D1_mac_mult2_result_reg[11];
+
+--D1L77Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT12
+D1L77Q = D1_mac_mult2_result_reg[12];
+
+--D1L87Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT13
+D1L87Q = D1_mac_mult2_result_reg[13];
+
+--D1L97Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT14
+D1L97Q = D1_mac_mult2_result_reg[14];
+
+--D1L08Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT15
+D1L08Q = D1_mac_mult2_result_reg[15];
+
+--D1L18Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT16
+D1L18Q = D1_mac_mult2_result_reg[16];
+
+--D1L28Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT17
+D1L28Q = D1_mac_mult2_result_reg[17];
+
+--D1L38Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT18
+D1L38Q = D1_mac_mult2_result_reg[18];
+
+--D1L48Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT19
+D1L48Q = D1_mac_mult2_result_reg[19];
+
+--D1L58Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT20
+D1L58Q = D1_mac_mult2_result_reg[20];
+
+--D1L68Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT21
+D1L68Q = D1_mac_mult2_result_reg[21];
+
+--D1L78Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT22
+D1L78Q = D1_mac_mult2_result_reg[22];
+
+--D1L88Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT23
+D1L88Q = D1_mac_mult2_result_reg[23];
+
+--D1L98Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT24
+D1L98Q = D1_mac_mult2_result_reg[24];
+
+--D1L09Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT25
+D1L09Q = D1_mac_mult2_result_reg[25];
+
+--D1L19Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT26
+D1L19Q = D1_mac_mult2_result_reg[26];
+
+--D1L29Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT27
+D1L29Q = D1_mac_mult2_result_reg[27];
+
+--D1L39Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT28
+D1L39Q = D1_mac_mult2_result_reg[28];
+
+--D1L49Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT29
+D1L49Q = D1_mac_mult2_result_reg[29];
+
+--D1L59Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT30
+D1L59Q = D1_mac_mult2_result_reg[30];
+
+--D1L69Q is altmult_add:add_rtl_0|mult_add_fp53:auto_generated|mac_mult2~DATAOUT31
+D1L69Q = D1_mac_mult2_result_reg[31];
+
+
+--arr[5][0] is arr[5][0]
+--operation mode is normal
+
+arr[5][0]_lut_out = ewr & in5[0];
+arr[5][0] = DFFEAS(arr[5][0]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][1] is arr[5][1]
+--operation mode is normal
+
+arr[5][1]_lut_out = ewr & in5[1];
+arr[5][1] = DFFEAS(arr[5][1]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][2] is arr[5][2]
+--operation mode is normal
+
+arr[5][2]_lut_out = ewr & in5[2];
+arr[5][2] = DFFEAS(arr[5][2]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][3] is arr[5][3]
+--operation mode is normal
+
+arr[5][3]_lut_out = ewr & in5[3];
+arr[5][3] = DFFEAS(arr[5][3]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][4] is arr[5][4]
+--operation mode is normal
+
+arr[5][4]_lut_out = ewr & in5[4];
+arr[5][4] = DFFEAS(arr[5][4]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][5] is arr[5][5]
+--operation mode is normal
+
+arr[5][5]_lut_out = ewr & in5[5];
+arr[5][5] = DFFEAS(arr[5][5]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][6] is arr[5][6]
+--operation mode is normal
+
+arr[5][6]_lut_out = ewr & in5[6];
+arr[5][6] = DFFEAS(arr[5][6]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][7] is arr[5][7]
+--operation mode is normal
+
+arr[5][7]_lut_out = ewr & in5[7];
+arr[5][7] = DFFEAS(arr[5][7]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][8] is arr[5][8]
+--operation mode is normal
+
+arr[5][8]_lut_out = ewr & in5[8];
+arr[5][8] = DFFEAS(arr[5][8]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][9] is arr[5][9]
+--operation mode is normal
+
+arr[5][9]_lut_out = ewr & in5[9];
+arr[5][9] = DFFEAS(arr[5][9]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][10] is arr[5][10]
+--operation mode is normal
+
+arr[5][10]_lut_out = ewr & in5[10];
+arr[5][10] = DFFEAS(arr[5][10]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][11] is arr[5][11]
+--operation mode is normal
+
+arr[5][11]_lut_out = ewr & in5[11];
+arr[5][11] = DFFEAS(arr[5][11]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][12] is arr[5][12]
+--operation mode is normal
+
+arr[5][12]_lut_out = ewr & in5[12];
+arr[5][12] = DFFEAS(arr[5][12]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][13] is arr[5][13]
+--operation mode is normal
+
+arr[5][13]_lut_out = ewr & in5[13];
+arr[5][13] = DFFEAS(arr[5][13]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][14] is arr[5][14]
+--operation mode is normal
+
+arr[5][14]_lut_out = ewr & in5[14];
+arr[5][14] = DFFEAS(arr[5][14]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[5][15] is arr[5][15]
+--operation mode is normal
+
+arr[5][15]_lut_out = ewr & in5[15];
+arr[5][15] = DFFEAS(arr[5][15]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][0] is arr[2][0]
+--operation mode is normal
+
+arr[2][0]_lut_out = ewr & in2[0];
+arr[2][0] = DFFEAS(arr[2][0]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][1] is arr[2][1]
+--operation mode is normal
+
+arr[2][1]_lut_out = ewr & in2[1];
+arr[2][1] = DFFEAS(arr[2][1]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][2] is arr[2][2]
+--operation mode is normal
+
+arr[2][2]_lut_out = ewr & in2[2];
+arr[2][2] = DFFEAS(arr[2][2]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][3] is arr[2][3]
+--operation mode is normal
+
+arr[2][3]_lut_out = ewr & in2[3];
+arr[2][3] = DFFEAS(arr[2][3]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][4] is arr[2][4]
+--operation mode is normal
+
+arr[2][4]_lut_out = ewr & in2[4];
+arr[2][4] = DFFEAS(arr[2][4]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][5] is arr[2][5]
+--operation mode is normal
+
+arr[2][5]_lut_out = ewr & in2[5];
+arr[2][5] = DFFEAS(arr[2][5]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][6] is arr[2][6]
+--operation mode is normal
+
+arr[2][6]_lut_out = ewr & in2[6];
+arr[2][6] = DFFEAS(arr[2][6]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][7] is arr[2][7]
+--operation mode is normal
+
+arr[2][7]_lut_out = ewr & in2[7];
+arr[2][7] = DFFEAS(arr[2][7]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][8] is arr[2][8]
+--operation mode is normal
+
+arr[2][8]_lut_out = ewr & in2[8];
+arr[2][8] = DFFEAS(arr[2][8]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][9] is arr[2][9]
+--operation mode is normal
+
+arr[2][9]_lut_out = ewr & in2[9];
+arr[2][9] = DFFEAS(arr[2][9]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][10] is arr[2][10]
+--operation mode is normal
+
+arr[2][10]_lut_out = ewr & in2[10];
+arr[2][10] = DFFEAS(arr[2][10]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][11] is arr[2][11]
+--operation mode is normal
+
+arr[2][11]_lut_out = ewr & in2[11];
+arr[2][11] = DFFEAS(arr[2][11]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][12] is arr[2][12]
+--operation mode is normal
+
+arr[2][12]_lut_out = ewr & in2[12];
+arr[2][12] = DFFEAS(arr[2][12]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][13] is arr[2][13]
+--operation mode is normal
+
+arr[2][13]_lut_out = ewr & in2[13];
+arr[2][13] = DFFEAS(arr[2][13]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][14] is arr[2][14]
+--operation mode is normal
+
+arr[2][14]_lut_out = ewr & in2[14];
+arr[2][14] = DFFEAS(arr[2][14]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[2][15] is arr[2][15]
+--operation mode is normal
+
+arr[2][15]_lut_out = ewr & in2[15];
+arr[2][15] = DFFEAS(arr[2][15]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][0] is arr[6][0]
+--operation mode is normal
+
+arr[6][0]_lut_out = ewr & in6[0];
+arr[6][0] = DFFEAS(arr[6][0]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][1] is arr[6][1]
+--operation mode is normal
+
+arr[6][1]_lut_out = ewr & in6[1];
+arr[6][1] = DFFEAS(arr[6][1]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][2] is arr[6][2]
+--operation mode is normal
+
+arr[6][2]_lut_out = ewr & in6[2];
+arr[6][2] = DFFEAS(arr[6][2]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][3] is arr[6][3]
+--operation mode is normal
+
+arr[6][3]_lut_out = ewr & in6[3];
+arr[6][3] = DFFEAS(arr[6][3]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][4] is arr[6][4]
+--operation mode is normal
+
+arr[6][4]_lut_out = ewr & in6[4];
+arr[6][4] = DFFEAS(arr[6][4]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][5] is arr[6][5]
+--operation mode is normal
+
+arr[6][5]_lut_out = ewr & in6[5];
+arr[6][5] = DFFEAS(arr[6][5]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][6] is arr[6][6]
+--operation mode is normal
+
+arr[6][6]_lut_out = ewr & in6[6];
+arr[6][6] = DFFEAS(arr[6][6]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][7] is arr[6][7]
+--operation mode is normal
+
+arr[6][7]_lut_out = ewr & in6[7];
+arr[6][7] = DFFEAS(arr[6][7]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][8] is arr[6][8]
+--operation mode is normal
+
+arr[6][8]_lut_out = ewr & in6[8];
+arr[6][8] = DFFEAS(arr[6][8]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][9] is arr[6][9]
+--operation mode is normal
+
+arr[6][9]_lut_out = ewr & in6[9];
+arr[6][9] = DFFEAS(arr[6][9]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][10] is arr[6][10]
+--operation mode is normal
+
+arr[6][10]_lut_out = ewr & in6[10];
+arr[6][10] = DFFEAS(arr[6][10]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][11] is arr[6][11]
+--operation mode is normal
+
+arr[6][11]_lut_out = ewr & in6[11];
+arr[6][11] = DFFEAS(arr[6][11]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][12] is arr[6][12]
+--operation mode is normal
+
+arr[6][12]_lut_out = ewr & in6[12];
+arr[6][12] = DFFEAS(arr[6][12]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][13] is arr[6][13]
+--operation mode is normal
+
+arr[6][13]_lut_out = ewr & in6[13];
+arr[6][13] = DFFEAS(arr[6][13]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][14] is arr[6][14]
+--operation mode is normal
+
+arr[6][14]_lut_out = ewr & in6[14];
+arr[6][14] = DFFEAS(arr[6][14]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[6][15] is arr[6][15]
+--operation mode is normal
+
+arr[6][15]_lut_out = ewr & in6[15];
+arr[6][15] = DFFEAS(arr[6][15]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][0] is arr[4][0]
+--operation mode is normal
+
+arr[4][0]_lut_out = ewr & in4[0];
+arr[4][0] = DFFEAS(arr[4][0]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][1] is arr[4][1]
+--operation mode is normal
+
+arr[4][1]_lut_out = ewr & in4[1];
+arr[4][1] = DFFEAS(arr[4][1]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][2] is arr[4][2]
+--operation mode is normal
+
+arr[4][2]_lut_out = ewr & in4[2];
+arr[4][2] = DFFEAS(arr[4][2]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][3] is arr[4][3]
+--operation mode is normal
+
+arr[4][3]_lut_out = ewr & in4[3];
+arr[4][3] = DFFEAS(arr[4][3]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][4] is arr[4][4]
+--operation mode is normal
+
+arr[4][4]_lut_out = ewr & in4[4];
+arr[4][4] = DFFEAS(arr[4][4]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][5] is arr[4][5]
+--operation mode is normal
+
+arr[4][5]_lut_out = ewr & in4[5];
+arr[4][5] = DFFEAS(arr[4][5]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][6] is arr[4][6]
+--operation mode is normal
+
+arr[4][6]_lut_out = ewr & in4[6];
+arr[4][6] = DFFEAS(arr[4][6]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][7] is arr[4][7]
+--operation mode is normal
+
+arr[4][7]_lut_out = ewr & in4[7];
+arr[4][7] = DFFEAS(arr[4][7]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][8] is arr[4][8]
+--operation mode is normal
+
+arr[4][8]_lut_out = ewr & in4[8];
+arr[4][8] = DFFEAS(arr[4][8]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][9] is arr[4][9]
+--operation mode is normal
+
+arr[4][9]_lut_out = ewr & in4[9];
+arr[4][9] = DFFEAS(arr[4][9]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][10] is arr[4][10]
+--operation mode is normal
+
+arr[4][10]_lut_out = ewr & in4[10];
+arr[4][10] = DFFEAS(arr[4][10]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][11] is arr[4][11]
+--operation mode is normal
+
+arr[4][11]_lut_out = ewr & in4[11];
+arr[4][11] = DFFEAS(arr[4][11]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][12] is arr[4][12]
+--operation mode is normal
+
+arr[4][12]_lut_out = ewr & in4[12];
+arr[4][12] = DFFEAS(arr[4][12]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][13] is arr[4][13]
+--operation mode is normal
+
+arr[4][13]_lut_out = ewr & in4[13];
+arr[4][13] = DFFEAS(arr[4][13]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][14] is arr[4][14]
+--operation mode is normal
+
+arr[4][14]_lut_out = ewr & in4[14];
+arr[4][14] = DFFEAS(arr[4][14]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[4][15] is arr[4][15]
+--operation mode is normal
+
+arr[4][15]_lut_out = ewr & in4[15];
+arr[4][15] = DFFEAS(arr[4][15]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][0] is arr[8][0]
+--operation mode is normal
+
+arr[8][0]_lut_out = ewr & in8[0];
+arr[8][0] = DFFEAS(arr[8][0]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][1] is arr[8][1]
+--operation mode is normal
+
+arr[8][1]_lut_out = ewr & in8[1];
+arr[8][1] = DFFEAS(arr[8][1]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][2] is arr[8][2]
+--operation mode is normal
+
+arr[8][2]_lut_out = ewr & in8[2];
+arr[8][2] = DFFEAS(arr[8][2]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][3] is arr[8][3]
+--operation mode is normal
+
+arr[8][3]_lut_out = ewr & in8[3];
+arr[8][3] = DFFEAS(arr[8][3]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][4] is arr[8][4]
+--operation mode is normal
+
+arr[8][4]_lut_out = ewr & in8[4];
+arr[8][4] = DFFEAS(arr[8][4]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][5] is arr[8][5]
+--operation mode is normal
+
+arr[8][5]_lut_out = ewr & in8[5];
+arr[8][5] = DFFEAS(arr[8][5]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][6] is arr[8][6]
+--operation mode is normal
+
+arr[8][6]_lut_out = ewr & in8[6];
+arr[8][6] = DFFEAS(arr[8][6]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][7] is arr[8][7]
+--operation mode is normal
+
+arr[8][7]_lut_out = ewr & in8[7];
+arr[8][7] = DFFEAS(arr[8][7]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][8] is arr[8][8]
+--operation mode is normal
+
+arr[8][8]_lut_out = ewr & in8[8];
+arr[8][8] = DFFEAS(arr[8][8]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][9] is arr[8][9]
+--operation mode is normal
+
+arr[8][9]_lut_out = ewr & in8[9];
+arr[8][9] = DFFEAS(arr[8][9]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][10] is arr[8][10]
+--operation mode is normal
+
+arr[8][10]_lut_out = ewr & in8[10];
+arr[8][10] = DFFEAS(arr[8][10]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][11] is arr[8][11]
+--operation mode is normal
+
+arr[8][11]_lut_out = ewr & in8[11];
+arr[8][11] = DFFEAS(arr[8][11]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][12] is arr[8][12]
+--operation mode is normal
+
+arr[8][12]_lut_out = ewr & in8[12];
+arr[8][12] = DFFEAS(arr[8][12]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][13] is arr[8][13]
+--operation mode is normal
+
+arr[8][13]_lut_out = ewr & in8[13];
+arr[8][13] = DFFEAS(arr[8][13]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][14] is arr[8][14]
+--operation mode is normal
+
+arr[8][14]_lut_out = ewr & in8[14];
+arr[8][14] = DFFEAS(arr[8][14]_lut_out, clock, VCC, , , , , , );
+
+
+--arr[8][15] is arr[8][15]
+--operation mode is normal
+
+arr[8][15]_lut_out = ewr & in8[15];
+arr[8][15] = DFFEAS(arr[8][15]_lut_out, clock, VCC, , , , , , );
+
+
+--clock is clock
+--operation mode is input
+
+clock = INPUT();
+
+
+--ewr is ewr
+--operation mode is input
+
+ewr = INPUT();
+
+
+--in9[0] is in9[0]
+--operation mode is input
+
+in9[0] = INPUT();
+
+
+--in9[1] is in9[1]
+--operation mode is input
+
+in9[1] = INPUT();
+
+
+--in9[2] is in9[2]
+--operation mode is input
+
+in9[2] = INPUT();
+
+
+--in9[3] is in9[3]
+--operation mode is input
+
+in9[3] = INPUT();
+
+
+--in9[4] is in9[4]
+--operation mode is input
+
+in9[4] = INPUT();
+
+
+--in9[5] is in9[5]
+--operation mode is input
+
+in9[5] = INPUT();
+
+
+--in9[6] is in9[6]
+--operation mode is input
+
+in9[6] = INPUT();
+
+
+--in9[7] is in9[7]
+--operation mode is input
+
+in9[7] = INPUT();
+
+
+--in9[8] is in9[8]
+--operation mode is input
+
+in9[8] = INPUT();
+
+
+--in9[9] is in9[9]
+--operation mode is input
+
+in9[9] = INPUT();
+
+
+--in9[10] is in9[10]
+--operation mode is input
+
+in9[10] = INPUT();
+
+
+--in9[11] is in9[11]
+--operation mode is input
+
+in9[11] = INPUT();
+
+
+--in9[12] is in9[12]
+--operation mode is input
+
+in9[12] = INPUT();
+
+
+--in9[13] is in9[13]
+--operation mode is input
+
+in9[13] = INPUT();
+
+
+--in9[14] is in9[14]
+--operation mode is input
+
+in9[14] = INPUT();
+
+
+--in9[15] is in9[15]
+--operation mode is input
+
+in9[15] = INPUT();
+
+
+--in7[0] is in7[0]
+--operation mode is input
+
+in7[0] = INPUT();
+
+
+--in7[1] is in7[1]
+--operation mode is input
+
+in7[1] = INPUT();
+
+
+--in7[2] is in7[2]
+--operation mode is input
+
+in7[2] = INPUT();
+
+
+--in7[3] is in7[3]
+--operation mode is input
+
+in7[3] = INPUT();
+
+
+--in7[4] is in7[4]
+--operation mode is input
+
+in7[4] = INPUT();
+
+
+--in7[5] is in7[5]
+--operation mode is input
+
+in7[5] = INPUT();
+
+
+--in7[6] is in7[6]
+--operation mode is input
+
+in7[6] = INPUT();
+
+
+--in7[7] is in7[7]
+--operation mode is input
+
+in7[7] = INPUT();
+
+
+--in7[8] is in7[8]
+--operation mode is input
+
+in7[8] = INPUT();
+
+
+--in7[9] is in7[9]
+--operation mode is input
+
+in7[9] = INPUT();
+
+
+--in7[10] is in7[10]
+--operation mode is input
+
+in7[10] = INPUT();
+
+
+--in7[11] is in7[11]
+--operation mode is input
+
+in7[11] = INPUT();
+
+
+--in7[12] is in7[12]
+--operation mode is input
+
+in7[12] = INPUT();
+
+
+--in7[13] is in7[13]
+--operation mode is input
+
+in7[13] = INPUT();
+
+
+--in7[14] is in7[14]
+--operation mode is input
+
+in7[14] = INPUT();
+
+
+--in7[15] is in7[15]
+--operation mode is input
+
+in7[15] = INPUT();
+
+
+--in3[0] is in3[0]
+--operation mode is input
+
+in3[0] = INPUT();
+
+
+--in3[1] is in3[1]
+--operation mode is input
+
+in3[1] = INPUT();
+
+
+--in3[2] is in3[2]
+--operation mode is input
+
+in3[2] = INPUT();
+
+
+--in3[3] is in3[3]
+--operation mode is input
+
+in3[3] = INPUT();
+
+
+--in3[4] is in3[4]
+--operation mode is input
+
+in3[4] = INPUT();
+
+
+--in3[5] is in3[5]
+--operation mode is input
+
+in3[5] = INPUT();
+
+
+--in3[6] is in3[6]
+--operation mode is input
+
+in3[6] = INPUT();
+
+
+--in3[7] is in3[7]
+--operation mode is input
+
+in3[7] = INPUT();
+
+
+--in3[8] is in3[8]
+--operation mode is input
+
+in3[8] = INPUT();
+
+
+--in3[9] is in3[9]
+--operation mode is input
+
+in3[9] = INPUT();
+
+
+--in3[10] is in3[10]
+--operation mode is input
+
+in3[10] = INPUT();
+
+
+--in3[11] is in3[11]
+--operation mode is input
+
+in3[11] = INPUT();
+
+
+--in3[12] is in3[12]
+--operation mode is input
+
+in3[12] = INPUT();
+
+
+--in3[13] is in3[13]
+--operation mode is input
+
+in3[13] = INPUT();
+
+
+--in3[14] is in3[14]
+--operation mode is input
+
+in3[14] = INPUT();
+
+
+--in3[15] is in3[15]
+--operation mode is input
+
+in3[15] = INPUT();
+
+
+--in1[0] is in1[0]
+--operation mode is input
+
+in1[0] = INPUT();
+
+
+--in1[1] is in1[1]
+--operation mode is input
+
+in1[1] = INPUT();
+
+
+--in1[2] is in1[2]
+--operation mode is input
+
+in1[2] = INPUT();
+
+
+--in1[3] is in1[3]
+--operation mode is input
+
+in1[3] = INPUT();
+
+
+--in1[4] is in1[4]
+--operation mode is input
+
+in1[4] = INPUT();
+
+
+--in1[5] is in1[5]
+--operation mode is input
+
+in1[5] = INPUT();
+
+
+--in1[6] is in1[6]
+--operation mode is input
+
+in1[6] = INPUT();
+
+
+--in1[7] is in1[7]
+--operation mode is input
+
+in1[7] = INPUT();
+
+
+--in1[8] is in1[8]
+--operation mode is input
+
+in1[8] = INPUT();
+
+
+--in1[9] is in1[9]
+--operation mode is input
+
+in1[9] = INPUT();
+
+
+--in1[10] is in1[10]
+--operation mode is input
+
+in1[10] = INPUT();
+
+
+--in1[11] is in1[11]
+--operation mode is input
+
+in1[11] = INPUT();
+
+
+--in1[12] is in1[12]
+--operation mode is input
+
+in1[12] = INPUT();
+
+
+--in1[13] is in1[13]
+--operation mode is input
+
+in1[13] = INPUT();
+
+
+--in1[14] is in1[14]
+--operation mode is input
+
+in1[14] = INPUT();
+
+
+--in1[15] is in1[15]
+--operation mode is input
+
+in1[15] = INPUT();
+
+
+--in5[0] is in5[0]
+--operation mode is input
+
+in5[0] = INPUT();
+
+
+--in5[1] is in5[1]
+--operation mode is input
+
+in5[1] = INPUT();
+
+
+--in5[2] is in5[2]
+--operation mode is input
+
+in5[2] = INPUT();
+
+
+--in5[3] is in5[3]
+--operation mode is input
+
+in5[3] = INPUT();
+
+
+--in5[4] is in5[4]
+--operation mode is input
+
+in5[4] = INPUT();
+
+
+--in5[5] is in5[5]
+--operation mode is input
+
+in5[5] = INPUT();
+
+
+--in5[6] is in5[6]
+--operation mode is input
+
+in5[6] = INPUT();
+
+
+--in5[7] is in5[7]
+--operation mode is input
+
+in5[7] = INPUT();
+
+
+--in5[8] is in5[8]
+--operation mode is input
+
+in5[8] = INPUT();
+
+
+--in5[9] is in5[9]
+--operation mode is input
+
+in5[9] = INPUT();
+
+
+--in5[10] is in5[10]
+--operation mode is input
+
+in5[10] = INPUT();
+
+
+--in5[11] is in5[11]
+--operation mode is input
+
+in5[11] = INPUT();
+
+
+--in5[12] is in5[12]
+--operation mode is input
+
+in5[12] = INPUT();
+
+
+--in5[13] is in5[13]
+--operation mode is input
+
+in5[13] = INPUT();
+
+
+--in5[14] is in5[14]
+--operation mode is input
+
+in5[14] = INPUT();
+
+
+--in5[15] is in5[15]
+--operation mode is input
+
+in5[15] = INPUT();
+
+
+--in2[0] is in2[0]
+--operation mode is input
+
+in2[0] = INPUT();
+
+
+--in2[1] is in2[1]
+--operation mode is input
+
+in2[1] = INPUT();
+
+
+--in2[2] is in2[2]
+--operation mode is input
+
+in2[2] = INPUT();
+
+
+--in2[3] is in2[3]
+--operation mode is input
+
+in2[3] = INPUT();
+
+
+--in2[4] is in2[4]
+--operation mode is input
+
+in2[4] = INPUT();
+
+
+--in2[5] is in2[5]
+--operation mode is input
+
+in2[5] = INPUT();
+
+
+--in2[6] is in2[6]
+--operation mode is input
+
+in2[6] = INPUT();
+
+
+--in2[7] is in2[7]
+--operation mode is input
+
+in2[7] = INPUT();
+
+
+--in2[8] is in2[8]
+--operation mode is input
+
+in2[8] = INPUT();
+
+
+--in2[9] is in2[9]
+--operation mode is input
+
+in2[9] = INPUT();
+
+
+--in2[10] is in2[10]
+--operation mode is input
+
+in2[10] = INPUT();
+
+
+--in2[11] is in2[11]
+--operation mode is input
+
+in2[11] = INPUT();
+
+
+--in2[12] is in2[12]
+--operation mode is input
+
+in2[12] = INPUT();
+
+
+--in2[13] is in2[13]
+--operation mode is input
+
+in2[13] = INPUT();
+
+
+--in2[14] is in2[14]
+--operation mode is input
+
+in2[14] = INPUT();
+
+
+--in2[15] is in2[15]
+--operation mode is input
+
+in2[15] = INPUT();
+
+
+--in6[0] is in6[0]
+--operation mode is input
+
+in6[0] = INPUT();
+
+
+--in6[1] is in6[1]
+--operation mode is input
+
+in6[1] = INPUT();
+
+
+--in6[2] is in6[2]
+--operation mode is input
+
+in6[2] = INPUT();
+
+
+--in6[3] is in6[3]
+--operation mode is input
+
+in6[3] = INPUT();
+
+
+--in6[4] is in6[4]
+--operation mode is input
+
+in6[4] = INPUT();
+
+
+--in6[5] is in6[5]
+--operation mode is input
+
+in6[5] = INPUT();
+
+
+--in6[6] is in6[6]
+--operation mode is input
+
+in6[6] = INPUT();
+
+
+--in6[7] is in6[7]
+--operation mode is input
+
+in6[7] = INPUT();
+
+
+--in6[8] is in6[8]
+--operation mode is input
+
+in6[8] = INPUT();
+
+
+--in6[9] is in6[9]
+--operation mode is input
+
+in6[9] = INPUT();
+
+
+--in6[10] is in6[10]
+--operation mode is input
+
+in6[10] = INPUT();
+
+
+--in6[11] is in6[11]
+--operation mode is input
+
+in6[11] = INPUT();
+
+
+--in6[12] is in6[12]
+--operation mode is input
+
+in6[12] = INPUT();
+
+
+--in6[13] is in6[13]
+--operation mode is input
+
+in6[13] = INPUT();
+
+
+--in6[14] is in6[14]
+--operation mode is input
+
+in6[14] = INPUT();
+
+
+--in6[15] is in6[15]
+--operation mode is input
+
+in6[15] = INPUT();
+
+
+--in4[0] is in4[0]
+--operation mode is input
+
+in4[0] = INPUT();
+
+
+--in4[1] is in4[1]
+--operation mode is input
+
+in4[1] = INPUT();
+
+
+--in4[2] is in4[2]
+--operation mode is input
+
+in4[2] = INPUT();
+
+
+--in4[3] is in4[3]
+--operation mode is input
+
+in4[3] = INPUT();
+
+
+--in4[4] is in4[4]
+--operation mode is input
+
+in4[4] = INPUT();
+
+
+--in4[5] is in4[5]
+--operation mode is input
+
+in4[5] = INPUT();
+
+
+--in4[6] is in4[6]
+--operation mode is input
+
+in4[6] = INPUT();
+
+
+--in4[7] is in4[7]
+--operation mode is input
+
+in4[7] = INPUT();
+
+
+--in4[8] is in4[8]
+--operation mode is input
+
+in4[8] = INPUT();
+
+
+--in4[9] is in4[9]
+--operation mode is input
+
+in4[9] = INPUT();
+
+
+--in4[10] is in4[10]
+--operation mode is input
+
+in4[10] = INPUT();
+
+
+--in4[11] is in4[11]
+--operation mode is input
+
+in4[11] = INPUT();
+
+
+--in4[12] is in4[12]
+--operation mode is input
+
+in4[12] = INPUT();
+
+
+--in4[13] is in4[13]
+--operation mode is input
+
+in4[13] = INPUT();
+
+
+--in4[14] is in4[14]
+--operation mode is input
+
+in4[14] = INPUT();
+
+
+--in4[15] is in4[15]
+--operation mode is input
+
+in4[15] = INPUT();
+
+
+--in8[0] is in8[0]
+--operation mode is input
+
+in8[0] = INPUT();
+
+
+--in8[1] is in8[1]
+--operation mode is input
+
+in8[1] = INPUT();
+
+
+--in8[2] is in8[2]
+--operation mode is input
+
+in8[2] = INPUT();
+
+
+--in8[3] is in8[3]
+--operation mode is input
+
+in8[3] = INPUT();
+
+
+--in8[4] is in8[4]
+--operation mode is input
+
+in8[4] = INPUT();
+
+
+--in8[5] is in8[5]
+--operation mode is input
+
+in8[5] = INPUT();
+
+
+--in8[6] is in8[6]
+--operation mode is input
+
+in8[6] = INPUT();
+
+
+--in8[7] is in8[7]
+--operation mode is input
+
+in8[7] = INPUT();
+
+
+--in8[8] is in8[8]
+--operation mode is input
+
+in8[8] = INPUT();
+
+
+--in8[9] is in8[9]
+--operation mode is input
+
+in8[9] = INPUT();
+
+
+--in8[10] is in8[10]
+--operation mode is input
+
+in8[10] = INPUT();
+
+
+--in8[11] is in8[11]
+--operation mode is input
+
+in8[11] = INPUT();
+
+
+--in8[12] is in8[12]
+--operation mode is input
+
+in8[12] = INPUT();
+
+
+--in8[13] is in8[13]
+--operation mode is input
+
+in8[13] = INPUT();
+
+
+--in8[14] is in8[14]
+--operation mode is input
+
+in8[14] = INPUT();
+
+
+--in8[15] is in8[15]
+--operation mode is input
+
+in8[15] = INPUT();
+
+
+--result[0] is result[0]
+--operation mode is output
+
+result[0] = OUTPUT(sumary[0]);
+
+
+--result[1] is result[1]
+--operation mode is output
+
+result[1] = OUTPUT(sumary[1]);
+
+
+--result[2] is result[2]
+--operation mode is output
+
+result[2] = OUTPUT(sumary[2]);
+
+
+--result[3] is result[3]
+--operation mode is output
+
+result[3] = OUTPUT(sumary[3]);
+
+
+--result[4] is result[4]
+--operation mode is output
+
+result[4] = OUTPUT(sumary[4]);
+
+
+--result[5] is result[5]
+--operation mode is output
+
+result[5] = OUTPUT(sumary[5]);
+
+
+--result[6] is result[6]
+--operation mode is output
+
+result[6] = OUTPUT(sumary[6]);
+
+
+--result[7] is result[7]
+--operation mode is output
+
+result[7] = OUTPUT(sumary[7]);
+
+
+--result[8] is result[8]
+--operation mode is output
+
+result[8] = OUTPUT(sumary[8]);
+
+
+--result[9] is result[9]
+--operation mode is output
+
+result[9] = OUTPUT(sumary[9]);
+
+
+--result[10] is result[10]
+--operation mode is output
+
+result[10] = OUTPUT(sumary[10]);
+
+
+--result[11] is result[11]
+--operation mode is output
+
+result[11] = OUTPUT(sumary[11]);
+
+
+--result[12] is result[12]
+--operation mode is output
+
+result[12] = OUTPUT(sumary[12]);
+
+
+--result[13] is result[13]
+--operation mode is output
+
+result[13] = OUTPUT(sumary[13]);
+
+
+--result[14] is result[14]
+--operation mode is output
+
+result[14] = OUTPUT(sumary[14]);
+
+
+--result[15] is result[15]
+--operation mode is output
+
+result[15] = OUTPUT(sumary[15]);
+
+
+--temp1[0] is temp1[0]
+--operation mode is output
+
+temp1[0] = OUTPUT(C1_product[0]);
+
+
+--temp1[1] is temp1[1]
+--operation mode is output
+
+temp1[1] = OUTPUT(C1_product[1]);
+
+
+--temp1[2] is temp1[2]
+--operation mode is output
+
+temp1[2] = OUTPUT(C1_product[2]);
+
+
+--temp1[3] is temp1[3]
+--operation mode is output
+
+temp1[3] = OUTPUT(C1_product[3]);
+
+
+--temp1[4] is temp1[4]
+--operation mode is output
+
+temp1[4] = OUTPUT(C1_product[4]);
+
+
+--temp1[5] is temp1[5]
+--operation mode is output
+
+temp1[5] = OUTPUT(C1_product[5]);
+
+
+--temp1[6] is temp1[6]
+--operation mode is output
+
+temp1[6] = OUTPUT(C1_product[6]);
+
+
+--temp1[7] is temp1[7]
+--operation mode is output
+
+temp1[7] = OUTPUT(C1_product[7]);
+
+
+--temp1[8] is temp1[8]
+--operation mode is output
+
+temp1[8] = OUTPUT(C1_product[8]);
+
+
+--temp1[9] is temp1[9]
+--operation mode is output
+
+temp1[9] = OUTPUT(C1_product[9]);
+
+
+--temp1[10] is temp1[10]
+--operation mode is output
+
+temp1[10] = OUTPUT(C1_product[10]);
+
+
+--temp1[11] is temp1[11]
+--operation mode is output
+
+temp1[11] = OUTPUT(C1_product[11]);
+
+
+--temp1[12] is temp1[12]
+--operation mode is output
+
+temp1[12] = OUTPUT(C1_product[12]);
+
+
+--temp1[13] is temp1[13]
+--operation mode is output
+
+temp1[13] = OUTPUT(C1_product[13]);
+
+
+--temp1[14] is temp1[14]
+--operation mode is output
+
+temp1[14] = OUTPUT(C1_product[14]);
+
+
+--temp1[15] is temp1[15]
+--operation mode is output
+
+temp1[15] = OUTPUT(C1_product[15]);
+
+
+--temp2[0] is temp2[0]
+--operation mode is output
+
+temp2[0] = OUTPUT(C2_product[0]);
+
+
+--temp2[1] is temp2[1]
+--operation mode is output
+
+temp2[1] = OUTPUT(C2_product[1]);
+
+
+--temp2[2] is temp2[2]
+--operation mode is output
+
+temp2[2] = OUTPUT(C2_product[2]);
+
+
+--temp2[3] is temp2[3]
+--operation mode is output
+
+temp2[3] = OUTPUT(C2_product[3]);
+
+
+--temp2[4] is temp2[4]
+--operation mode is output
+
+temp2[4] = OUTPUT(C2_product[4]);
+
+
+--temp2[5] is temp2[5]
+--operation mode is output
+
+temp2[5] = OUTPUT(C2_product[5]);
+
+
+--temp2[6] is temp2[6]
+--operation mode is output
+
+temp2[6] = OUTPUT(C2_product[6]);
+
+
+--temp2[7] is temp2[7]
+--operation mode is output
+
+temp2[7] = OUTPUT(C2_product[7]);
+
+
+--temp2[8] is temp2[8]
+--operation mode is output
+
+temp2[8] = OUTPUT(C2_product[8]);
+
+
+--temp2[9] is temp2[9]
+--operation mode is output
+
+temp2[9] = OUTPUT(C2_product[9]);
+
+
+--temp2[10] is temp2[10]
+--operation mode is output
+
+temp2[10] = OUTPUT(C2_product[10]);
+
+
+--temp2[11] is temp2[11]
+--operation mode is output
+
+temp2[11] = OUTPUT(C2_product[11]);
+
+
+--temp2[12] is temp2[12]
+--operation mode is output
+
+temp2[12] = OUTPUT(C2_product[12]);
+
+
+--temp2[13] is temp2[13]
+--operation mode is output
+
+temp2[13] = OUTPUT(C2_product[13]);
+
+
+--temp2[14] is temp2[14]
+--operation mode is output
+
+temp2[14] = OUTPUT(C2_product[14]);
+
+
+--temp2[15] is temp2[15]
+--operation mode is output
+
+temp2[15] = OUTPUT(C2_product[15]);
+
+
+--temp3[0] is temp3[0]
+--operation mode is output
+
+temp3[0] = OUTPUT(C3_product[0]);
+
+
+--temp3[1] is temp3[1]
+--operation mode is output
+
+temp3[1] = OUTPUT(C3_product[1]);
+
+
+--temp3[2] is temp3[2]
+--operation mode is output
+
+temp3[2] = OUTPUT(C3_product[2]);
+
+
+--temp3[3] is temp3[3]
+--operation mode is output
+
+temp3[3] = OUTPUT(C3_product[3]);
+
+
+--temp3[4] is temp3[4]
+--operation mode is output
+
+temp3[4] = OUTPUT(C3_product[4]);
+
+
+--temp3[5] is temp3[5]
+--operation mode is output
+
+temp3[5] = OUTPUT(C3_product[5]);
+
+
+--temp3[6] is temp3[6]
+--operation mode is output
+
+temp3[6] = OUTPUT(C3_product[6]);
+
+
+--temp3[7] is temp3[7]
+--operation mode is output
+
+temp3[7] = OUTPUT(C3_product[7]);
+
+
+--temp3[8] is temp3[8]
+--operation mode is output
+
+temp3[8] = OUTPUT(C3_product[8]);
+
+
+--temp3[9] is temp3[9]
+--operation mode is output
+
+temp3[9] = OUTPUT(C3_product[9]);
+
+
+--temp3[10] is temp3[10]
+--operation mode is output
+
+temp3[10] = OUTPUT(C3_product[10]);
+
+
+--temp3[11] is temp3[11]
+--operation mode is output
+
+temp3[11] = OUTPUT(C3_product[11]);
+
+
+--temp3[12] is temp3[12]
+--operation mode is output
+
+temp3[12] = OUTPUT(C3_product[12]);
+
+
+--temp3[13] is temp3[13]
+--operation mode is output
+
+temp3[13] = OUTPUT(C3_product[13]);
+
+
+--temp3[14] is temp3[14]
+--operation mode is output
+
+temp3[14] = OUTPUT(C3_product[14]);
+
+
+--temp3[15] is temp3[15]
+--operation mode is output
+
+temp3[15] = OUTPUT(C3_product[15]);
+
+
+--temp4[0] is temp4[0]
+--operation mode is output
+
+temp4[0] = OUTPUT(C4_product[0]);
+
+
+--temp4[1] is temp4[1]
+--operation mode is output
+
+temp4[1] = OUTPUT(C4_product[1]);
+
+
+--temp4[2] is temp4[2]
+--operation mode is output
+
+temp4[2] = OUTPUT(C4_product[2]);
+
+
+--temp4[3] is temp4[3]
+--operation mode is output
+
+temp4[3] = OUTPUT(C4_product[3]);
+
+
+--temp4[4] is temp4[4]
+--operation mode is output
+
+temp4[4] = OUTPUT(C4_product[4]);
+
+
+--temp4[5] is temp4[5]
+--operation mode is output
+
+temp4[5] = OUTPUT(C4_product[5]);
+
+
+--temp4[6] is temp4[6]
+--operation mode is output
+
+temp4[6] = OUTPUT(C4_product[6]);
+
+
+--temp4[7] is temp4[7]
+--operation mode is output
+
+temp4[7] = OUTPUT(C4_product[7]);
+
+
+--temp4[8] is temp4[8]
+--operation mode is output
+
+temp4[8] = OUTPUT(C4_product[8]);
+
+
+--temp4[9] is temp4[9]
+--operation mode is output
+
+temp4[9] = OUTPUT(C4_product[9]);
+
+
+--temp4[10] is temp4[10]
+--operation mode is output
+
+temp4[10] = OUTPUT(C4_product[10]);
+
+
+--temp4[11] is temp4[11]
+--operation mode is output
+
+temp4[11] = OUTPUT(C4_product[11]);
+
+
+--temp4[12] is temp4[12]
+--operation mode is output
+
+temp4[12] = OUTPUT(C4_product[12]);
+
+
+--temp4[13] is temp4[13]
+--operation mode is output
+
+temp4[13] = OUTPUT(C4_product[13]);
+
+
+--temp4[14] is temp4[14]
+--operation mode is output
+
+temp4[14] = OUTPUT(C4_product[14]);
+
+
+--temp4[15] is temp4[15]
+--operation mode is output
+
+temp4[15] = OUTPUT(C4_product[15]);
+
+
+--temp5[0] is temp5[0]
+--operation mode is output
+
+temp5[0] = OUTPUT(C5_product[0]);
+
+
+--temp5[1] is temp5[1]
+--operation mode is output
+
+temp5[1] = OUTPUT(C5_product[1]);
+
+
+--temp5[2] is temp5[2]
+--operation mode is output
+
+temp5[2] = OUTPUT(C5_product[2]);
+
+
+--temp5[3] is temp5[3]
+--operation mode is output
+
+temp5[3] = OUTPUT(C5_product[3]);
+
+
+--temp5[4] is temp5[4]
+--operation mode is output
+
+temp5[4] = OUTPUT(C5_product[4]);
+
+
+--temp5[5] is temp5[5]
+--operation mode is output
+
+temp5[5] = OUTPUT(C5_product[5]);
+
+
+--temp5[6] is temp5[6]
+--operation mode is output
+
+temp5[6] = OUTPUT(C5_product[6]);
+
+
+--temp5[7] is temp5[7]
+--operation mode is output
+
+temp5[7] = OUTPUT(C5_product[7]);
+
+
+--temp5[8] is temp5[8]
+--operation mode is output
+
+temp5[8] = OUTPUT(C5_product[8]);
+
+
+--temp5[9] is temp5[9]
+--operation mode is output
+
+temp5[9] = OUTPUT(C5_product[9]);
+
+
+--temp5[10] is temp5[10]
+--operation mode is output
+
+temp5[10] = OUTPUT(C5_product[10]);
+
+
+--temp5[11] is temp5[11]
+--operation mode is output
+
+temp5[11] = OUTPUT(C5_product[11]);
+
+
+--temp5[12] is temp5[12]
+--operation mode is output
+
+temp5[12] = OUTPUT(C5_product[12]);
+
+
+--temp5[13] is temp5[13]
+--operation mode is output
+
+temp5[13] = OUTPUT(C5_product[13]);
+
+
+--temp5[14] is temp5[14]
+--operation mode is output
+
+temp5[14] = OUTPUT(C5_product[14]);
+
+
+--temp5[15] is temp5[15]
+--operation mode is output
+
+temp5[15] = OUTPUT(C5_product[15]);
+
+
+--temp6[0] is temp6[0]
+--operation mode is output
+
+temp6[0] = OUTPUT(C6_product[0]);
+
+
+--temp6[1] is temp6[1]
+--operation mode is output
+
+temp6[1] = OUTPUT(C6_product[1]);
+
+
+--temp6[2] is temp6[2]
+--operation mode is output
+
+temp6[2] = OUTPUT(C6_product[2]);
+
+
+--temp6[3] is temp6[3]
+--operation mode is output
+
+temp6[3] = OUTPUT(C6_product[3]);
+
+
+--temp6[4] is temp6[4]
+--operation mode is output
+
+temp6[4] = OUTPUT(C6_product[4]);
+
+
+--temp6[5] is temp6[5]
+--operation mode is output
+
+temp6[5] = OUTPUT(C6_product[5]);
+
+
+--temp6[6] is temp6[6]
+--operation mode is output
+
+temp6[6] = OUTPUT(C6_product[6]);
+
+
+--temp6[7] is temp6[7]
+--operation mode is output
+
+temp6[7] = OUTPUT(C6_product[7]);
+
+
+--temp6[8] is temp6[8]
+--operation mode is output
+
+temp6[8] = OUTPUT(C6_product[8]);
+
+
+--temp6[9] is temp6[9]
+--operation mode is output
+
+temp6[9] = OUTPUT(C6_product[9]);
+
+
+--temp6[10] is temp6[10]
+--operation mode is output
+
+temp6[10] = OUTPUT(C6_product[10]);
+
+
+--temp6[11] is temp6[11]
+--operation mode is output
+
+temp6[11] = OUTPUT(C6_product[11]);
+
+
+--temp6[12] is temp6[12]
+--operation mode is output
+
+temp6[12] = OUTPUT(C6_product[12]);
+
+
+--temp6[13] is temp6[13]
+--operation mode is output
+
+temp6[13] = OUTPUT(C6_product[13]);
+
+
+--temp6[14] is temp6[14]
+--operation mode is output
+
+temp6[14] = OUTPUT(C6_product[14]);
+
+
+--temp6[15] is temp6[15]
+--operation mode is output
+
+temp6[15] = OUTPUT(C6_product[15]);
+
+

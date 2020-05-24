@@ -1,0 +1,4 @@
+﻿  main.cpp
+E:\systemc-2.3.2\src\sysc\packages\boost\utility\string_view.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  Unknown compiler version - please run the configure tests and report the results
+  decoder.vcxproj -> C:\Users\mi\Desktop\LabSystemC\decoder\x64\Debug\decoder.exe

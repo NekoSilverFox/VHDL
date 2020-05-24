@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="determinant">
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_4|lpm_mult:mult_rtl_16" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_4|lpm_mult:mult_rtl_15" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_8|lpm_mult:mult_rtl_8" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_6|lpm_mult:mult_rtl_11" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_6|lpm_mult:mult_rtl_12" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_8|lpm_mult:mult_rtl_7" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_5|lpm_mult:mult_rtl_13" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_5|lpm_mult:mult_rtl_14" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_7|lpm_mult:mult_rtl_9" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_9|lpm_mult:mult_rtl_6" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_9|lpm_mult:mult_rtl_5" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|plus_mult:comb_7|lpm_mult:mult_rtl_10" CBX_FILE_NAME="mult_ko01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|lpm_add_sub:add_rtl_4" CBX_FILE_NAME="add_sub_1qh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|lpm_add_sub:add_rtl_2" CBX_FILE_NAME="add_sub_1qh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|lpm_add_sub:add_rtl_3" CBX_FILE_NAME="add_sub_1qh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|lpm_add_sub:add_rtl_0" CBX_FILE_NAME="add_sub_0qh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|determinant|lpm_add_sub:add_rtl_1" CBX_FILE_NAME="add_sub_0qh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

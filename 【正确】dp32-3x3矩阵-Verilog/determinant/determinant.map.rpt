@@ -1,0 +1,959 @@
+Analysis & Synthesis report for determinant
+Thu May 14 23:46:37 2020
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis DSP Block Usage Summary
+  8. General Register Statistics
+  9. Parameter Settings for Inferred Entity Instance: altmult_add:add_rtl_0
+ 10. Parameter Settings for Inferred Entity Instance: plus_mult:comb_5|lpm_mult:mult_rtl_1
+ 11. Parameter Settings for Inferred Entity Instance: plus_mult:comb_4|lpm_mult:mult_rtl_2
+ 12. Parameter Settings for Inferred Entity Instance: plus_mult:comb_4|lpm_mult:mult_rtl_3
+ 13. Parameter Settings for Inferred Entity Instance: plus_mult:comb_5|lpm_mult:mult_rtl_4
+ 14. Parameter Settings for Inferred Entity Instance: plus_mult:comb_6|lpm_mult:mult_rtl_5
+ 15. Parameter Settings for Inferred Entity Instance: plus_mult:comb_6|lpm_mult:mult_rtl_6
+ 16. Parameter Settings for Inferred Entity Instance: plus_mult:comb_7|lpm_mult:mult_rtl_7
+ 17. Parameter Settings for Inferred Entity Instance: plus_mult:comb_7|lpm_mult:mult_rtl_8
+ 18. Parameter Settings for Inferred Entity Instance: plus_mult:comb_8|lpm_mult:mult_rtl_9
+ 19. Parameter Settings for Inferred Entity Instance: plus_mult:comb_8|lpm_mult:mult_rtl_10
+ 20. Parameter Settings for Inferred Entity Instance: plus_mult:comb_9|lpm_mult:mult_rtl_11
+ 21. Parameter Settings for Inferred Entity Instance: plus_mult:comb_9|lpm_mult:mult_rtl_12
+ 22. altmult_add Parameter Settings by Entity Instance
+ 23. lpm_mult Parameter Settings by Entity Instance
+ 24. Analysis & Synthesis Equations
+ 25. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu May 14 23:46:37 2020    ;
+; Quartus II Version          ; 5.0 Build 148 04/26/2005 SJ Full Version ;
+; Revision Name               ; determinant                              ;
+; Top-level Entity Name       ; determinant                              ;
+; Family                      ; Stratix                                  ;
+; Total logic elements        ; 304                                      ;
+; Total pins                  ; 258                                      ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; DSP block 9-bit elements    ; 28                                       ;
+; Total PLLs                  ; 0                                        ;
+; Total DLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                     ;
++--------------------------------------------------------------------+--------------+---------------+
+; Option                                                             ; Setting      ; Default Value ;
++--------------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                              ; determinant  ; determinant   ;
+; Family name                                                        ; Stratix      ; Stratix       ;
+; Use smart compilation                                              ; Off          ; Off           ;
+; Restructure Multiplexers                                           ; Auto         ; Auto          ;
+; Create Debugging Nodes for IP Cores                                ; off          ; off           ;
+; Preserve fewer node names                                          ; On           ; On            ;
+; Disable OpenCore Plus hardware evaluation                          ; Off          ; Off           ;
+; Verilog Version                                                    ; Verilog_2001 ; Verilog_2001  ;
+; VHDL Version                                                       ; VHDL93       ; VHDL93        ;
+; State Machine Processing                                           ; Auto         ; Auto          ;
+; Extract Verilog State Machines                                     ; On           ; On            ;
+; Extract VHDL State Machines                                        ; On           ; On            ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On           ; On            ;
+; DSP Block Balancing                                                ; Auto         ; Auto          ;
+; Maximum DSP Block Usage                                            ; -1           ; -1            ;
+; NOT Gate Push-Back                                                 ; On           ; On            ;
+; Power-Up Don't Care                                                ; On           ; On            ;
+; Remove Redundant Logic Cells                                       ; Off          ; Off           ;
+; Remove Duplicate Registers                                         ; On           ; On            ;
+; Ignore CARRY Buffers                                               ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                             ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                              ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                                          ; Off          ; Off           ;
+; Ignore LCELL Buffers                                               ; Off          ; Off           ;
+; Ignore SOFT Buffers                                                ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                                     ; Off          ; Off           ;
+; Optimization Technique -- Stratix/Stratix GX                       ; Balanced     ; Balanced      ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70           ; 70            ;
+; Auto Carry Chains                                                  ; On           ; On            ;
+; Auto Open-Drain Pins                                               ; On           ; On            ;
+; Remove Duplicate Logic                                             ; On           ; On            ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off          ; Off           ;
+; Perform gate-level register retiming                               ; Off          ; Off           ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On           ; On            ;
+; Auto ROM Replacement                                               ; On           ; On            ;
+; Auto RAM Replacement                                               ; On           ; On            ;
+; Auto DSP Block Replacement                                         ; On           ; On            ;
+; Auto Shift Register Replacement                                    ; On           ; On            ;
+; Auto Clock Enable Replacement                                      ; On           ; On            ;
+; Allows Synchronous Control Signal Usage in Normal Mode Logic Cells ; On           ; On            ;
+; Auto RAM Block Balancing                                           ; On           ; On            ;
+; Auto Resource Sharing                                              ; Off          ; Off           ;
+; Allow Any RAM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any ROM Size For Recognition                                 ; Off          ; Off           ;
+; Allow Any Shift Register Size For Recognition                      ; Off          ; Off           ;
+; Maximum Number of M512 Memory Blocks                               ; -1           ; -1            ;
+; Maximum Number of M4K Memory Blocks                                ; -1           ; -1            ;
+; Maximum Number of M-RAM Memory Blocks                              ; -1           ; -1            ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off          ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On           ; On            ;
++--------------------------------------------------------------------+--------------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+; determinant.v                    ; yes             ; User Verilog HDL File        ; C:/QUATUAII_WirkingSpace/determinant/determinant.v               ;
+; altmult_add.tdf                  ; yes             ; Megafunction                 ; c:/altera/quartus50/libraries/megafunctions/altmult_add.tdf      ;
+; stratix_mac_mult.inc             ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/stratix_mac_mult.inc ;
+; stratix_mac_out.inc              ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/stratix_mac_out.inc  ;
+; db/mult_add_fp53.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/QUATUAII_WirkingSpace/determinant/db/mult_add_fp53.tdf        ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/altera/quartus50/libraries/megafunctions/lpm_mult.tdf         ;
+; aglobal50.inc                    ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/aglobal50.inc        ;
+; lpm_add_sub.inc                  ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/lpm_add_sub.inc      ;
+; multcore.inc                     ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/multcore.inc         ;
+; bypassff.inc                     ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/bypassff.inc         ;
+; altshift.inc                     ; yes             ; Other                        ; c:/altera/quartus50/libraries/megafunctions/altshift.inc         ;
+; db/mult_ko01.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/QUATUAII_WirkingSpace/determinant/db/mult_ko01.tdf            ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++-----------------------------------+---------+
+; Resource                          ; Usage   ;
++-----------------------------------+---------+
+; Total logic elements              ; 304     ;
+; Total combinational functions     ; 208     ;
+;     -- Total 4-input functions    ; 0       ;
+;     -- Total 3-input functions    ; 0       ;
+;     -- Total 2-input functions    ; 208     ;
+;     -- Total 1-input functions    ; 0       ;
+;     -- Total 0-input functions    ; 0       ;
+; Combinational cells for routing   ; 0       ;
+; Total registers                   ; 256     ;
+; Total logic cells in carry chains ; 64      ;
+; I/O pins                          ; 258     ;
+; DSP block 9-bit elements          ; 28      ;
+; Maximum fan-out node              ; clock   ;
+; Maximum fan-out                   ; 258     ;
+; Total fan-out                     ; 1300    ;
+; Average fan-out                   ; 2.21    ;
++-----------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                          ;
++--------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+-----------------------------------------------------------------------------+
+; Compilation Hierarchy Node           ; Logic Cells ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Full Hierarchy Name                                                         ;
++--------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+-----------------------------------------------------------------------------+
+; |determinant                         ; 304 (208)   ; 256          ; 0           ; 28           ; 0       ; 14        ; 0         ; 258  ; 0            ; 48 (48)      ; 96 (0)            ; 160 (160)        ; 64 (64)         ; |determinant                                                                ;
+;    |altmult_add:add_rtl_0|           ; 0 (0)       ; 0            ; 0           ; 4            ; 0       ; 2         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|altmult_add:add_rtl_0                                          ;
+;       |mult_add_fp53:auto_generated| ; 0 (0)       ; 0            ; 0           ; 4            ; 0       ; 2         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|altmult_add:add_rtl_0|mult_add_fp53:auto_generated             ;
+;    |plus_mult:comb_4|                ; 16 (16)     ; 16           ; 0           ; 4            ; 0       ; 2         ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_4                                               ;
+;       |lpm_mult:mult_rtl_2|          ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_4|lpm_mult:mult_rtl_2                           ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_4|lpm_mult:mult_rtl_2|mult_ko01:auto_generated  ;
+;       |lpm_mult:mult_rtl_3|          ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_4|lpm_mult:mult_rtl_3                           ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_4|lpm_mult:mult_rtl_3|mult_ko01:auto_generated  ;
+;    |plus_mult:comb_5|                ; 16 (16)     ; 16           ; 0           ; 4            ; 0       ; 2         ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_5                                               ;
+;       |lpm_mult:mult_rtl_1|          ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_5|lpm_mult:mult_rtl_1                           ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_5|lpm_mult:mult_rtl_1|mult_ko01:auto_generated  ;
+;       |lpm_mult:mult_rtl_4|          ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_5|lpm_mult:mult_rtl_4                           ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_5|lpm_mult:mult_rtl_4|mult_ko01:auto_generated  ;
+;    |plus_mult:comb_6|                ; 16 (16)     ; 16           ; 0           ; 4            ; 0       ; 2         ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_6                                               ;
+;       |lpm_mult:mult_rtl_5|          ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_6|lpm_mult:mult_rtl_5                           ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_6|lpm_mult:mult_rtl_5|mult_ko01:auto_generated  ;
+;       |lpm_mult:mult_rtl_6|          ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_6|lpm_mult:mult_rtl_6                           ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_6|lpm_mult:mult_rtl_6|mult_ko01:auto_generated  ;
+;    |plus_mult:comb_7|                ; 16 (16)     ; 16           ; 0           ; 4            ; 0       ; 2         ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_7                                               ;
+;       |lpm_mult:mult_rtl_7|          ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_7|lpm_mult:mult_rtl_7                           ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_7|lpm_mult:mult_rtl_7|mult_ko01:auto_generated  ;
+;       |lpm_mult:mult_rtl_8|          ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_7|lpm_mult:mult_rtl_8                           ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_7|lpm_mult:mult_rtl_8|mult_ko01:auto_generated  ;
+;    |plus_mult:comb_8|                ; 16 (16)     ; 16           ; 0           ; 4            ; 0       ; 2         ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_8                                               ;
+;       |lpm_mult:mult_rtl_10|         ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_8|lpm_mult:mult_rtl_10                          ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_8|lpm_mult:mult_rtl_10|mult_ko01:auto_generated ;
+;       |lpm_mult:mult_rtl_9|          ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_8|lpm_mult:mult_rtl_9                           ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_8|lpm_mult:mult_rtl_9|mult_ko01:auto_generated  ;
+;    |plus_mult:comb_9|                ; 16 (16)     ; 16           ; 0           ; 4            ; 0       ; 2         ; 0         ; 0    ; 0            ; 0 (0)        ; 16 (16)           ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_9                                               ;
+;       |lpm_mult:mult_rtl_11|         ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_9|lpm_mult:mult_rtl_11                          ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_9|lpm_mult:mult_rtl_11|mult_ko01:auto_generated ;
+;       |lpm_mult:mult_rtl_12|         ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_9|lpm_mult:mult_rtl_12                          ;
+;          |mult_ko01:auto_generated|  ; 0 (0)       ; 0            ; 0           ; 2            ; 0       ; 1         ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; |determinant|plus_mult:comb_9|lpm_mult:mult_rtl_12|mult_ko01:auto_generated ;
++--------------------------------------+-------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+-----------------+-----------------------------------------------------------------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary   ;
++----------------------------------+-------------+
+; Statistic                        ; Number Used ;
++----------------------------------+-------------+
+; Simple Multipliers (9-bit)       ; 0           ;
+; Simple Multipliers (18-bit)      ; 12          ;
+; Simple Multipliers (36-bit)      ; 0           ;
+; Multiply Accumulators (18-bit)   ; 0           ;
+; Two-Multipliers Adders (9-bit)   ; 0           ;
+; Two-Multipliers Adders (18-bit)  ; 1           ;
+; Four-Multipliers Adders (9-bit)  ; 0           ;
+; Four-Multipliers Adders (18-bit) ; 0           ;
+; DSP Blocks                       ; --          ;
+; DSP Block 9-bit Elements         ; 28          ;
+; Signed Multipliers               ; 0           ;
+; Unsigned Multipliers             ; 14          ;
+; Mixed Sign Multipliers           ; 0           ;
+; Variable Sign Multipliers        ; 0           ;
+; Dedicated Shift Register Chains  ; 0           ;
++----------------------------------+-------------+
+Note: number of DSP Blocks used is only available after a successful fit.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 256   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: altmult_add:add_rtl_0                     ;
++---------------------------------------+---------------+------------------------------------+
+; Parameter Name                        ; Value         ; Type                               ;
++---------------------------------------+---------------+------------------------------------+
+; NUMBER_OF_MULTIPLIERS                 ; 2             ; Untyped                            ;
+; WIDTH_A                               ; 16            ; Untyped                            ;
+; WIDTH_B                               ; 16            ; Untyped                            ;
+; WIDTH_RESULT                          ; 16            ; Untyped                            ;
+; INPUT_REGISTER_A0                     ; UNREGISTERED  ; Untyped                            ;
+; INPUT_ACLR_A0                         ; ACLR3         ; Untyped                            ;
+; INPUT_SOURCE_A0                       ; DATAA         ; Untyped                            ;
+; INPUT_REGISTER_A1                     ; UNREGISTERED  ; Untyped                            ;
+; INPUT_ACLR_A1                         ; ACLR3         ; Untyped                            ;
+; INPUT_SOURCE_A1                       ; DATAA         ; Untyped                            ;
+; INPUT_REGISTER_A2                     ; UNREGISTERED  ; Untyped                            ;
+; INPUT_ACLR_A2                         ; ACLR3         ; Untyped                            ;
+; INPUT_SOURCE_A2                       ; DATAA         ; Untyped                            ;
+; INPUT_REGISTER_A3                     ; UNREGISTERED  ; Untyped                            ;
+; INPUT_ACLR_A3                         ; ACLR3         ; Untyped                            ;
+; INPUT_SOURCE_A3                       ; DATAA         ; Untyped                            ;
+; REPRESENTATION_A                      ; UNSIGNED      ; Untyped                            ;
+; SIGNED_REGISTER_A                     ; UNREGISTERED  ; Untyped                            ;
+; SIGNED_ACLR_A                         ; ACLR3         ; Untyped                            ;
+; SIGNED_PIPELINE_REGISTER_A            ; UNREGISTERED  ; Untyped                            ;
+; SIGNED_PIPELINE_ACLR_A                ; ACLR3         ; Untyped                            ;
+; INPUT_REGISTER_B0                     ; UNREGISTERED  ; Untyped                            ;
+; INPUT_ACLR_B0                         ; ACLR3         ; Untyped                            ;
+; INPUT_SOURCE_B0                       ; DATAB         ; Untyped                            ;
+; INPUT_REGISTER_B1                     ; UNREGISTERED  ; Untyped                            ;
+; INPUT_ACLR_B1                         ; ACLR3         ; Untyped                            ;
+; INPUT_SOURCE_B1                       ; DATAB         ; Untyped                            ;
+; INPUT_REGISTER_B2                     ; UNREGISTERED  ; Untyped                            ;
+; INPUT_ACLR_B2                         ; ACLR3         ; Untyped                            ;
+; INPUT_SOURCE_B2                       ; DATAB         ; Untyped                            ;
+; INPUT_REGISTER_B3                     ; UNREGISTERED  ; Untyped                            ;
+; INPUT_ACLR_B3                         ; ACLR3         ; Untyped                            ;
+; INPUT_SOURCE_B3                       ; DATAB         ; Untyped                            ;
+; REPRESENTATION_B                      ; UNSIGNED      ; Untyped                            ;
+; SIGNED_REGISTER_B                     ; UNREGISTERED  ; Untyped                            ;
+; SIGNED_ACLR_B                         ; ACLR3         ; Untyped                            ;
+; SIGNED_PIPELINE_REGISTER_B            ; UNREGISTERED  ; Untyped                            ;
+; SIGNED_PIPELINE_ACLR_B                ; ACLR3         ; Untyped                            ;
+; MULTIPLIER_REGISTER0                  ; CLOCK0        ; Untyped                            ;
+; MULTIPLIER_ACLR0                      ; ACLR0         ; Untyped                            ;
+; MULTIPLIER_REGISTER1                  ; CLOCK1        ; Untyped                            ;
+; MULTIPLIER_ACLR1                      ; ACLR1         ; Untyped                            ;
+; MULTIPLIER1_DIRECTION                 ; ADD           ; Untyped                            ;
+; ADDNSUB_MULTIPLIER_REGISTER1          ; UNREGISTERED  ; Untyped                            ;
+; ADDNSUB_MULTIPLIER_ACLR1              ; ACLR3         ; Untyped                            ;
+; ADDNSUB_MULTIPLIER_PIPELINE_REGISTER1 ; UNREGISTERED  ; Untyped                            ;
+; ADDNSUB_MULTIPLIER_PIPELINE_ACLR1     ; ACLR3         ; Untyped                            ;
+; MULTIPLIER_REGISTER2                  ; CLOCK0        ; Untyped                            ;
+; MULTIPLIER_ACLR2                      ; ACLR3         ; Untyped                            ;
+; MULTIPLIER_REGISTER3                  ; CLOCK0        ; Untyped                            ;
+; MULTIPLIER_ACLR3                      ; ACLR3         ; Untyped                            ;
+; MULTIPLIER3_DIRECTION                 ; UNUSED        ; Untyped                            ;
+; ADDNSUB_MULTIPLIER_REGISTER3          ; UNREGISTERED  ; Untyped                            ;
+; ADDNSUB_MULTIPLIER_ACLR3              ; ACLR3         ; Untyped                            ;
+; ADDNSUB_MULTIPLIER_PIPELINE_REGISTER3 ; UNREGISTERED  ; Untyped                            ;
+; ADDNSUB_MULTIPLIER_PIPELINE_ACLR3     ; ACLR3         ; Untyped                            ;
+; MULTIPLIER01_ROUNDING                 ; NO            ; Untyped                            ;
+; MULTIPLIER01_SATURATION               ; NO            ; Untyped                            ;
+; MULTIPLIER23_ROUNDING                 ; NO            ; Untyped                            ;
+; MULTIPLIER23_SATURATION               ; NO            ; Untyped                            ;
+; ADDER1_ROUNDING                       ; NO            ; Untyped                            ;
+; ADDER3_ROUNDING                       ; NO            ; Untyped                            ;
+; PORT_MULT0_IS_SATURATED               ; UNUSED        ; Untyped                            ;
+; PORT_MULT1_IS_SATURATED               ; UNUSED        ; Untyped                            ;
+; PORT_MULT2_IS_SATURATED               ; UNUSED        ; Untyped                            ;
+; PORT_MULT3_IS_SATURATED               ; UNUSED        ; Untyped                            ;
+; MULT01_ROUND_REGISTER                 ; CLOCK0        ; Untyped                            ;
+; MULT01_ROUND_ACLR                     ; ACLR3         ; Untyped                            ;
+; MULT23_ROUND_REGISTER                 ; CLOCK0        ; Untyped                            ;
+; MULT23_ROUND_ACLR                     ; ACLR3         ; Untyped                            ;
+; MULT01_SATURATION_REGISTER            ; CLOCK0        ; Untyped                            ;
+; MULT01_SATURATION_ACLR                ; ACLR3         ; Untyped                            ;
+; MULT23_SATURATION_REGISTER            ; CLOCK0        ; Untyped                            ;
+; MULT23_SATURATION_ACLR                ; ACLR3         ; Untyped                            ;
+; ADDNSUB1_ROUND_REGISTER               ; CLOCK0        ; Untyped                            ;
+; ADDNSUB1_ROUND_ACLR                   ; ACLR3         ; Untyped                            ;
+; ADDNSUB1_ROUND_PIPELINE_REGISTER      ; CLOCK0        ; Untyped                            ;
+; ADDNSUB1_ROUND_PIPELINE_ACLR          ; ACLR3         ; Untyped                            ;
+; ADDNSUB3_ROUND_REGISTER               ; CLOCK0        ; Untyped                            ;
+; ADDNSUB3_ROUND_ACLR                   ; ACLR3         ; Untyped                            ;
+; ADDNSUB3_ROUND_PIPELINE_REGISTER      ; CLOCK0        ; Untyped                            ;
+; ADDNSUB3_ROUND_PIPELINE_ACLR          ; ACLR3         ; Untyped                            ;
+; OUTPUT_REGISTER                       ; UNREGISTERED  ; Untyped                            ;
+; OUTPUT_ACLR                           ; ACLR0         ; Untyped                            ;
+; EXTRA_LATENCY                         ; 0             ; Untyped                            ;
+; DEDICATED_MULTIPLIER_CIRCUITRY        ; AUTO          ; Untyped                            ;
+; DSP_BLOCK_BALANCING                   ; Auto          ; DSP_BLOCK_BALANCING_IMPLEMENTATION ;
+; CBXI_PARAMETER                        ; mult_add_fp53 ; Untyped                            ;
++---------------------------------------+---------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_5|lpm_mult:mult_rtl_1 ;
++------------------------------------------------+-----------+--------------------------+
+; Parameter Name                                 ; Value     ; Type                     ;
++------------------------------------------------+-----------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                  ;
+; LATENCY                                        ; 0         ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; USE_EAB                                        ; OFF       ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                  ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                  ;
++------------------------------------------------+-----------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_4|lpm_mult:mult_rtl_2 ;
++------------------------------------------------+-----------+--------------------------+
+; Parameter Name                                 ; Value     ; Type                     ;
++------------------------------------------------+-----------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                  ;
+; LATENCY                                        ; 0         ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; USE_EAB                                        ; OFF       ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                  ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                  ;
++------------------------------------------------+-----------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_4|lpm_mult:mult_rtl_3 ;
++------------------------------------------------+-----------+--------------------------+
+; Parameter Name                                 ; Value     ; Type                     ;
++------------------------------------------------+-----------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                  ;
+; LATENCY                                        ; 0         ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; USE_EAB                                        ; OFF       ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                  ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                  ;
++------------------------------------------------+-----------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_5|lpm_mult:mult_rtl_4 ;
++------------------------------------------------+-----------+--------------------------+
+; Parameter Name                                 ; Value     ; Type                     ;
++------------------------------------------------+-----------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                  ;
+; LATENCY                                        ; 0         ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; USE_EAB                                        ; OFF       ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                  ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                  ;
++------------------------------------------------+-----------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_6|lpm_mult:mult_rtl_5 ;
++------------------------------------------------+-----------+--------------------------+
+; Parameter Name                                 ; Value     ; Type                     ;
++------------------------------------------------+-----------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                  ;
+; LATENCY                                        ; 0         ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; USE_EAB                                        ; OFF       ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                  ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                  ;
++------------------------------------------------+-----------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_6|lpm_mult:mult_rtl_6 ;
++------------------------------------------------+-----------+--------------------------+
+; Parameter Name                                 ; Value     ; Type                     ;
++------------------------------------------------+-----------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                  ;
+; LATENCY                                        ; 0         ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; USE_EAB                                        ; OFF       ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                  ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                  ;
++------------------------------------------------+-----------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_7|lpm_mult:mult_rtl_7 ;
++------------------------------------------------+-----------+--------------------------+
+; Parameter Name                                 ; Value     ; Type                     ;
++------------------------------------------------+-----------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                  ;
+; LATENCY                                        ; 0         ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; USE_EAB                                        ; OFF       ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                  ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                  ;
++------------------------------------------------+-----------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_7|lpm_mult:mult_rtl_8 ;
++------------------------------------------------+-----------+--------------------------+
+; Parameter Name                                 ; Value     ; Type                     ;
++------------------------------------------------+-----------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                  ;
+; LATENCY                                        ; 0         ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; USE_EAB                                        ; OFF       ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                  ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                  ;
++------------------------------------------------+-----------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_8|lpm_mult:mult_rtl_9 ;
++------------------------------------------------+-----------+--------------------------+
+; Parameter Name                                 ; Value     ; Type                     ;
++------------------------------------------------+-----------+--------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE           ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                  ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                  ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                  ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                  ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                  ;
+; LATENCY                                        ; 0         ; Untyped                  ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                  ;
+; USE_EAB                                        ; OFF       ; Untyped                  ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                  ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                  ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                  ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K      ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                  ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                  ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                  ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                  ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                  ;
++------------------------------------------------+-----------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_8|lpm_mult:mult_rtl_10 ;
++------------------------------------------------+-----------+---------------------------+
+; Parameter Name                                 ; Value     ; Type                      ;
++------------------------------------------------+-----------+---------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE            ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                   ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                   ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                   ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                   ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                   ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                   ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                   ;
+; LATENCY                                        ; 0         ; Untyped                   ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                   ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                   ;
+; USE_EAB                                        ; OFF       ; Untyped                   ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                   ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                   ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                   ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K       ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                   ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                   ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                   ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                   ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                   ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                   ;
++------------------------------------------------+-----------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_9|lpm_mult:mult_rtl_11 ;
++------------------------------------------------+-----------+---------------------------+
+; Parameter Name                                 ; Value     ; Type                      ;
++------------------------------------------------+-----------+---------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE            ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                   ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                   ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                   ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                   ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                   ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                   ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                   ;
+; LATENCY                                        ; 0         ; Untyped                   ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                   ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                   ;
+; USE_EAB                                        ; OFF       ; Untyped                   ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                   ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                   ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                   ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K       ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                   ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                   ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                   ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                   ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                   ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                   ;
++------------------------------------------------+-----------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: plus_mult:comb_9|lpm_mult:mult_rtl_12 ;
++------------------------------------------------+-----------+---------------------------+
+; Parameter Name                                 ; Value     ; Type                      ;
++------------------------------------------------+-----------+---------------------------+
+; AUTO_CARRY_CHAINS                              ; ON        ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS                           ; OFF       ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                            ; ON        ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF       ; IGNORE_CASCADE            ;
+; LPM_WIDTHA                                     ; 16        ; Untyped                   ;
+; LPM_WIDTHB                                     ; 16        ; Untyped                   ;
+; LPM_WIDTHP                                     ; 32        ; Untyped                   ;
+; LPM_WIDTHR                                     ; 32        ; Untyped                   ;
+; LPM_WIDTHS                                     ; 1         ; Untyped                   ;
+; LPM_REPRESENTATION                             ; UNSIGNED  ; Untyped                   ;
+; LPM_PIPELINE                                   ; 0         ; Untyped                   ;
+; LATENCY                                        ; 0         ; Untyped                   ;
+; INPUT_A_IS_CONSTANT                            ; NO        ; Untyped                   ;
+; INPUT_B_IS_CONSTANT                            ; NO        ; Untyped                   ;
+; USE_EAB                                        ; OFF       ; Untyped                   ;
+; MAXIMIZE_SPEED                                 ; 6         ; Untyped                   ;
+; DEVICE_FAMILY                                  ; Stratix   ; Untyped                   ;
+; CARRY_CHAIN                                    ; MANUAL    ; Untyped                   ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; Lut       ; TECH_MAPPER_APEX20K       ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO      ; Untyped                   ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0         ; Untyped                   ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0         ; Untyped                   ;
+; CBXI_PARAMETER                                 ; mult_ko01 ; Untyped                   ;
+; INPUT_A_FIXED_VALUE                            ; Bx        ; Untyped                   ;
+; INPUT_B_FIXED_VALUE                            ; Bx        ; Untyped                   ;
++------------------------------------------------+-----------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; altmult_add Parameter Settings by Entity Instance             ;
++---------------------------------------+-----------------------+
+; Name                                  ; Value                 ;
++---------------------------------------+-----------------------+
+; Number of entity instances            ; 1                     ;
+; Entity Instance                       ; altmult_add:add_rtl_0 ;
+;     -- NUMBER_OF_MULTIPLIERS          ; 2                     ;
+;     -- WIDTH_A                        ; 16                    ;
+;     -- WIDTH_B                        ; 16                    ;
+;     -- WIDTH_RESULT                   ; 16                    ;
+;     -- REPRESENTATION_A               ; UNSIGNED              ;
+;     -- REPRESENTATION_B               ; UNSIGNED              ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                  ;
++---------------------------------------+-----------------------+
+
+
++-------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                ;
++---------------------------------------+---------------------------------------+
+; Name                                  ; Value                                 ;
++---------------------------------------+---------------------------------------+
+; Number of entity instances            ; 12                                    ;
+; Entity Instance                       ; plus_mult:comb_5|lpm_mult:mult_rtl_1  ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_4|lpm_mult:mult_rtl_2  ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_4|lpm_mult:mult_rtl_3  ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_5|lpm_mult:mult_rtl_4  ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_6|lpm_mult:mult_rtl_5  ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_6|lpm_mult:mult_rtl_6  ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_7|lpm_mult:mult_rtl_7  ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_7|lpm_mult:mult_rtl_8  ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_8|lpm_mult:mult_rtl_9  ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_8|lpm_mult:mult_rtl_10 ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_9|lpm_mult:mult_rtl_11 ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
+; Entity Instance                       ; plus_mult:comb_9|lpm_mult:mult_rtl_12 ;
+;     -- LPM_WIDTHA                     ; 16                                    ;
+;     -- LPM_WIDTHB                     ; 16                                    ;
+;     -- LPM_WIDTHP                     ; 32                                    ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                              ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                    ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                    ;
+;     -- USE_EAB                        ; OFF                                   ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
++---------------------------------------+---------------------------------------+
+
+
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/QUATUAII_WirkingSpace/determinant/determinant.map.eqn.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Thu May 14 23:46:30 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off determinant -c determinant
+Info: Found 2 design units, including 2 entities, in source file determinant.v
+    Info: Found entity 1: plus_mult
+    Info: Found entity 2: determinant
+Info: Elaborating entity "determinant" for the top level hierarchy
+Warning: Verilog HDL assignment warning at determinant.v(85): truncated value with size 32 to match size of target (1)
+Info: Elaborating entity "plus_mult" for hierarchy "plus_mult:comb_4"
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred altmult_add megafunction (WIDTH_A=16, WIDTH_B=16, NUMBER_OF_MULTIPLIERS=2) from following the logic: "add~484"
+Info: Found 1 design units, including 1 entities, in source file ../../altera/quartus50/libraries/megafunctions/altmult_add.tdf
+    Info: Found entity 1: altmult_add
+Info: Found 1 design units, including 1 entities, in source file db/mult_add_fp53.tdf
+    Info: Found entity 1: mult_add_fp53
+Info: Found 1 design units, including 1 entities, in source file ../../altera/quartus50/libraries/megafunctions/lpm_mult.tdf
+    Info: Found entity 1: lpm_mult
+Info: Found 1 design units, including 1 entities, in source file db/mult_ko01.tdf
+    Info: Found entity 1: mult_ko01
+Info: Implemented 590 device resources after synthesis - the final resource count might be different
+    Info: Implemented 146 input pins
+    Info: Implemented 112 output pins
+    Info: Implemented 304 logic cells
+    Info: Implemented 28 DSP elements
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Processing ended: Thu May 14 23:46:37 2020
+    Info: Elapsed time: 00:00:08
+
+

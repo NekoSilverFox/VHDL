@@ -1,0 +1,88 @@
+EDA Netlist Writer report for determinant
+Thu May 14 23:47:05 2020
+Version 5.0 Build 148 04/26/2005 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. Simulation Tool Settings
+  4. Simulation Tool Generated Files
+  5. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Thu May 14 23:47:05 2020 ;
+; Revision Name             ; determinant                           ;
+; Top-level Entity Name     ; determinant                           ;
+; Family                    ; Stratix                               ;
+; Simulation Tool Writer    ; Successful                            ;
++---------------------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Simulation Tool Settings                                                         ;
++------------------------------------------------------+---------------------------+
+; Option                                               ; Setting                   ;
++------------------------------------------------------+---------------------------+
+; Tool Name                                            ; ModelSim-Altera (Verilog) ;
+; Generate Netlist for Functional Simulation Only      ; Off                       ;
+; Time scale                                           ; 1 ps                      ;
+; Truncate long hierarchy paths                        ; Off                       ;
+; Map illegal HDL characters                           ; Off                       ;
+; Flatten buses into individual nodes                  ; Off                       ;
+; Maintain hierarchy                                   ; Off                       ;
+; Bring out device-wide set/reset signals as ports     ; Off                       ;
+; Output Excalibur stripe as a single module or entity ; Off                       ;
+; Enable glitch filtering                              ; Off                       ;
++------------------------------------------------------+---------------------------+
+
+
++----------------------------------------------------------------------------+
+; Simulation Tool Generated Files                                            ;
++----------------------------------------------------------------------------+
+; Generated Files                                                            ;
++----------------------------------------------------------------------------+
+; C:/QUATUAII_WirkingSpace/determinant/simulation/modelsim/determinant.vo    ;
+; C:/QUATUAII_WirkingSpace/determinant/simulation/modelsim/determinant_v.sdo ;
++----------------------------------------------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus II EDA Netlist Writer
+    Info: Version 5.0 Build 148 04/26/2005 SJ Full Version
+    Info: Processing started: Thu May 14 23:47:03 2020
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off determinant -c determinant
+Info: Generated files "determinant.vo" and "determinant_v.sdo" in directory "C:/QUATUAII_WirkingSpace/determinant/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Processing ended: Thu May 14 23:47:05 2020
+    Info: Elapsed time: 00:00:02
+
+

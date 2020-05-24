@@ -1,0 +1,4 @@
+C:\Users\mi\Desktop\电路\decoder\x64\Debug\decoder.exe
+C:\Users\mi\Desktop\电路\decoder\x64\Debug\decoder.pdb
+C:\Users\mi\Desktop\LabSystemC\decoder\x64\Debug\decoder.exe
+C:\Users\mi\Desktop\LabSystemC\decoder\x64\Debug\decoder.pdb
